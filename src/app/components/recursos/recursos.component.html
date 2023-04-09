@@ -1,0 +1,63 @@
+<body> 
+    <h1>Registro de Recursos</h1>
+        
+    <div class="content">
+        <div class="container">
+            <img class="bg-img" src="assets/imagenes/bg.jpg" alt="">
+                <div class="menu">
+                    <button (click) = "cerrarSesion()" type="" class="btn btn-success">Cerrar sesion</button>
+                </div>
+                <form [formGroup]="formulariorecursos" (ngSubmit)="enviarDatos3()">
+                    <div> 
+                        <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                    </div>
+                    <div>
+                        <input formControlName="id_involucra" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="id_involucrado">
+                    </div>
+                    <div class="connexion">
+                        <div class="contact-form">
+                            <label>Recurso</label>
+                            <input formControlName="recurso" placeholder="" type="text">
+                            
+                            <label>.</label>
+                            <input class="submit" value="Guardar" type="submit">
+    
+                            <label>.</label>
+                            
+                            <input (click) = "regresarInvolucrados()" id="sub" value="Regresar>involucrado">
+                        </div>                    
+                    </div>   
+                </form>     
+        </div>
+        <div id="contenedor">
+            <div class="table-responsive">
+                        
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Recurso</th>
+                            <th scope="col">Involucrado</th>
+                            <th scope="col">Proyecto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let recurso of Recursos; let iControl=index" class="">
+                            <td>{{ recurso.id_recurso}}</td> 
+                            <td>{{ recurso.recurso}}</td> 
+                            <td>{{ recurso.id_involucra}}</td> 
+                            <td>{{ recurso.nombre_extraido}}</td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    
+    </body> 
+

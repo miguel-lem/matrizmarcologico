@@ -1,0 +1,82 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  .container-login100 {
+      position:relative;
+      width: 100%;  
+      min-height: 100vh; 
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      flex-wrap: wrap;
+      padding: 10px;
+      background-color: #354152;
+      color: #7e8ba3;
+    }
+div#cabecera{
+        width: 100%;
+        height: 50px;
+}
+div#cabecera1{
+    float: left;
+    width: 650px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#cabecera2{
+  float: left;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  div#cabecera3{
+    float: left;
+    width: 55px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cabecera4{
+    float: left;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .1;
+  }
+  div#cabecera5{
+    float: left;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cabecera6{
+    float: left;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo{
+    margin-top: 5px;
+    width: 100%;
+    height: 680px;
+    overflow: scroll;
+  }
+  #label1{
+    color: wheat;
+  }
+
+

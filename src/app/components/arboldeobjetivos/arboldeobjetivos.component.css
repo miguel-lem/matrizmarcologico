@@ -1,0 +1,257 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  .container-login100 {
+      position:relative;
+      width: 100%;  
+      min-height: 100vh; 
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      flex-wrap: wrap;
+      padding: 10px;
+      background: #9053c7;
+      background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+      background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+      background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+      background: linear-gradient(-135deg, #c850c0, #4158d0);
+    } 
+  div#cabecera{
+        width: 100%;
+        height: 50px;
+  }
+  div#cabecera1{
+    float: left;
+    width: 450px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cabecera2{
+    float: left;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cabecera3{
+    float: left;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+  }
+  div#cabecera4{
+    float: left;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .1;
+  }
+  div#cabecera5{
+    float: left;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+  }
+  input#texto1{
+    width: 100%;
+  }
+  div#cuerpotabla1{
+    float: left;
+    margin-top: 5px;
+    width: 40%;
+    height: 680px;
+  }
+  div#cuerpo{
+    float: left;
+    margin-top: 5px;
+    width: 70%;
+    height: 680px;
+  }
+  div#cuerpo1{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo11{
+    border-width: 1px;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  div#cuerpo2{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo21{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo22{
+    width: 50%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo3{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo4{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo41{
+    width: 33.33%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo42{
+    width: 33.33%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo43{
+    width: 33.34%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo5{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo51{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo52{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo53{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo54{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo55{
+    width: 20%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo111{
+    border-width: 1px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  
+  
+  div#uno{
+    float: left;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+  div#dos{
+    float: left;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    align-items: center;
+    justify-content: center; 
+  }
+  div#primero{
+    width: 160px;
+    height: 40px;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#segundo{
+    width: 160px;
+    height: 40px;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  div#cuerpo6{
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  

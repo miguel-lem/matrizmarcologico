@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<body> 
+    <div class="container-login100">
+        <div id="cabecera">
+            <form [formGroup]="formulariodelnombre" > 
+                <div id="cabecera1">
+                    <label id="label1">Matriz Marco Logico2. Se carga directamente la columna descripcion si ya se trabajo previamente.
+                        ¡Puede empezar a completar la tabla!. Si ya a sido creada dirijase a " ver matriz creada"
+                    </label>
+                </div>
+                <div id="cabecera2" > 
+                    <label id="label1">Proyecto: </label>
+                </div>
+                <div id="cabecera4" > 
+                    <input formControlName="nombre_extraido" type="text" class="form-control" 
+                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                </div> 
+                <div id="cabecera5">
+                    <button routerLink="matrizmarcologico2creada/1" type="" class="btn btn-success">Ver matriz creada</button>
+                </div> 
+                <div id="cabecera3">
+                    <button  (click) = "regresarUnpoco()" type="" class="btn btn-success">Ir a proyectos</button>
+                </div>
+            </form>
+        </div>
+        <div id="cuerpo">
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">--</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Indicadores</th>
+                            <th scope="col">Verificadores </th>
+                            <th scope="col">Supuestos </th>
+                            <th scope="col">--> </th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let valor of Finparatabla; let iControl=index" class="">
+                            <th>Fines</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td> 
+                            <td>
+                                <form [formGroup]="formulariofin">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariofin">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariofin">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviarfinaMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Propositotabla; let iControl=index" class="">
+                            <th>Proposito</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioproposito">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioproposito">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioproposito">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviarpropositoaMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Componente1tabla; let iControl=index" class="">
+                            <th>Componentes</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente1">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente1">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente1">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviarcomponente1aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Componente2tabla; let iControl=index" class="">
+                            <th>Componentes</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente2">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente2">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente2">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviarcomponente2aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Componente3tabla; let iControl=index" class="">
+                            <th>Componentes</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente3">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente3">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente3">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviarcomponente3aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Actividad1tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad1">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad1">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad1">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad1aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Actividad2tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad2">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad2">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad2">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad2aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Actividad3tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad3">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad3">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad3">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad3aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Actividad4tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad4">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad4">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad4">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad4aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td>
+                        </tr>
+                        <tr *ngFor="let valor of Actividad5tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad5">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad5">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad5">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad5aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td> 
+                        </tr>
+                        <tr *ngFor="let valor of Actividad6tabla; let iControl=index" class="">
+                            <th>Actividades</th>
+                            <td>
+                                {{ valor.finproposito}}
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad6">
+                                    <textarea formControlName="b" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Resumen presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad6">
+                                    <textarea formControlName="c" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Ejecucion presupuestal">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad6">
+                                    <textarea formControlName="d" type="text" class="form-control" 
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    </textarea>
+                                </form>
+                            </td>
+                            <td>
+                                <button (click) = "enviaractividad6aMatriz()" type="button" class="btn btn-success">Enviar</button>
+                            </td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>    
+</body>
+
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,128 @@
+
+.container-login100 {
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: #9053c7;
+    background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+  }
+  
+  body {
+      font-family: "Open Sans", sans-serif;
+      color: #444444;
+    }
+    
+    
+    p {
+      font-family: "Raleway", sans-serif;
+    }
+    
+    #main {
+      margin-top: 90px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      [data-aos-delay] {
+        transition-delay: 0 !important;
+      }
+    }
+    .hero-container1 {
+      position: center;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 3;
+      height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #hero .hero-container {
+      position: center;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    #hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 56px;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: -1px 0 2px #2f4d5a;
+    }
+    
+  
+    
+    #hero .btn-get-started {
+      font-size: 36px;
+      display: inline-block;
+      padding: 4px 0;
+      border-radius: 50px;
+      transition: 0.3s ease-in-out;
+      margin: 10px;
+      width: 64px;
+      height: 64px;
+      text-align: center;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    
+    #hero .btn-get-started:hover {
+      padding-top: 8px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+    
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+    }
+    
+    
+  
+    
+    .section-title p {
+      margin-bottom: 0;
+    }
+    
+    /*--------------------------------------------------------------
+    # Breadcrumbs
+    --------------------------------------------------------------*/
+    
+    

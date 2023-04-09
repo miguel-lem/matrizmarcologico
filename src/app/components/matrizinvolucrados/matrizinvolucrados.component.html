@@ -1,0 +1,67 @@
+<body> 
+    <h1>Registro del involucrado</h1> 
+        
+    <div class="content">
+        <div class="container">
+            <img class="bg-img" src="assets/imagenes/bg.jpg" alt="">
+                <div class="menu">
+                    <button (click) = "cerrarSesion()" type="" class="btn btn-danger">Cerrar sesion</button>
+                </div>
+                <form ngNativeValidate [formGroup]="formularioinvolucrados1" (ngSubmit)="enviarDatos1()">
+                    <div> 
+                        <input  formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                            <input  formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="Correo">
+                    </div>
+                    <div class="connexion">
+                        <div class="contact-form">
+                            <label>Involucrado</label>
+                            <input required #involucrado formControlName="nombre" placeholder="" type="text">
+                            <label>.</label>
+                        </div>
+                        <input class="submit" value="Agregar involucrado" type="submit"> 
+                        <label>.</label> 
+                        <input (click) = "regresarProyectos()" class="submit" value="Regresar a Proyectos" >                  
+                    </div> 
+                </form> 
+                               
+        </div>
+        <div id="contenedor">
+            <div class="table-responsive">
+                        
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Involucrado</th>
+                            <th scope="col">Proyecto</th>
+                            <th scope="col">Ingresar: </th>
+                            <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let involucrado of Involucrados; let iControl=index" class="">
+                            <td>{{ involucrado.id_involucrado}}</td> 
+                            <td>{{ involucrado.nombre}}</td> 
+                            <td>{{ involucrado.nombre_extraido}}</td> 
+                            <td>
+                                <button routerLink="intereses/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"><i class="fa-solid fa-thumbs-up"></i> Intereses</button>
+                                <button routerLink="problemas/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"> <i class="fa-solid fa-triangle-exclamation"></i>Problemas</button>
+                                <button routerLink="recursos/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"><i class="fa-solid fa-scale-balanced"></i> Recursos</button>
+                                
+                            <td>
+                                <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-eraser"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    
+    </body> 
+

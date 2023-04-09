@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<body> 
+    <div class="container-login100">
+        <div id="cabecera">
+            <form [formGroup]="formulariodelnombre" > 
+                <div id="cabecera1">
+                    <label id="label1">Matriz de involucrados. Se carga directamente la matriz creada.
+                    </label>
+                </div> 
+                <div id="cabecera2" >
+                    <label id="label1">Proyecto: </label>
+                </div>
+                <div id="cabecera4" > 
+                    <input formControlName="nombre_extraido" type="text" class="form-control" 
+                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                </div> 
+                <div id="cabecera5">
+                    <button (click) = "regresaraProyectos()" type="" class="btn btn-success">Regresar</button>
+                </div> 
+                <div id="cabecera3">
+                    <button (click)="downloadPDF()" type="" class="btn btn-success"><i class="fa-solid fa-download"></i> Descargar PDF</button>
+                </div>
+            </form>
+        </div>
+        <div id="cuerpo">
+            <div class="table-responsive">
+                        
+                <table class="table table-bordered" id="tablaprincipal">
+                    <thead>
+                        <tr>
+                            <th colspan="4" scope="col">Matriz de Involucrados</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Intereses</th>
+                            <th scope="col">Problemas</th>
+                            <th scope="col">Recursos</th>
+                        </tr> 
+                    </thead>
+                    <tbody>
+                        <tr >                            
+                            <td>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Interes</th>
+                                    </tr>
+                                    <tr  *ngFor="let elemento of InvolucradoIntereses; let iControl=index" class="">
+                                        <td>{{elemento.nombre}}</td>
+                                        <td>{{elemento.interes}}</td>
+                                    </tr>
+                                </table>
+                            </td> 
+                            <td>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Problema</th>
+                                    </tr>
+                                    <tr  *ngFor="let elemento of InvolucradoProblemas; let iControl=index" class="">
+                                        <td>{{elemento.nombre}}</td>
+                                        <td>{{elemento.problema}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Recurso</th>
+                                    </tr>
+                                    <tr  *ngFor="let elemento of InvolucradoRecursos; let iControl=index" class="">
+                                        <td>{{elemento.nombre}}</td>
+                                        <td>{{elemento.recurso}}</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody> 
+                </table>
+            </div>
+        </div> 
+    </div>    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

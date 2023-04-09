@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<body> 
+    <div class="container-login100">
+        <div id="cabecera">
+                <form ngNativeValidate [formGroup]="formulariodecrearproyecto" (ngSubmit)="enviarDatos1()"> 
+                    <div id="cabecera1"> 
+                        <label id="label1">Crear nuevo proyecto:</label>
+                    </div>
+                    <div id="cabecera2" >
+                    <input required formControlName="nombre_proyecto" type="text" class="form-control" 
+                        name="" id="texto1" aria-describedby="helpId" placeholder="Ingresa un nombre al proyecto">
+                    </div>
+                    <div id="cabecera4" > 
+                        <input formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="Usuario">
+                    </div>  
+                    <div id="cabecera3">
+                        <button type="submit" class="btn btn-outline-info"><i class="fa-solid fa-folder-open"></i> Crear Proyecto</button>
+                    </div>
+                </form>
+                <div id="cabecera3">
+                    <button (click) = "cerrarSesion()" type="" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesion</button>
+                </div>
+        </div> 
+        <div id="cuerpo">
+            
+                
+                    <div class="table-responsive">
+                         
+                        <table class="table table-primary" id="tabladecontenido" >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Proyectos</th>
+                                    <th scope="col">Matriz involucrados</th>
+                                    <th scope="col">Arbol de problemas </th>
+                                    <th scope="col">Arbol causa-efecto </th>
+                                    <th scope="col">Arbol de objetivos </th>
+                                    <th scope="col">Matriz Marco Logico </th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let proyecto of Proyectos; let iControl=index" class="" id="trdetabla">
+                                    <td><i class="fa-solid fa-gears"></i> {{ proyecto.nombre_proyecto}} -></td> 
+                                    <td>
+                                        <i class="fa-solid fa-users-line"></i>
+                                        <label>.</label>
+                                        <label>.</label>
+                                        <button routerLink="matrizinvolucrados/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">Crear</button>
+                                        <label>.</label>
+                                        <button routerLink="matrizinvolucradoscreada/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">Ver</button>
+                                    </td>
+                                    <td>
+                                        <i class="fa-solid fa-tree"></i>
+                                        <label>.</label>
+                                        <label>.</label>
+                                        <button routerLink="todoslosproblemas/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">Crear</button>
+                                    </td>
+                                    <td>
+                                        <i class="fa-solid fa-sitemap"></i>
+                                        <label>.</label>
+                                        <label>.</label>
+                                        <button routerLink="arbolcausaefecto/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 1</button>
+                                        <label>.</label>
+                                        <button routerLink="arbolcausaefecto2/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 2</button>
+                                        <label>.</label>
+                                        <button routerLink="arbolcausaefecto3/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 3</button>
+                                    </td> 
+                                    <td>
+                                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                                        <label>.</label>
+                                        <label>.</label>
+                                        <button routerLink="arboldeobjetivos/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 1</button>
+                                        <label>.</label>
+                                        <button routerLink="arboldeobjetivos2/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 2</button>
+                                        <label>.</label>
+                                        <button routerLink="arboldeobjetivos3/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">A-> 3</button>
+                                    </td>
+                                    <td> 
+                                        <i class="fa-sharp fa-solid fa-chart-simple"></i>
+                                        <label>.</label>
+                                        <label>.</label>
+                                        <button routerLink="matrizmarcologico/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">M-> 1</button>
+                                        <label>.</label>
+                                        <button routerLink="matrizmarcologico2/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">M-> 2</button>
+                                        <label>.</label>
+                                        <button routerLink="matrizmarcologico3/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">M-> 3</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+    </div>    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
