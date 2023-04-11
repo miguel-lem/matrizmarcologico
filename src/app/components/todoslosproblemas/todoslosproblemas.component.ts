@@ -31,7 +31,6 @@ export class TodoslosproblemasComponent {
     });
     this.formulariodeenvio = this.formulario.group({
       problema:[''],
-      id_problema:[''],
       nombre_extraido:['']
     });
     //para cargar el dato recibido por el id
@@ -63,7 +62,6 @@ export class TodoslosproblemasComponent {
         //le agrego los valores del problema  extraido al formulario
         this.formulariodeenvio.setValue({
           problema:respuesta[0]['problema'],
-          id_problema:respuesta[0]['id_problema'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });
         //los console.log son porqu debo ir probando si estan pasando los datos para sino buscar solucion
