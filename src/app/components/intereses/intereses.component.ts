@@ -12,11 +12,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./intereses.component.css']
 })
 export class InteresesComponent {
-  formulariointereses: FormGroup
+  formulariointereses: FormGroup;
+  formulariodeeliminar: FormGroup;
   elinvolucrado: any;
   elproyecto:any;
   Intereses:any;
   elcorreo:any;
+  captura:any;
   constructor (
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -33,6 +35,9 @@ export class InteresesComponent {
       interes: [''],
       nombre_extraido:[''],
       id_involucrad:['']
+    });
+    this.formulariodeeliminar = this.formulario.group({
+      intere: ['']
     });
 
     this.formulariointereses.patchValue({id_involucrad: this.elinvolucrado});
@@ -53,20 +58,39 @@ export class InteresesComponent {
     console.log('me presionaste'); 
     console.log(this.formulariointereses.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarIntereses(this.formulariointereses.value).subscribe();
+    this.coneccionServicio.agregarIntereses(this.formulariointereses.value).subscribe(
+      respuesta=>{
+        //recarga de la pagina pa poder notar el registro
+        location.reload();
+      }
+    );
     console.log("se paso del registro"); 
   }
 
   regresarInvolucrados(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizinvolucrados/'+this.elproyecto]);
   }
-  cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
-    if(window.confirm("Seguro desea cerrar sesion")){
-      this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
-      this.router.navigate(['home']);
+  eliminarInteres(interes: any): void{
+    this.captura=interes;
+    console.log("el protecto que se pretente eliminar es: ",interes);
+    this.formulariodeeliminar = this.formulario.group({
+      intere: [this.captura]
+    });
+    console.log("El contenido del formulario");
+    console.log(this.formulariodeeliminar.value);
+    if(window.confirm("Desea eliminar el interes, recuerde que se perdera la informacion")){
+      alert("Decidio eliminar el interes");
+      this.coneccionServicio.borrarinteres(this.formulariodeeliminar.value).subscribe(
+        respuesta=>{
+          location.reload();
+        }
+      );
+    }else{
+      alert("a cancelado la eliminacion del interes");
     }
+  }
+
+  editarintereses(interes:any):void{
     
   }
 

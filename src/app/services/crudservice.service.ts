@@ -47,6 +47,11 @@ export class CrudserviceService {
     return this.clienteHttp.get(this.API+"?verproyectos="+correorequerido);
   }
 
+  //funcion para eliminar un proyecto de la BD
+   borrarproyecto(nombreproyecto:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?borrarproyecto=",nombreproyecto);
+  }
+
   //funcion para pasarle los datos del nombre del involucrado
   agregarInvolucrado(datosInvolucrado:Involucrado):Observable<any>{
     return this.clienteHttp.post(this.API+"?insertarinvolucrado=1",datosInvolucrado);
@@ -55,6 +60,11 @@ export class CrudserviceService {
   //funcion para extraer los involucrados 
   extraerInvolucrados(proyectorequerido:Registro):Observable<any>{
     return this.clienteHttp.get(this.API+"?verinvolucrados="+proyectorequerido);
+  }
+
+  //funcion para eliminar un involucrado de la BD
+  borrarinvolucrado(numeroinvolucrado:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?borrarinvolucrada=",numeroinvolucrado);
   }
 
   //funcion para pasarle los datos de los intereses del involucrado
@@ -67,6 +77,11 @@ export class CrudserviceService {
     return this.clienteHttp.get(this.API+"?verintereses="+involucradorequerido);
   }
 
+  //funcion para eliminar un interes de la BD
+  borrarinteres(numerointeres:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?borrarinteres=",numerointeres);
+  }
+
   //funcion para pasarle los datos de los problemas del involucrado
   agregarProblemas(involucradorequerido:Involucrado):Observable<any>{
     return this.clienteHttp.post(this.API+"?insertarproblema=1",involucradorequerido);
@@ -77,6 +92,11 @@ export class CrudserviceService {
     return this.clienteHttp.get(this.API+"?verproblemas="+involucradorequerido);
   }
 
+  //funcion para eliminar un problema de la BD
+  borrarproblema(numeroproblema:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?borrarproblema=",numeroproblema);
+  }
+
   //funcion para pasarle los datos de los recursos del involucrado
   agregarRecursos(involucradorequerido:Involucrado):Observable<any>{
     return this.clienteHttp.post(this.API+"?insertarrecurso=1",involucradorequerido);
@@ -84,6 +104,11 @@ export class CrudserviceService {
   //funcion para extraer los recursos
   extraerRecursos(involucradorequerido:Registro):Observable<any>{
     return this.clienteHttp.get(this.API+"?verrecursos="+involucradorequerido);
+  }
+
+  //funcion para eliminar un recurso de la BD
+  borrarrecurso(numerorecurso:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?borrarrecurso=",numerorecurso);
   }
 
   //funcion para extraer todos los problemas de un proyecto

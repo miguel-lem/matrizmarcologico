@@ -4,10 +4,7 @@
     <div class="content">
         <div class="container">
             <img class="bg-img" src="assets/imagenes/bg.jpg" alt="">
-                <div class="menu">
-                    <button (click) = "cerrarSesion()" type="" class="btn btn-success">Cerrar sesion</button>
-                </div>
-                <form [formGroup]="formulariorecursos" (ngSubmit)="enviarDatos3()">
+                <form [formGroup]="formulariorecursos">
                     <div> 
                         <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
@@ -19,10 +16,10 @@
                     <div class="connexion">
                         <div class="contact-form">
                             <label>Recurso</label>
-                            <input formControlName="recurso" placeholder="" type="text">
+                            <input formControlName="recurso" placeholder="" type="text" autocomplete="off">
                             
                             <label>.</label>
-                            <input class="submit" value="Guardar" type="submit">
+                            <input (click) = "enviarDatos3()" class="submit" value="Guardar" >
     
                             <label>.</label>
                             
@@ -41,6 +38,8 @@
                             <th scope="col">Recurso</th>
                             <th scope="col">Involucrado</th>
                             <th scope="col">Proyecto</th>
+                            <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
+                            <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,6 +48,12 @@
                             <td>{{ recurso.recurso}}</td> 
                             <td>{{ recurso.id_involucra}}</td> 
                             <td>{{ recurso.nombre_extraido}}</td> 
+                            <td>
+                                <button (click) = "eliminarRecurso(recurso.id_recurso)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
+                            </td> 
+                            <td>
+                                <button (click) = "editarrecurso( recurso.id_recurso)" type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i></button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

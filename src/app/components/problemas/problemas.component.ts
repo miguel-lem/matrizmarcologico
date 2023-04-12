@@ -12,10 +12,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProblemasComponent {
   formularioproblemas: FormGroup;
+  formulariodeeliminar: FormGroup;
   elproyecto:any;
   Problemas:any;
   elinvolucrado: any;
   elcorreo:any;
+  captura:any;
   constructor(
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -31,6 +33,9 @@ export class ProblemasComponent {
       problema: [''],
       nombre_extraido:[''],
       id_involucrado:['']
+    });
+    this.formulariodeeliminar = this.formulario.group({
+      problem: ['']
     });
     //para cargar el dato recibido por el id
       //y pasarlo al input de correo que en si es el usuario
@@ -53,22 +58,40 @@ export class ProblemasComponent {
     console.log('me presionaste'); 
     console.log(this.formularioproblemas.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarProblemas(this.formularioproblemas.value).subscribe();
+    this.coneccionServicio.agregarProblemas(this.formularioproblemas.value).subscribe(
+      respuesta=>{
+        //recarga de la pagina pa poder notar el registro
+        location.reload();
+      }
+    );
     console.log("se paso del registro"); 
   }
 
   regresarInvolucrados(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizinvolucrados/'+this.elproyecto]);
   }
-
-  cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
-    if(window.confirm("Seguro desea cerrar sesion")){
-      this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
-      this.router.navigate(['home']);
+  eliminarProblema(problema: any): void{ 
+    this.captura=problema;
+    console.log("el protecto que se pretente eliminar es: ",problema);
+    this.formulariodeeliminar = this.formulario.group({
+      problem: [this.captura]
+    });
+    console.log("El contenido del formulario");
+    console.log(this.formulariodeeliminar.value);
+    if(window.confirm("Desea eliminar el problema, recuerde que se perdera la informacion")){
+      alert("Decidio eliminar el problema");
+      this.coneccionServicio.borrarproblema(this.formulariodeeliminar.value).subscribe(
+        respuesta=>{
+          location.reload();
+        }
+      );
+    }else{
+      alert("a cancelado la eliminacion del problema");
     }
-    
+  }
+
+  editarproblema( problema: any): void {
+
   }
 
 }

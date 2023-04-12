@@ -40,7 +40,18 @@ export class RegisterComponent {
     //console.log('me presionaste');
     //console.log(this.formularioderegistro.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarRegistro(this.formularioderegistro.value).subscribe();
+    this.coneccionServicio.agregarRegistro(this.formularioderegistro.value).subscribe(
+      respuesta=>{
+        //le paso de nuevo el formulario para que se retorne a vacio los campos luego de registrar el usuario
+        this.formularioderegistro = this.formulario.group({
+          correo: [''],
+          nombre_usuario:[''],
+          contrasenia:['']
+        });
+        alert("Si ya registro el usuario dirijase a iniciar sesion e ingrese con el correo y contraseña");
+      }
+    );
+    
     //console.log("se paso del registro");
     //this.router.navigate(['/proyectos/'+this.variablecorreo]);
   } 

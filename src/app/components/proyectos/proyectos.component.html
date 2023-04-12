@@ -6,12 +6,12 @@
 <body> 
     <div class="container-login100">
         <div id="cabecera">
-                <form ngNativeValidate [formGroup]="formulariodecrearproyecto" (ngSubmit)="enviarDatos1()"> 
+                <form ngNativeValidate [formGroup]="formulariodecrearproyecto" > 
                     <div id="cabecera1"> 
                         <label id="label1">Crear nuevo proyecto:</label>
                     </div>
                     <div id="cabecera2" >
-                    <input required formControlName="nombre_proyecto" type="text" class="form-control" 
+                    <input required formControlName="nombre_proyecto" type="text" class="form-control" autocomplete="off"
                         name="" id="texto1" aria-describedby="helpId" placeholder="Ingresa un nombre al proyecto">
                     </div>
                     <div id="cabecera4" > 
@@ -19,7 +19,7 @@
                             name="" id="texto1" aria-describedby="helpId" placeholder="Usuario">
                     </div>  
                     <div id="cabecera3">
-                        <button type="submit" class="btn btn-outline-info"><i class="fa-solid fa-folder-open"></i> Crear Proyecto</button>
+                        <button (click) = "enviarDatos1()" type="" class="btn btn-outline-info">.<i class="fa-solid fa-folder-open"></i> Crear Proyecto</button>
                     </div>
                 </form>
                 <div id="cabecera3">
@@ -40,6 +40,7 @@
                                     <th scope="col">Arbol causa-efecto </th>
                                     <th scope="col">Arbol de objetivos </th>
                                     <th scope="col">Matriz Marco Logico </th>
+                                    <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
                                 </tr> 
                             </thead>
                             <tbody>
@@ -88,6 +89,9 @@
                                         <button routerLink="matrizmarcologico2/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">M-> 2</button>
                                         <label>.</label>
                                         <button routerLink="matrizmarcologico3/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">M-> 3</button>
+                                    </td>
+                                    <td>
+                                        <button (click) = "eliminarProyecto(proyecto.nombre_proyecto)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

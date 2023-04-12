@@ -10,11 +10,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./recursos.component.css']
 })
 export class RecursosComponent {
-  formulariorecursos: FormGroup
+  formulariorecursos: FormGroup;
+  formulariodeeliminar: FormGroup;
   elinvolucrado: any;
   elproyecto:any;
   Recursos:any;
   elcorreo:any;
+  captura:any;
   constructor(
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -32,6 +34,9 @@ export class RecursosComponent {
       recurso: [''],
       id_involucra:[''],
       nombre_extraido:['']
+    });
+    this.formulariodeeliminar = this.formulario.group({
+      recurso: ['']
     });
     this.formulariorecursos.patchValue({id_involucra: this.elinvolucrado});
     this.formulariorecursos.patchValue({nombre_extraido: this.elproyecto});
@@ -53,7 +58,12 @@ export class RecursosComponent {
     console.log('me presionaste'); 
     console.log(this.formulariorecursos.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarRecursos(this.formulariorecursos.value).subscribe();
+    this.coneccionServicio.agregarRecursos(this.formulariorecursos.value).subscribe(
+      respuesta=>{
+        //recarga de la pagina pa poder notar el registro
+        location.reload();
+      }
+    );
     console.log("se paso del registro"); 
   }
 
@@ -72,5 +82,28 @@ export class RecursosComponent {
     
   }
 
+  eliminarRecurso(recurso: any): void{
+    this.captura=recurso;
+    console.log("el protecto que se pretente eliminar es: ",recurso);
+    this.formulariodeeliminar = this.formulario.group({
+      recurso: [this.captura]
+    });
+    console.log("El contenido del formulario");
+    console.log(this.formulariodeeliminar.value);
+    if(window.confirm("Desea eliminar el recurso, recuerde que se perdera la informacion")){
+      alert("Decidio eliminar el recurso");
+      this.coneccionServicio.borrarrecurso(this.formulariodeeliminar.value).subscribe(
+        respuesta=>{
+          location.reload();
+        }
+      );
+    }else{
+      alert("a cancelado la eliminacion del recurso");
+    }
+  }
+
+  editarrecurso( recurso: any): void {
+    
+  }
 }
 

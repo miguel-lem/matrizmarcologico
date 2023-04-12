@@ -11,11 +11,13 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./matrizinvolucrados.component.css']
 })
 export class MatrizinvolucradosComponent {
-  formularioinvolucrados1: FormGroup
+  formularioinvolucrados1: FormGroup;
+  formulariodeeliminar: FormGroup;
   elproyecto: any;
   elcorreo:any;
   elinvolucrado: any;
   Involucrados:any;
+  captura:any;
   constructor(
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -32,6 +34,9 @@ export class MatrizinvolucradosComponent {
       nombre: [''],
       nombre_extraido:[''],
       correo_primario:['']
+    });
+    this.formulariodeeliminar = this.formulario.group({
+      involucra: ['']
     });
 
     //para cargar el dato recibido por el id
@@ -55,7 +60,12 @@ export class MatrizinvolucradosComponent {
     console.log('me presionaste'); 
     console.log(this.formularioinvolucrados1.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarInvolucrado(this.formularioinvolucrados1.value).subscribe();
+    this.coneccionServicio.agregarInvolucrado(this.formularioinvolucrados1.value).subscribe(
+      respuesta=>{
+        //recarga de la pagina pa poder notar el registro
+        location.reload();
+      }
+    );
     console.log("se paso del registro"); 
   }
   obtenerInvolucrado(valorobtenido:string){
@@ -67,13 +77,27 @@ export class MatrizinvolucradosComponent {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
 
-  cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
-    if(window.confirm("Seguro desea cerrar sesion")){
-      this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
-      this.router.navigate(['home']);
+  eliminarInvolucrado(involucrado:any): void{
+    this.captura=involucrado;
+    console.log("el protecto que se pretente eliminar es: ",involucrado);
+    this.formulariodeeliminar = this.formulario.group({
+      involucra: [this.captura]
+    });
+    console.log("El contenido del formulario");
+    console.log(this.formulariodeeliminar.value);
+    if(window.confirm("Desea eliminar el involucrado, recuerde que se perdera la informacion de: intereses, problemas y recursos del involucrado seleccionado")){
+      alert("Decidio eliminar el involucrado");
+      this.coneccionServicio.borrarinvolucrado(this.formulariodeeliminar.value).subscribe(
+        respuesta=>{
+          location.reload();
+        }
+      );
+    }else{
+      alert("a cancelado la eliminacion del involucrado");
     }
+  }
+
+  editarinvolucrado(involucrado:any): void{
     
   }
 

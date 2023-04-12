@@ -4,10 +4,7 @@
     <div class="content">
         <div class="container">
             <img class="bg-img" src="assets/imagenes/bg.jpg" alt="">
-                <div class="menu">
-                    <button (click) = "cerrarSesion()" type="" class="btn btn-success">Cerrar sesion</button>
-                </div>
-                <form ngNativeValidate [formGroup]="formulariointereses" (ngSubmit)="enviarDatos2()" >
+                <form ngNativeValidate [formGroup]="formulariointereses">
                     <div> 
                         <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
@@ -19,10 +16,10 @@
                     <div class="connexion">
                         <div class="contact-form">
                             <label>Interes</label>
-                            <input required formControlName="interes" placeholder="" type="text">
+                            <input required formControlName="interes" placeholder="" type="text" autocomplete="off">
                             
                             <label>.</label>
-                            <input class="submit" value="Guardar" type="submit">
+                            <input (click) = "enviarDatos2()" class="submit" value="Guardar">
                             
                             <label>.</label>
                             
@@ -42,6 +39,8 @@
                             <th scope="col">Interes</th>
                             <th scope="col">Id involucrado</th>
                             <th scope="col">Proyecto</th>
+                            <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
+                            <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,6 +49,12 @@
                             <td>{{ interes.interes}}</td> 
                             <td>{{ interes.id_involucrad}}</td>
                             <td>{{ interes.nombre_extraido}}</td>  
+                            <td>
+                                <button (click) = "eliminarInteres(interes.id_interes)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
+                            </td>
+                            <td>
+                                <button (click) = "editarintereses(interes.id_interes)" type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i></button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

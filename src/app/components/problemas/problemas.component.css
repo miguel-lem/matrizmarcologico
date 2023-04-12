@@ -115,7 +115,7 @@ body {
       margin: auto;
       padding: 13px;
       border: 0;
-      border-radius: 20px;
+      border-radius: 10px;
       font-family: "Roboto",sans-serif;
       /*la opacidad de aqui la utilizo para bloquear visualmente a los otros input*/
       opacity: 6;

@@ -4,10 +4,7 @@
     <div class="content">
         <div class="container">
             <img class="bg-img" src="assets/imagenes/bg.jpg" alt="">
-                <div class="menu">
-                    <button (click) = "cerrarSesion()" type="" class="btn btn-danger">Cerrar sesion</button>
-                </div>
-                <form ngNativeValidate [formGroup]="formularioinvolucrados1" (ngSubmit)="enviarDatos1()">
+                <form ngNativeValidate [formGroup]="formularioinvolucrados1">
                     <div> 
                         <input  formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
@@ -15,12 +12,12 @@
                             name="" id="texto1" aria-describedby="helpId" placeholder="Correo">
                     </div>
                     <div class="connexion">
-                        <div class="contact-form">
+                        <div class="contact-form"> 
                             <label>Involucrado</label>
-                            <input required #involucrado formControlName="nombre" placeholder="" type="text">
+                            <input required id="involucra" formControlName="nombre" placeholder="" type="text" autocomplete="off">
                             <label>.</label>
                         </div>
-                        <input class="submit" value="Agregar involucrado" type="submit"> 
+                        <input (click) = "enviarDatos1()" class="submit" value="Agregar involucrado"> 
                         <label>.</label> 
                         <input (click) = "regresarProyectos()" class="submit" value="Regresar a Proyectos" >                  
                     </div> 
@@ -38,6 +35,7 @@
                             <th scope="col">Proyecto</th>
                             <th scope="col">Ingresar: </th>
                             <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
+                            <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,7 +49,10 @@
                                 <button routerLink="recursos/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"><i class="fa-solid fa-scale-balanced"></i> Recursos</button>
                                 
                             <td>
-                                <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-eraser"></i></button>
+                                <button (click) = "eliminarInvolucrado(involucrado.id_involucrado)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
+                            </td>
+                            <td>
+                                <button (click) = "editarinvolucrado(involucrado.id_involucrado)" type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i></button>
                             </td>
                         </tr>
                     </tbody>
