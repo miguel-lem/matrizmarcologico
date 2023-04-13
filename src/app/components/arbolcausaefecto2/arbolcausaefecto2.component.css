@@ -12,6 +12,8 @@
       display: -moz-box;
       display: -ms-flexbox;
       flex-wrap: wrap;
+      display: grid;
+      grid-template-rows: auto,auto;
       padding: 10px;
       background: #9053c7;
       background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -23,10 +25,12 @@
         width: 100%;
         height: 50px;
         min-width: 400px;
+        display: grid;
+        grid-template-columns: auto, auto, auto, auto;
   }
   div#cabecera1{
     float: left;
-    width: 750px;
+    width: 450px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -49,6 +53,15 @@
     justify-content: center;
     opacity: .7;
   }
+  div#cabecera33{
+    float: left;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+  }
   div#cabecera4{
     float: left;
     width: 200px;
@@ -58,7 +71,7 @@
     justify-content: center;
     opacity: .1;
   }
-  input#texto1{
+  input#texto11{
     width: 100%;
   }
   div#cuerpotabla1{
@@ -72,80 +85,30 @@
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 60%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    width: 100%;
     height: 680px;
   }
-  div#cuerpo1{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+ 
   div#cuerpo11{
     border-width: 1px;
     border-radius: 5px;
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center; 
   }
-  div#cuerpo2{
-    margin-top: 5px;
+  #texto1{
     width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100px;
+    resize: none;
+    overflow: hidden;
+    word-wrap: break-word;
   }
-
-  div#cuerpo3{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo4{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo41{
-    width: 33.33%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo42{
-    width: 33.33%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo43{
-    width: 33.34%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo5{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  
  
   div#cuerpo111{
     border-width: 1px;
@@ -188,14 +151,6 @@
     height: 40px;
     border-width: 1px;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo6{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
