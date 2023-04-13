@@ -17,6 +17,7 @@ export class RecursosComponent {
   Recursos:any;
   elcorreo:any;
   captura:any;
+  id_llave:any;
   constructor(
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -31,6 +32,7 @@ export class RecursosComponent {
     console.log("valor obtenido",this.elinvolucrado);
 
     this.formulariorecursos = this.formulario.group({
+      id_recurso:[''],
       recurso: [''],
       id_involucra:[''],
       nombre_extraido:['']
@@ -55,16 +57,29 @@ export class RecursosComponent {
 
   }
   enviarDatos3(): any{
-    console.log('me presionaste'); 
-    console.log(this.formulariorecursos.value);
-    //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarRecursos(this.formulariorecursos.value).subscribe(
-      respuesta=>{
-        //recarga de la pagina pa poder notar el registro
-        location.reload();
-      }
-    );
-    console.log("se paso del registro"); 
+    if(this.id_llave==undefined){
+      console.log('me presionaste'); 
+      console.log(this.formulariorecursos.value);
+      //pasamos el dato mediante la funcion creada de lado del servicio
+      this.coneccionServicio.agregarRecursos(this.formulariorecursos.value).subscribe(
+        respuesta=>{
+          //recarga de la pagina pa poder notar el registro
+          location.reload();
+        }
+      );
+      console.log("se paso del registro"); 
+    }else{
+      console.log("El numero es mayor que cero");
+      console.log(this.formulariorecursos.value);
+      //pasamos el dato mediante la funcion creada de lado del servicio pero ya editado
+      this.coneccionServicio.actualizarRecurso(this.formulariorecursos.value).subscribe(
+        respuesta=>{
+          //recarga de la pagina pa poder notar el registro
+          location.reload();
+        }
+      );
+    }
+    
   }
 
   //funcion para poder regresar a la parte donde esta el involucrado
@@ -103,7 +118,16 @@ export class RecursosComponent {
   }
 
   editarrecurso( recurso: any): void {
-    
+    this.id_llave=recurso;
+    //extraigo el recurso que selecciono
+    this.coneccionServicio.extraerRecursounico(recurso).subscribe(
+      respuesta=>{
+        this.formulariorecursos = this.formulario.group({
+          id_recurso:respuesta[0]['id_recurso'],
+          recurso:respuesta[0]['recurso']
+        });
+      }
+    );
   }
 }
 

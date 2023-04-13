@@ -18,6 +18,7 @@ export class ProblemasComponent {
   elinvolucrado: any;
   elcorreo:any;
   captura:any;
+  id_llave:any;
   constructor(
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
@@ -30,6 +31,7 @@ export class ProblemasComponent {
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
     this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
     this.formularioproblemas = this.formulario.group({
+      id_problema:[''],
       problema: [''],
       nombre_extraido:[''],
       id_involucrado:['']
@@ -55,16 +57,28 @@ export class ProblemasComponent {
 
   }
   enviarDatos3(): any{
-    console.log('me presionaste'); 
-    console.log(this.formularioproblemas.value);
-    //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarProblemas(this.formularioproblemas.value).subscribe(
-      respuesta=>{
-        //recarga de la pagina pa poder notar el registro
-        location.reload();
-      }
-    );
-    console.log("se paso del registro"); 
+    if(this.id_llave==undefined){
+      console.log('me presionaste'); 
+      console.log(this.formularioproblemas.value);
+      //pasamos el dato mediante la funcion creada de lado del servicio
+      this.coneccionServicio.agregarProblemas(this.formularioproblemas.value).subscribe(
+        respuesta=>{
+          //recarga de la pagina pa poder notar el registro
+          location.reload();
+        }
+      );
+      console.log("se paso del registro");
+    }else{
+      console.log("La llave es mayor que cero");
+      //pasamos el dato mediante la funcion creada de lado del servicio, estos son lo de editado
+      this.coneccionServicio.actualizarproblema(this.formularioproblemas.value).subscribe(
+        respuesta=>{
+          //recarga de la pagina pa poder notar el registro
+          location.reload();
+        }
+      );
+    }
+     
   }
 
   regresarInvolucrados(): void{
@@ -91,6 +105,16 @@ export class ProblemasComponent {
   }
 
   editarproblema( problema: any): void {
+    //esta variable ya le comente el por que en la parte de involucrado
+    this.id_llave=problema;
+    //extraccion de un problema en especifico
+    this.coneccionServicio.extraerProblemaunico(problema).subscribe(respuesta=>{
+      //le paso los parametros al formulario para poder editarlo
+      this.formularioproblemas = this.formulario.group({
+        id_problema:respuesta[0]['id_problema'],
+        problema: respuesta[0]['problema']
+      });
+    });
 
   }
 
