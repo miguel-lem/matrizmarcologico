@@ -76,7 +76,11 @@ export class ProyectosComponent {
     //console.log("El correo que se enviara a cerrar sesion es: ");
     //console.log(this.elcorreo);
     if(window.confirm("Seguro desea cerrar sesion")){
-      this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
+      this.coneccionServicio.agregarFin(this.elcorreo).subscribe(
+        respuesta=>{
+          location.reload();
+        }
+      );
       this.router.navigate(['home']);
     }
   }
