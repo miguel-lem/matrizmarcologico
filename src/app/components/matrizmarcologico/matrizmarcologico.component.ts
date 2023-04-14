@@ -49,14 +49,17 @@ export class MatrizmarcologicoComponent {
   Actividad3tabla:any;
   Actividad4tabla:any;
   Actividad5tabla:any;
+  elcorreo:any;
   constructor (
     //el ofrmbuilder sirve para la recoleccion de los datos
     public formulario:FormBuilder,
     //para poder trabajr con el servicio le debemos agregar al constructor
     private coneccionServicio:CrudserviceService,
     private activeRoute:ActivatedRoute,
+    private router: Router
   ){
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
+    this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
     this.formulariodelnombre = this.formulario.group({
       nombre_extraido:['']
     });
@@ -494,5 +497,8 @@ export class MatrizmarcologicoComponent {
     this.coneccionServicio.agregarMatrizMarco(this.formularioactividad5.value).subscribe();
   }
 
+  regresarProyectos(): void {
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
+  }
 }
 

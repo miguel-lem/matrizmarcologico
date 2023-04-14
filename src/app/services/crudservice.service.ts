@@ -206,6 +206,11 @@ editarCausasyEfectos(causasyefectoeleccionada:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?editarcausasyefectos=",causasyefectoeleccionada);
 }
 
+//funcion para eliminar las causas y efectos creados
+eliminarcausasyefectos(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarcausaefecto=",nombreproyecto);
+}
+
 //funcion para pasarle los datos del arbol creado a la tabla de causas y efectos del segundo diseño 
 agregarCausasyEfectos2(problemaseleccionado:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararcausasefectos2=1",problemaseleccionado);
@@ -249,6 +254,12 @@ filtrarFinesyPropositos(descripcionrequerida:any, nombre: any):Observable<any>{
 editarFinesyPropositos(finypropositoseleccionado:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?editarfinproposito=",finypropositoseleccionado);
 }
+
+//funcion para eliminar los fines y propositos creados
+eliminarFinesyPropositos(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarfinproposito=",nombreproyecto);
+}
+
 //funcion para pasarle los datos del arbol creado a la tabla de causas y efectos a los fines y propositos 2
 agregarFinesyPropositos2(elementoseleccionado:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararfinproposito2=1",elementoseleccionado);
@@ -289,6 +300,12 @@ agregarMatrizMarco(elementoseleccionados:Involucrado):Observable<any>{
 filtrarlamatrizmarcoparverlocreado(nombreproyecto:Registro):Observable<any>{
   return this.clienteHttp.get(this.API+"?seleccionarmatrizmarco="+nombreproyecto); 
 }
+
+//funcion para eliminar la matriz de marco logico creada
+eliminarMatrizmarco(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarmatrizmarco=",nombreproyecto);
+}
+
 //funcion para pasarle los datos de la tabla a la matriz de marco logico 
 agregarMatrizMarco2(elementoseleccionados:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararmatrizmarco2=1",elementoseleccionados);

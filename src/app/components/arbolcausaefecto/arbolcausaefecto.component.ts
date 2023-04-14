@@ -372,51 +372,20 @@ export class ArbolcausaefectoComponent {
     });
   }
 
-  /*
-  capturaraPDF(){
-     const $contenedor = document.querySelector("#hijo")
-    html2canvas(document.querySelector('#cuerpo')).then((canvas) => {
-      $contenedor.appendChild(canvas);
-    })
-  }*/
-
-  /*
-  const generatePDF = (characterData, preview) => {
-    const doc = new jsPDF();
-    doc.setFontSize(40);
-    doc.setFont("helvetica", "bold");
-    doc.text(characterData.name, 60, 30);
-    doc.setFont("helvetica", "normal");
-    doc.text(characterData.surname, 60, 42);
-    doc.addImage(characterData.type.image, "PNG", 5, 0, 50, 50);
-    doc.setFontSize(20);
-    const docWidth = doc.internal.pageSize.getWidth();
-    const docHeight = doc.internal.pageSize.getHeight();
-    doc.line(0, 60, docWidth, 60);
-    doc.setFont("helvetica", "italic");
-    const splitDescription = doc.splitTextToSize(
-      characterData.description,
-      docWidth - 20
-    );
-    doc.text(splitDescription, 10, 80);
-    doc.setFontSize(20);
-    doc.setFont("helvetica", "bold");
-    doc.text(characterData.type.name, docWidth - 20, 45, { align: "right" });
-    doc.line(0, docHeight - 60, docWidth, docHeight - 60);
-    doc.text(`Fuerza: `, 10, docHeight - 40);
-    doc.text(`Magia: `, 10, docHeight - 30);
-    doc.text(`Velocidad: `, 10, docHeight - 20);
-    doc.setFont("helvetica", "normal");
-    doc.text(`${characterData.strength}`, 50, docHeight - 40);
-    doc.text(`${characterData.magic}`, 50, docHeight - 30);
-    doc.text(`${characterData.velocity}`, 50, docHeight - 20);
-    if (preview) {
-      frame.src = doc.output("bloburl");
-      return;
+  eliminarArbol():void{
+    if(window.confirm("En verdad desea eliminar el arbol causa efecto que a creado ¿?")){
+      alert("Decidio eliminar el arbol");
+      console.log("la informacion que le voy  pasar");
+      console.log(this.formulariodelnombre.value);
+      this.coneccionServicio.eliminarcausasyefectos(this.formulariodelnombre.value).subscribe(respuesta=>{
+        //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
+        location.reload();
+      });
+    }else{
+      alert("A cancelado la eliminación del arbol")
     }
-    doc.save(`${characterData.name}-${characterData.surname}`);
-  };
-  */
+
+  }
   
 
 }

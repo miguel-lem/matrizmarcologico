@@ -13,6 +13,7 @@ export class MatrizmarcologicocreadaComponent {
   formulariodelnombre: FormGroup;
   elproyecto:any;
   Elementos:any;
+  elcorreo:any;
 
   constructor (
     //el ofrmbuilder sirve para la recoleccion de los datos
@@ -20,8 +21,10 @@ export class MatrizmarcologicocreadaComponent {
     //para poder trabajr con el servicio le debemos agregar al constructor
     private coneccionServicio:CrudserviceService,
     private activeRoute:ActivatedRoute,
+    private router: Router
   ){
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
+    this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
     this.formulariodelnombre = this.formulario.group({
       nombre_extraido:['']
     });
@@ -38,6 +41,30 @@ export class MatrizmarcologicocreadaComponent {
   }
   prepararDatos(datos: string) {
     
+  }
+
+  regresarUnpoco(): void {
+    //this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico/'+this.elproyecto]);
+  }
+
+  eliminarMatriz(): void{
+    if(window.confirm("En verdad desea eliminar la matriz creada que a creado ¿?")){
+      alert("Decidio eliminar la matriz");
+      console.log("la informacion que le voy  pasar");
+      console.log(this.formulariodelnombre.value);
+      this.coneccionServicio.eliminarMatrizmarco(this.formulariodelnombre.value).subscribe(respuesta=>{
+        //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
+        location.reload();
+      });
+    }else{
+      alert("A cancelado la eliminación del arbol")
+    }
+
+  }
+
+  descargaPdf(): void {
+
   }
 
 }

@@ -40,7 +40,7 @@
   }
   div#cabecera3{
     float: left;
-    width: 150px;
+    width: 140px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
   }
   div#cabecera5{
     float: left;
-    width: 300px;
+    width: 180px;
     height: 50px;
     display: flex;
     align-items: center;

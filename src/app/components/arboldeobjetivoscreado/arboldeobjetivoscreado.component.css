@@ -34,7 +34,7 @@
   }
   div#cabecera2{
     float: left;
-    width: 150px;
+    width: 100px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
   }
   div#cabecera3{
     float: left;
-    width: 150px;
+    width: 100px;
     height: 50px;
     display: flex;
     align-items: center;
