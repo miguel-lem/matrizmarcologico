@@ -15,8 +15,11 @@
                 </div>
                 <div id="cabecera4" >
                     <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
-                        name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                        name="" id="texto11" aria-describedby="helpId" placeholder="Proyecto">
                 </div> 
+                <div id="cabecera33">
+                    <button (click) = "editararbolfinesproposito()" class="btn btn-success">Guardar edicion de arbol objetivos</button>
+                </div>
                 <div id="cabecera3">
                     <button (click) = "regresarUnpoco()" type="" class="btn btn-success">Regresar</button>
                 </div>
@@ -25,131 +28,168 @@
         </div>
         
         <div id="cuerpo">
-            <div id="cuerpo1">
-                <form [formGroup]="formulariofin">
-                    <div id="cuerpo11">
-                        <input formControlName="a" type="text" class="form-control" 
-                            name="" id="texto1" aria-describedby="helpId" placeholder="1:Fin">
-                    </div>
-                </form> 
-            </div>          
-           
-            <div id="cuerpo3">
-                <form [formGroup]="formularioproposito">
-                    <div id="cuerpo11">
-                        <input formControlName="a" type="text" class="form-control" 
-                            name="" id="texto1" aria-describedby="helpId" placeholder="2:Proposito">
-                    </div>
-                </form>
-            </div>
-            <div id="cuerpo4">
-                <div id="cuerpo41">
-                    <form [formGroup]="formulariocomponente1">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="3:Componente1">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formulariocomponente2">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="4:Componente2">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formulariocomponente3">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="5:Componente3">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo44">
-                    <form [formGroup]="formulariocomponente4">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="6:Componente4">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="cuerpo2">
-                <div id="cuerpo41">
-                    <form [formGroup]="formularioactividad1">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="7:Actividad1">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formularioactividad2">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="8:Actividad2">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formularioactividad3">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="9:Actividad3">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo44">
-                    <form [formGroup]="formularioactividad4">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="10:Actividad4">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="cuerpo5">
-                <div id="cuerpo41">
-                    <form [formGroup]="formularioactividad5">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="11:Actividad5">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formularioactividad6">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="12:Actividad6">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formularioactividad7">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="13:Actividad7">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo44">
-                    <form [formGroup]="formularioactividad8">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" 
-                                name="" id="texto1" aria-describedby="helpId" placeholder="14:Actividad8">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            
-            <div id="cuerpo6">
-                    <div id="cabecera3">
-                        <button (click) = "editararbolfinesproposito()" class="btn btn-success">Guardar edicion de arbol objetivos</button>
-                    </div>
-            </div>            
+            <div class="table-responsive">
+                <table class="table" id="tabladecontenido" >
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <form [formGroup]="formulariofin">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="1:Fin">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <form [formGroup]="formularioproposito">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="2:Proposito">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form [formGroup]="formulariocomponente1">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="3:Componente1">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente2">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="4:Componente2">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente3">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="5:Componente3">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formulariocomponente4">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="6:Componente4">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form [formGroup]="formularioactividad1">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="7:Actividad1">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad2">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="8:Actividad2">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad3">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="9:Actividad3">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad4">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="10:Actividad4">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <form [formGroup]="formularioactividad5">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="11:Actividad5">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad6">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="12:Actividad6">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad7">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="13:Actividad7">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                            <td>
+                                <form [formGroup]="formularioactividad8">
+                                    <div id="cuerpo11">
+                                        <textarea formControlName="a" type="text" class="form-control" 
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="14:Actividad8">
+
+                                        </textarea>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>      
         </div> 
     </div>    
 </body>

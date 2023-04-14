@@ -13,6 +13,8 @@
       display: -ms-flexbox;
       flex-wrap: wrap;
       padding: 10px;
+      display: grid;
+      grid-template-rows: auto, auto;
       background: #9053c7;
       background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
       background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -47,7 +49,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .7;
+    opacity: .9;
+  }
+  div#cabecera33{
+    float: left;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .9;
   }
   div#cabecera5{
     float: left;
@@ -56,7 +67,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .7;
+    opacity: .9;
   }
   div#cabecera4{
     float: left;
@@ -65,9 +76,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .1;
+    opacity: .9;
   }
-  input#texto1{
+  input#texto11{
     width: 100%;
   }
   div#cuerpotabla1{
@@ -81,8 +92,14 @@
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 60%;
+    width: 100%;
     height: 680px;
+    background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), 
+    url("/assets/imagenes/Slide5.jpg") top center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
   }
   div#cuerpo1{
     margin-top: 5px;
@@ -95,66 +112,19 @@
   div#cuerpo11{
     border-width: 1px;
     border-radius: 5px;
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center; 
   }
-  div#cuerpo2{
-    margin-top: 5px;
+  #texto1{
     width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100px;
+    resize: none; 
+    word-wrap: break-word;
   }
-
-  div#cuerpo3{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo4{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo41{
-    width: 33.33%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo42{
-    width: 33.33%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo43{
-    width: 33.34%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo5{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+ 
  
   div#cuerpo111{
     border-width: 1px;
