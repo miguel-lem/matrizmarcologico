@@ -209,4 +209,14 @@
   #label1{
     color: wheat;
   }
+  div#cuerpo7{
+    margin-top: 5px;
+    width: 50%;
+    height: 200px;
+    background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), 
+    url("/assets/imagenes/Slide3.jpg") top center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+  }
   
