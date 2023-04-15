@@ -325,6 +325,16 @@ eliminarMatrizmarco(nombreproyecto:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?eliminarmatrizmarco=",nombreproyecto);
 }
 
+//funcion para extraer un elemento de la matriz de marco logico uno
+extraerUnelementomatriz(idmatriz:Registro):Observable<any>{
+  return this.clienteHttp.get(this.API+"?verunelementomatriz="+idmatriz);
+}
+
+//funcion para pasarle los datos editados a la matriz de marco logico 
+editarMatrizmarco(elementoseleccionado:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?editarelementomatriz=",elementoseleccionado);
+}
+
 //funcion para pasarle los datos de la tabla a la matriz de marco logico 
 agregarMatrizMarco2(elementoseleccionados:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararmatrizmarco2=1",elementoseleccionados);
@@ -340,6 +350,16 @@ eliminarMatrizmarco2(nombreproyecto:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?eliminarmatrizmarco2=",nombreproyecto);
 }
 
+//funcion para extraer un elemento de la matriz de marco logico uno
+extraerUnelementomatriz2(idmatriz:Registro):Observable<any>{
+  return this.clienteHttp.get(this.API+"?verunelementomatriz2="+idmatriz);
+}
+
+//funcion para pasarle los datos editados a la matriz de marco logico 
+editarMatrizmarco2(elementoseleccionado:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?editarelementomatriz2=",elementoseleccionado);
+}
+
 //funcion para pasarle los datos de la tabla a la matriz de marco logico 
 agregarMatrizMarco3(elementoseleccionados:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararmatrizmarco3=1",elementoseleccionados);
@@ -353,5 +373,15 @@ filtrarlamatrizmarcoparverlocreado3(nombreproyecto:Registro):Observable<any>{
 //funcion para eliminar la matriz de marco logico creada
 eliminarMatrizmarco3(nombreproyecto:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?eliminarmatrizmarco3=",nombreproyecto);
+}
+
+//funcion para extraer un elemento de la matriz de marco logico uno
+extraerUnelementomatriz3(idmatriz:Registro):Observable<any>{
+  return this.clienteHttp.get(this.API+"?verunelementomatriz3="+idmatriz);
+}
+
+//funcion para pasarle los datos editados a la matriz de marco logico 
+editarMatrizmarco3(elementoseleccionado:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?editarelementomatriz3=",elementoseleccionado);
 }
 }

@@ -35,6 +35,9 @@ import { Matrizmarcologico3Component } from './components/matrizmarcologico3/mat
 import { Matrizmarcologico2creadaComponent } from './components/matrizmarcologico2creada/matrizmarcologico2creada.component';
 import { Matrizmarcologico3creadaComponent } from './components/matrizmarcologico3creada/matrizmarcologico3creada.component';
 import { MatrizinvolucradoscreadaComponent } from './components/matrizinvolucradoscreada/matrizinvolucradoscreada.component';
+import { EditarelementomatrizComponent } from './components/editarelementomatriz/editarelementomatriz.component';
+import { Editarelementomatriz2Component } from './components/editarelementomatriz2/editarelementomatriz2.component';
+import { Editarelementomatriz3Component } from './components/editarelementomatriz3/editarelementomatriz3.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { MatrizinvolucradoscreadaComponent } from './components/matrizinvolucrad
     Matrizmarcologico3Component,
     Matrizmarcologico2creadaComponent,
     Matrizmarcologico3creadaComponent,
-    MatrizinvolucradoscreadaComponent
+    MatrizinvolucradoscreadaComponent,
+    EditarelementomatrizComponent,
+    Editarelementomatriz2Component,
+    Editarelementomatriz3Component
   ],
   imports: [
     BrowserModule,

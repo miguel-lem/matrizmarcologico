@@ -63,6 +63,11 @@ export class MatrizmarcologicocreadaComponent {
 
   }
 
+  editaelementoMatriz(elemento: any): void{
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico/'+this.elproyecto+'/matrizmarcologicocreada/'+1+'/editarelementomatriz/'+elemento]);
+
+  } 
+
   descargaPdf(): void {
 
   }

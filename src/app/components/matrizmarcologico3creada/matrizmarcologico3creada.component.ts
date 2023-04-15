@@ -60,4 +60,9 @@ export class Matrizmarcologico3creadaComponent {
 
   }
 
+  editaelementoMatriz(elemento: any): void{
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico3/'+this.elproyecto+'/matrizmarcologico3creada/'+1+'/editarelementomatriz3/'+elemento]);
+
+  }
+
 }

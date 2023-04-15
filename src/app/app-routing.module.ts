@@ -26,10 +26,13 @@ import { Arboldeobjetivos2creadoComponent } from './components/arboldeobjetivos2
 import { Arboldeobjetivos3creadoComponent } from './components/arboldeobjetivos3creado/arboldeobjetivos3creado.component';
 import { MatrizmarcologicoComponent } from './components/matrizmarcologico/matrizmarcologico.component';
 import { MatrizmarcologicocreadaComponent } from './components/matrizmarcologicocreada/matrizmarcologicocreada.component';
+import { EditarelementomatrizComponent } from './components/editarelementomatriz/editarelementomatriz.component';
 import { Matrizmarcologico2Component } from './components/matrizmarcologico2/matrizmarcologico2.component';
 import { Matrizmarcologico2creadaComponent } from './components/matrizmarcologico2creada/matrizmarcologico2creada.component';
+import { Editarelementomatriz2Component } from './components/editarelementomatriz2/editarelementomatriz2.component';
 import { Matrizmarcologico3Component } from './components/matrizmarcologico3/matrizmarcologico3.component';
 import { Matrizmarcologico3creadaComponent } from './components/matrizmarcologico3creada/matrizmarcologico3creada.component';
+import { Editarelementomatriz3Component } from './components/editarelementomatriz3/editarelementomatriz3.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -59,10 +62,13 @@ const routes: Routes = [
   {path: 'home/login/proyectos/:correo/arboldeobjetivos3/:proyecto/arboldeobjetivos3creado/:valor', component:  Arboldeobjetivos3creadoComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto', component:MatrizmarcologicoComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto/matrizmarcologicocreada/:id', component:MatrizmarcologicocreadaComponent},
+  {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto/matrizmarcologicocreada/:id/editarelementomatriz/:idmat', component:EditarelementomatrizComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico2/:proyecto', component:Matrizmarcologico2Component},
   {path: 'home/login/proyectos/:correo/matrizmarcologico2/:proyecto/matrizmarcologico2creada/:id', component:Matrizmarcologico2creadaComponent},
+  {path: 'home/login/proyectos/:correo/matrizmarcologico2/:proyecto/matrizmarcologico2creada/:id/editarelementomatriz2/:idmat2', component:Editarelementomatriz2Component},
   {path: 'home/login/proyectos/:correo/matrizmarcologico3/:proyecto', component:Matrizmarcologico3Component},
   {path: 'home/login/proyectos/:correo/matrizmarcologico3/:proyecto/matrizmarcologico3creada/:id', component:Matrizmarcologico3creadaComponent},
+  {path: 'home/login/proyectos/:correo/matrizmarcologico3/:proyecto/matrizmarcologico3creada/:id/editarelementomatriz3/:idmat3', component:Editarelementomatriz3Component},
 ];
 
 @NgModule({

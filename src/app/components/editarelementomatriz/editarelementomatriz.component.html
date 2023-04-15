@@ -1,0 +1,49 @@
+<div class="card border-primary mb-3">
+    <div class="card-header">
+        Edicion de elementos de matriz marco logico
+    </div>
+    <div class="card-body text-primary">
+        <form [formGroup]="formularioedicion">
+            <div class="mb-3">
+              <label for="" class="form-label">Id:</label>
+              <input formControlName="id_matriz" type="text" readonly="readonly"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Id">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Esto es:</label>
+                <input formControlName="nombre" type="text" readonly="readonly"
+                  class="form-control" name="" id="" aria-describedby="helpId" placeholder="Id">
+              </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Descripción:</label> 
+                <input formControlName="descripcion" type="text" readonly="readonly"
+                  class="form-control" name="" id="" aria-describedby="helpId" placeholder="Descripción">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Indicadores:</label>
+                <textarea formControlName="indicadores" type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Indicadores">
+
+                </textarea>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Verificadores:</label>
+                <textarea formControlName="verificadores" type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Verificadores">
+
+                </textarea>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Supuestos:</label>
+                <textarea formControlName="supuestos" type="text"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Supuetos">
+
+                </textarea>
+            </div>
+            <div class="btn-group" role="group" aria-label="Button group name">
+                <button (click)="guardareditado()" type="button" class="btn btn-success">Guardar</button>
+                <button (click)="cancelareditado()" type="button" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
