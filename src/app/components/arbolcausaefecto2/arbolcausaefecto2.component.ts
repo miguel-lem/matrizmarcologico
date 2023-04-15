@@ -320,6 +320,20 @@ export class Arbolcausaefecto2Component {
   regresarProyectos(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
+  eliminarArbol():void{
+    if(window.confirm("En verdad desea eliminar el arbol2 causa efecto que a creado ¿?")){
+      alert("Decidio eliminar el arbol2");
+      console.log("la informacion que le voy  pasar");
+      console.log(this.formulariodelnombre.value);
+      this.coneccionServicio.eliminarcausasyefectos2(this.formulariodelnombre.value).subscribe(respuesta=>{
+        //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
+        location.reload();
+      });
+    }else{
+      alert("A cancelado la eliminación del arbol2")
+    }
+
+  }
 
 }
 

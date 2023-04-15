@@ -310,32 +310,35 @@ export class Arboldeobjetivos2Component {
   }
 
   pasararbolobjetivocreado(): any{
-    console.log("Probando los datos del arbol creado");
-    console.log("Datos para tabla efectos");
-    console.log(this.formularioefectodirecto.value);
-    //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarFinesyPropositos2(this.formularioefectodirecto.value).subscribe();
-    console.log("Datos para tabla causas"); 
-    console.log(this.formularioproblema.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formularioproblema.value).subscribe();
-    console.log(this.formulariocausadirecta1.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta1.value).subscribe();
-    console.log(this.formulariocausadirecta2.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta2.value).subscribe();
-    console.log(this.formulariocausadirecta3.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta3.value).subscribe();
-    console.log(this.formulariocausaindirecta1.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta1.value).subscribe();
-    console.log(this.formulariocausaindirecta2.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta2.value).subscribe();
-    console.log(this.formulariocausaindirecta3.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta3.value).subscribe();
-    console.log(this.formulariocausaindirecta4.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta4.value).subscribe();
-    console.log(this.formulariocausaindirecta5.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta5.value).subscribe();
-    console.log(this.formulariocausaindirecta6.value);
-    this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta6.value).subscribe();
+    if(window.confirm("Ya convirtio todo el arbol a positivo¿?")){
+      console.log("Probando los datos del arbol creado");
+      console.log("Datos para tabla efectos");
+      console.log(this.formularioefectodirecto.value);
+      //pasamos el dato mediante la funcion creada de lado del servicio
+      this.coneccionServicio.agregarFinesyPropositos2(this.formularioefectodirecto.value).subscribe();
+      console.log("Datos para tabla causas"); 
+      console.log(this.formularioproblema.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formularioproblema.value).subscribe();
+      console.log(this.formulariocausadirecta1.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta1.value).subscribe();
+      console.log(this.formulariocausadirecta2.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta2.value).subscribe();
+      console.log(this.formulariocausadirecta3.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausadirecta3.value).subscribe();
+      console.log(this.formulariocausaindirecta1.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta1.value).subscribe();
+      console.log(this.formulariocausaindirecta2.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta2.value).subscribe();
+      console.log(this.formulariocausaindirecta3.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta3.value).subscribe();
+      console.log(this.formulariocausaindirecta4.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta4.value).subscribe();
+      console.log(this.formulariocausaindirecta5.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta5.value).subscribe();
+      console.log(this.formulariocausaindirecta6.value);
+      this.coneccionServicio.agregarFinesyPropositos2(this.formulariocausaindirecta6.value).subscribe();
+    }
+    
   } 
 
   regresarProyectos(): void {

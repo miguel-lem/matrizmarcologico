@@ -49,7 +49,7 @@ export class MatrizmarcologicocreadaComponent {
   }
 
   eliminarMatriz(): void{
-    if(window.confirm("En verdad desea eliminar la matriz creada que a creado ¿?")){
+    if(window.confirm("En verdad desea eliminar la matriz que a creado ¿?")){
       alert("Decidio eliminar la matriz");
       console.log("la informacion que le voy  pasar");
       console.log(this.formulariodelnombre.value);

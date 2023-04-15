@@ -393,4 +393,19 @@ export class Arboldeobjetivos3creadoComponent {
   regresarUnpoco(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arboldeobjetivos3/'+this.elproyecto]);
   }
+
+  eliminarArbol():void{
+    if(window.confirm("En verdad desea eliminar el arbol fines y propositos3 que a creado ¿?")){
+      alert("Decidio eliminar el arbol3");
+      console.log("la informacion que le voy  pasar");
+      console.log(this.formulariodelnombre.value);
+      this.coneccionServicio.eliminarFinesyPropositos3(this.formulariodelnombre.value).subscribe(respuesta=>{
+        //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
+        location.reload();
+      });
+    }else{
+      alert("A cancelado la eliminación del arbol3")
+    }
+
+  }
 }

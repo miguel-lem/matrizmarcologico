@@ -334,34 +334,37 @@ export class ArboldeobjetivosComponent {
   
   
   pasararbolcreado(): any{
-    console.log("Probando los datos del arbol creado");
-    console.log("Datos para fines");
-    console.log(this.formularioefectoindirecto.value);
-    //pasamos el dato mediante la funcion creada de lado del servicio
-    this.coneccionServicio.agregarFinesyPropositos(this.formularioefectoindirecto.value).subscribe();
-    console.log(this.formularioefectodirecto1.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto1.value).subscribe();
-    console.log(this.formularioefectodirecto2.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto2.value).subscribe();
-    console.log("Datos para proposito y componentes");
-    console.log(this.formularioproblema.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formularioproblema.value).subscribe();
-    console.log(this.formulariocausadirecta1.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta1.value).subscribe();
-    console.log(this.formulariocausadirecta2.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta2.value).subscribe();
-    console.log(this.formulariocausadirecta3.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta3.value).subscribe();
-    console.log(this.formulariocausaindirecta1.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta1.value).subscribe();
-    console.log(this.formulariocausaindirecta2.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta2.value).subscribe();
-    console.log(this.formulariocausaindirecta3.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta3.value).subscribe();
-    console.log(this.formulariocausaindirecta4.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta4.value).subscribe();
-    console.log(this.formulariocausaindirecta5.value);
-    this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta5.value).subscribe();
+    if(window.confirm("Ya convirtio a positivo todo¿?")){
+      console.log("Probando los datos del arbol creado");
+      console.log("Datos para fines");
+      console.log(this.formularioefectoindirecto.value);
+      //pasamos el dato mediante la funcion creada de lado del servicio
+      this.coneccionServicio.agregarFinesyPropositos(this.formularioefectoindirecto.value).subscribe();
+      console.log(this.formularioefectodirecto1.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto1.value).subscribe();
+      console.log(this.formularioefectodirecto2.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto2.value).subscribe();
+      console.log("Datos para proposito y componentes");
+      console.log(this.formularioproblema.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formularioproblema.value).subscribe();
+      console.log(this.formulariocausadirecta1.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta1.value).subscribe();
+      console.log(this.formulariocausadirecta2.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta2.value).subscribe();
+      console.log(this.formulariocausadirecta3.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta3.value).subscribe();
+      console.log(this.formulariocausaindirecta1.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta1.value).subscribe();
+      console.log(this.formulariocausaindirecta2.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta2.value).subscribe();
+      console.log(this.formulariocausaindirecta3.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta3.value).subscribe();
+      console.log(this.formulariocausaindirecta4.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta4.value).subscribe();
+      console.log(this.formulariocausaindirecta5.value);
+      this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta5.value).subscribe();
+    }
+    
   }
 
 

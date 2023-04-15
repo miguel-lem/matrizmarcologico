@@ -226,6 +226,11 @@ editarCausasyEfectos2(causasyefectoeleccionada:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?editarcausasyefectos2=",causasyefectoeleccionada);
 }
 
+//funcion para eliminar las causas y efectos2 creados
+eliminarcausasyefectos2(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarcausaefecto2=",nombreproyecto);
+}
+
 //funcion para pasarle los datos del arbol creado a la tabla de causas y efectos del segundo diseño 
 agregarCausasyEfectos3(problemaseleccionado:Involucrado):Observable<any>{
 return this.clienteHttp.post(this.API+"?insertararcausasefectos3=1",problemaseleccionado);
@@ -239,6 +244,11 @@ return this.clienteHttp.post(this.API+"?seleccionarcausaefectoefecto3="+descripc
 //funcion para pasarle los datos editados del arbol creado a la tabla de causas y efectos segundo diseño 
 editarCausasyEfectos3(causasyefectoeleccionada:Involucrado):Observable<any>{
 return this.clienteHttp.post(this.API+"?editarcausasyefectos3=",causasyefectoeleccionada);
+}
+
+//funcion para eliminar las causas y efectos3 creados
+eliminarcausasyefectos3(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarcausaefecto3=",nombreproyecto);
 }
 
 //funcion para pasarle los datos del arbol creado a la tabla de causas y efectos 
@@ -275,6 +285,10 @@ editarFinesyPropositos2(finypropositoseleccionado:Involucrado):Observable<any>{
 return this.clienteHttp.post(this.API+"?editarfinproposito2=",finypropositoseleccionado);
 }
 
+//funcion para eliminar los fines y propositos creados
+eliminarFinesyPropositos2(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarfinproposito2=",nombreproyecto);
+}
 
 //funcion para pasarle los datos del arbol creado a la tabla de causas y efectos a los fines y propositos 2
 agregarFinesyPropositos3(elementoseleccionado:Involucrado):Observable<any>{
@@ -289,6 +303,11 @@ return this.clienteHttp.post(this.API+"?seleccionarfinproposito3="+descripcionre
 //funcion para pasarle los datos editados del arbol creado a la tabla de fines y propositos 
 editarFinesyPropositos3(finypropositoseleccionado:Involucrado):Observable<any>{
 return this.clienteHttp.post(this.API+"?editarfinproposito3=",finypropositoseleccionado);
+}
+
+//funcion para eliminar los fines y propositos3 creados
+eliminarFinesyPropositos3(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarfinproposito3=",nombreproyecto);
 }
 
 //funcion para pasarle los datos del arbol creado a la tabla de matriz de marco logico 
@@ -316,6 +335,11 @@ filtrarlamatrizmarcoparverlocreado2(nombreproyecto:Registro):Observable<any>{
   return this.clienteHttp.get(this.API+"?seleccionarmatrizmarco2="+nombreproyecto); 
 }
 
+//funcion para eliminar la matriz de marco logico creada
+eliminarMatrizmarco2(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarmatrizmarco2=",nombreproyecto);
+}
+
 //funcion para pasarle los datos de la tabla a la matriz de marco logico 
 agregarMatrizMarco3(elementoseleccionados:Involucrado):Observable<any>{
   return this.clienteHttp.post(this.API+"?insertararmatrizmarco3=1",elementoseleccionados);
@@ -324,5 +348,10 @@ agregarMatrizMarco3(elementoseleccionados:Involucrado):Observable<any>{
  //funcion para extraer los elementos de la matriz de marco logico
 filtrarlamatrizmarcoparverlocreado3(nombreproyecto:Registro):Observable<any>{
   return this.clienteHttp.get(this.API+"?seleccionarmatrizmarco3="+nombreproyecto); 
+}
+
+//funcion para eliminar la matriz de marco logico creada
+eliminarMatrizmarco3(nombreproyecto:Involucrado):Observable<any>{
+  return this.clienteHttp.post(this.API+"?eliminarmatrizmarco3=",nombreproyecto);
 }
 }
