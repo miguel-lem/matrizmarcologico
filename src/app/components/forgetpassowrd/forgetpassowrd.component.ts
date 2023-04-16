@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+//importamos la libreria para dar uso de los formularios
+import {FormGroup, FormBuilder} from '@angular/forms';
+//importamos el servicio para poder establecer comnicacion
+import { CrudserviceService } from 'src/app/services/crudservice.service';
 
 @Component({
   selector: 'app-forgetpassowrd',
@@ -8,11 +12,20 @@ import { Router } from '@angular/router';
 })
 export class ForgetpassowrdComponent {
 
-  correonecesario:any;
+  formularioderecuperacion:any;
   
-  constructor(
-    private router: Router
-    ) {
+  constructor( 
+    private router: Router,
+    //el ofrmbuilder sirve para la recoleccion de los datos
+    public formulario:FormBuilder,
+    //para poder trabajr con el servicio le debemos agregar al constructor
+    private coneccionServicio:CrudserviceService
+  ) {
+    //almacenamos los datos para poder procesarlos
+    this.formularioderecuperacion = this.formulario.group({
+      correo: ['']
+    });
+
   }
 
   ngOnInit() {}
@@ -21,10 +34,10 @@ export class ForgetpassowrdComponent {
     this.router.navigate(['home/login']);
   }
 
-  recuperarcontraseña(correo:string): void {
-    var abecedario=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k","0","1","2","3","4","5","6","7","8","9","$","@"];
-    var numeroAleatorio = 5;
-    
+  enviarDatos(): void{
+    console.log("lo que estoy para enviar");
+    console.log(this.formularioderecuperacion.value);
+    this.coneccionServicio.recuperarContraseña1(this.formularioderecuperacion.value).subscribe();
   }
 
 }

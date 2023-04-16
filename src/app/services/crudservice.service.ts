@@ -37,6 +37,17 @@ export class CrudserviceService {
     return this.clienteHttp.get(this.API+"?insertarcerrado="+correofinalizacion);
   }
 
+  //funcion para el inicio de recuperar contraseña que me envie la clave de recuperacion al correo
+  recuperarContraseña1(datoscorreo:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?comprobarexistencia=",datoscorreo); 
+  }
+
+  //funcion para concretar el recuperar contraseña con la clave de recuperacion del correo
+   recuperarContraseña(datosnuevacontrasenia:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?actualizarcontraseniaclave=",datosnuevacontrasenia); 
+  }
+
+
   //funcion para ingresar el nombre de un nuevo proyecto
   agregarProyecto(datosnombreProyecto:Registro):Observable<any>{
     return this.clienteHttp.post(this.API+"?insertarproyecto=1",datosnombreProyecto); 

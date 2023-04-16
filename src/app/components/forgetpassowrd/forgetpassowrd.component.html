@@ -4,14 +4,14 @@
             Recuperar cuenta
         </div>
         <div class="card-body">
-            <form ngNativeValidate> 
+            <form ngNativeValidate [formGroup]="formularioderecuperacion" (ngSubmit)="enviarDatos()">  
                 <div class="mb-3">
-                <label for="" class="form-label">Correo</label>
-                <input required type="email"
+                <label for="" class="form-label">Ingrese el correo con el que se registro en la plataforma</label>
+                <input required type="email" formControlName="correo"
                     class="form-control" name="" id="" aria-describedby="helpId" placeholder="Ingresa el correo del registro">
                 </div>
                 <div class="btn-group" role="group" aria-label="Button group name">
-                    <button type="button" class="btn btn-success">Enviar contraseña temporal a correo</button>
+                    <button type="submit" class="btn btn-success">Enviar contraseña</button>
                     <button (click) = "iraPrincipal()"  type="button" class="btn btn-primary">Cancelar</button>
                 </div>
             </form>
