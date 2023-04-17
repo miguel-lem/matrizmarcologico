@@ -4,8 +4,9 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 import { CrudserviceService } from 'src/app/services/crudservice.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
+//librerias para poder convertir a pdf la información
 import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+import * as _html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-matrizinvolucradoscreada',
@@ -70,6 +71,7 @@ export class MatrizinvolucradoscreadaComponent {
  //esta funcion es para poder convertir a un pdf la informacion de la tabla
   downloadPDF() {
     //capturo el documento de lado del html
+    const html2canvas: any=_html2canvas;
     const INFORMACION = document.getElementById('tablaprincipal');
     //coloco las variable de psicion, unidad de media, y el formato
     //con 'p' se va de verttical con 'l' de horizontal
@@ -81,7 +83,7 @@ export class MatrizinvolucradoscreadaComponent {
     //le agrego la imagen para el pdf
     html2canvas(INFORMACION, options).then((canvas) => {
 
-      const img = canvas.toDataURL('image/PNG');
+      const img = canvas.toDataURL('image/PNG'); 
 
       // Add image Canvas to PDF
       const bufferX = 15;
