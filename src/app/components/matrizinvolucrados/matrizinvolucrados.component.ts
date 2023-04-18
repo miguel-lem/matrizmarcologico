@@ -13,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class MatrizinvolucradosComponent {
   formularioinvolucrados1: FormGroup;
   formulariodeeliminar: FormGroup;
+  formularioverpertenencia: FormGroup;
   elproyecto: any;
   elcorreo:any;
   elinvolucrado: any;
@@ -40,11 +41,16 @@ export class MatrizinvolucradosComponent {
     this.formulariodeeliminar = this.formulario.group({
       involucra: ['']
     });
+    this.formularioverpertenencia = this.formulario.group({
+      nombre_extraido:[''],
+    });
 
     //para cargar el dato recibido por el id
       //y pasarlo al input de correo que en si es el usuario
       this.formularioinvolucrados1.patchValue({nombre_extraido: this.elproyecto});
       this.formularioinvolucrados1.patchValue({correo_primario: this.elcorreo});
+      //este lo creo para poder mostrar el nombre en la tabla de proyectos y no imprimir cada rato eso
+      this.formularioverpertenencia.patchValue({nombre_extraido: this.elproyecto});
 
       //aqui utilizo el api para extrear los datos de involucrados pertenecientes a este proyecto y desplazarlos
       //en la vista

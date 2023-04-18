@@ -12,6 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class RecursosComponent {
   formulariorecursos: FormGroup;
   formulariodeeliminar: FormGroup;
+  formularioverpertenencia: FormGroup;
   elinvolucrado: any;
   elproyecto:any;
   Recursos:any;
@@ -40,6 +41,9 @@ export class RecursosComponent {
     this.formulariodeeliminar = this.formulario.group({
       recurso: ['']
     });
+    this.formularioverpertenencia = this.formulario.group({
+      nombre: ['']
+    });
     this.formulariorecursos.patchValue({id_involucra: this.elinvolucrado});
     this.formulariorecursos.patchValue({nombre_extraido: this.elproyecto});
     //aqui utilizo el api para extrear los datos de recursos pertenecientes a este involucrado y desplazarlos
@@ -50,7 +54,19 @@ export class RecursosComponent {
           console.log(respuesta);
           this.Recursos=respuesta;
         }
-      )
+      );
+    //con ela funcion puedo extraer un determinado incolucrado para mostrarlo en la tabla de recursos a la
+    //cabecera y evitar repetirlo en cada fila
+    this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
+      respuesta=>{
+        console.log("Lo que se extrajo como unico involucrado");
+        console.log(respuesta);
+        //extraigo la informacion y le cargo para poder contemplar en la vista
+        this.formularioverpertenencia = this.formulario.group({
+          nombre:respuesta[0] ['nombre']
+        });
+      }
+    );
 
   }
   ngOnInit(){

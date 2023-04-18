@@ -13,6 +13,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProblemasComponent {
   formularioproblemas: FormGroup;
   formulariodeeliminar: FormGroup;
+  formularioverpertenencia: FormGroup;
   elproyecto:any;
   Problemas:any;
   elinvolucrado: any;
@@ -39,6 +40,9 @@ export class ProblemasComponent {
     this.formulariodeeliminar = this.formulario.group({
       problem: ['']
     });
+    this.formularioverpertenencia = this.formulario.group({
+      nombre: ['']
+    });
     //para cargar el dato recibido por el id
       //y pasarlo al input de correo que en si es el usuario
       this.formularioproblemas.patchValue({id_involucrado: this.elinvolucrado});
@@ -50,7 +54,20 @@ export class ProblemasComponent {
           console.log(respuesta);
           this.Problemas=respuesta;
         }
-    )
+    );
+
+    //con ela funcion puedo extraer un determinado incolucrado para mostrarlo en la tabla de problemas a la
+    //cabecera y evitar repetirlo en cada fila
+    this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
+      respuesta=>{
+        console.log("Lo que se extrajo como unico involucrado");
+        console.log(respuesta);
+        //extraigo la informacion y le cargo para poder contemplar en la vista
+        this.formularioverpertenencia = this.formulario.group({
+          nombre:respuesta[0] ['nombre']
+        });
+      }
+    );
 
   }
   ngOnInit(){

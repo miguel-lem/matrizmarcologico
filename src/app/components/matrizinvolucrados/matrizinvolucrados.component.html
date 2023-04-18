@@ -8,7 +8,7 @@
                     <div> 
                         <input  formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
-                            <input  formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
+                        <input  formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Correo">
                     </div>
                     <div class="connexion">
@@ -30,9 +30,20 @@
                 <table class="table table-primary">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
+                            <th colspan="2">
+                                <label >Nombre proyecto:</label>
+                            </th>
+                            <th>
+                                <form [formGroup]="formularioverpertenencia">
+                                    <input  formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
+                                </form>
+                            </th>
+                            <th colspan="2"></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">N.-</th>
                             <th scope="col">Involucrado</th>
-                            <th scope="col">Proyecto</th>
                             <th scope="col">Ingresar: </th>
                             <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
                             <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
@@ -40,9 +51,8 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let involucrado of Involucrados; let iControl=index" class="">
-                            <td>{{ involucrado.id_involucrado}}</td> 
+                            <td>{{iControl+1}}</td>
                             <td>{{ involucrado.nombre}}</td> 
-                            <td>{{ involucrado.nombre_extraido}}</td> 
                             <td>
                                 <button routerLink="intereses/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"><i class="fa-solid fa-thumbs-up"></i> Intereses</button>
                                 <button routerLink="problemas/{{ involucrado.id_involucrado }}" type="button" class="btn btn-outline-success"> <i class="fa-solid fa-triangle-exclamation"></i>Problemas</button>

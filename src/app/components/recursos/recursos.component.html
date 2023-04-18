@@ -34,20 +34,28 @@
                 <table class="table table-primary">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">
+                                <label>Involucrado:</label>
+                            </th>
+                            <th scope="col">
+                                <form [formGroup]="formularioverpertenencia">
+                                    <input  formControlName="nombre" type="text" class="form-control" readonly="readonly"
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="Nombre">
+                                </form>
+                            </th>
+                            <th colspan="2" scope="col"></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">N.-</th>
                             <th scope="col">Recurso</th>
-                            <th scope="col">Involucrado</th>
-                            <th scope="col">Proyecto</th>
                             <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
                             <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let recurso of Recursos; let iControl=index" class="">
-                            <td>{{ recurso.id_recurso}}</td> 
-                            <td>{{ recurso.recurso}}</td> 
-                            <td>{{ recurso.id_involucra}}</td> 
-                            <td>{{ recurso.nombre_extraido}}</td> 
+                            <td>{{ iControl+1}}</td> 
+                            <td>{{ recurso.recurso}}</td>
                             <td>
                                 <button (click) = "eliminarRecurso(recurso.id_recurso)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
                             </td> 

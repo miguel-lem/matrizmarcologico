@@ -36,20 +36,28 @@
                 <table class="table table-primary">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">
+                                <label>Involucrado:</label>
+                            </th>
+                            <th scope="col">
+                                <form [formGroup]="formularioverpertenencia">
+                                    <input  formControlName="nombre" type="text" class="form-control" readonly="readonly"
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="Nombre">
+                                </form>
+                            </th>
+                            <th colspan="2" scope="col"></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">N.-</th>
                             <th scope="col">Interes</th>
-                            <th scope="col">Id involucrado</th>
-                            <th scope="col">Proyecto</th>
                             <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
                             <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let interes of Intereses; let iControl=index" class="">
-                            <td>{{ interes.id_interes}}</td> 
-                            <td>{{ interes.interes}}</td> 
-                            <td>{{ interes.id_involucrad}}</td>
-                            <td>{{ interes.nombre_extraido}}</td>  
+                            <td>{{ iControl+1}}</td> 
+                            <td>{{ interes.interes}}</td>
                             <td>
                                 <button (click) = "eliminarInteres(interes.id_interes)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
                             </td>

@@ -50,7 +50,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let problema of Problemas; let iControl=index" class="">
-                            <td>{{ problema.id_problema}}</td> 
+                            <td>{{ iControl+1}}</td> 
                             <td>{{ problema.problema}}</td> 
                             <td>{{ problema.id_involucrado}}</td>
                             <td>{{ problema.nombre_extraido}}</td> 

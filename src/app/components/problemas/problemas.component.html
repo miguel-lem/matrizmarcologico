@@ -34,20 +34,28 @@
                 <table class="table table-primary">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
+                            <th scope="col">
+                                <label>Involucrado:</label>
+                            </th>
+                            <th scope="col">
+                                <form [formGroup]="formularioverpertenencia">
+                                    <input  formControlName="nombre" type="text" class="form-control" readonly="readonly"
+                                        name="" id="texto1" aria-describedby="helpId" placeholder="Nombre">
+                                </form>
+                            </th>
+                            <th colspan="2" scope="col"></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">N.-</th>
                             <th scope="col">Problema</th>
-                            <th scope="col">Involucrado</th>
-                            <th scope="col">Proyecto</th>
                             <th scope="col"><i class="fa-solid fa-trash-can"></i></th>
                             <th scope="col"><i class="fa-regular fa-pen-to-square"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let problema of Problemas; let iControl=index" class="">
-                            <td>{{ problema.id_problema}}</td> 
+                            <td>{{ iControl+1}}</td> 
                             <td>{{ problema.problema}}</td> 
-                            <td>{{ problema.id_involucrado}}</td>
-                            <td>{{ problema.nombre_extraido}}</td>
                             <td>
                                 <button (click) = "eliminarProblema(problema.id_problema)" type="button" class="btn btn-outline-danger"><i class="fa-solid fa-trash-can"></i></button>
                             </td> 

@@ -14,6 +14,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class InteresesComponent {
   formulariointereses: FormGroup;
   formulariodeeliminar: FormGroup;
+  formularioverpertenencia: FormGroup;
   elinvolucrado: any;
   elproyecto:any;
   Intereses:any;
@@ -41,6 +42,9 @@ export class InteresesComponent {
     this.formulariodeeliminar = this.formulario.group({
       intere: ['']
     });
+    this.formularioverpertenencia = this.formulario.group({
+      nombre: ['']
+    });
 
     this.formulariointereses.patchValue({id_involucrad: this.elinvolucrado});
     this.formulariointereses.patchValue({nombre_extraido: this.elproyecto});
@@ -51,7 +55,19 @@ export class InteresesComponent {
         console.log(respuesta); 
         this.Intereses=respuesta;
       }
-    )
+    );
+    //con ela funcion puedo extraer un determinado incolucrado para mostrarlo en la tabla de intereses a la
+    //cabecera y evitar repetirlo en cada fila
+    this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
+      respuesta=>{
+        console.log("Lo que se extrajo como unico involucrado");
+        console.log(respuesta);
+        //extraigo la informacion y le cargo para poder contemplar en la vista
+        this.formularioverpertenencia = this.formulario.group({
+          nombre:respuesta[0] ['nombre']
+        });
+      }
+    );
   }
   ngOnInit(){
 

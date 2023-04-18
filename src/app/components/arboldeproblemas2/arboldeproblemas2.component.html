@@ -38,7 +38,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let problema of Problemas; let iControl=index" class="">
-                            <td>{{ problema.id_arbol}}</td> 
+                            <td>{{ iControl+1}}</td> 
                             <td>{{ problema.problema}}</td>
                             <td>
                                 <select (change)="changeselected($event)" id="">
