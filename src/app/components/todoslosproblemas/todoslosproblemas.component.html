@@ -43,8 +43,6 @@
                         <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Problemas</th>
-                            <th scope="col">Involucrado</th>
-                            <th scope="col">Proyecto</th>
                             <th scope="col">Seleccion de problemas</th>
                         </tr>
                     </thead>
@@ -52,8 +50,6 @@
                         <tr *ngFor="let problema of Problemas; let iControl=index" class="">
                             <td>{{ iControl+1}}</td> 
                             <td>{{ problema.problema}}</td> 
-                            <td>{{ problema.id_involucrado}}</td>
-                            <td>{{ problema.nombre_extraido}}</td> 
                             <td>
                                 <button (click) = "enviarProblema(problema.id_problema)" type="button" class="btn btn-outline-secondary">Seleccionar</button>
                             </td>

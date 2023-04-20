@@ -26,146 +26,148 @@
                 
             </form>
         </div>
-        <div id="cuerpotabla1">
-            <div class="table-responsive">   
-                <table class="table table-primary">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Problemas</th>
-                            <th scope="col">Arbol causa-efecto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let problema of Problemas; let iControl=index" class="">
-                            <td>{{ iControl+1}}</td> 
-                            <td>{{ problema.problema}}</td>
-                            <td>
-                                <select (change)="changeselected($event)" id="">
-                                    <option value="0"  >Ninguna</option>
-                                    <option value="{{problema.id_arbol}},1">1_Efecto directo</option>
-                                    <option value="{{problema.id_arbol}},2">2_Problema</option>
-                                    <option value="{{problema.id_arbol}},3">3_Causa directa1</option>
-                                    <option value="{{problema.id_arbol}},4">4_Causa directa2</option>
-                                    <option value="{{problema.id_arbol}},5">5_Causa directa3</option>
-                                    <option value="{{problema.id_arbol}},6">6_Causa indirecta1</option>
-                                    <option value="{{problema.id_arbol}},7">7_Causa indirecta2</option>
-                                    <option value="{{problema.id_arbol}},8">8_Causa indirecta3</option>
-                                    <option value="{{problema.id_arbol}},9">9_Causa indirecta4</option>
-                                    <option value="{{problema.id_arbol}},10">10_Causa indirecta5</option>
-                                    <option value="{{problema.id_arbol}},11">11_Causa indirecta6</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div id="contenedorcuerpo">
+            <div id="cuerpotabla1">
+                <div class="table-responsive">   
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Problemas</th>
+                                <th scope="col">Arbol causa-efecto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let problema of Problemas; let iControl=index" class="">
+                                <td>{{ iControl+1}}</td> 
+                                <td>{{ problema.problema}}</td>
+                                <td>
+                                    <select (change)="changeselected($event)" id="">
+                                        <option value="0"  >Ninguna</option>
+                                        <option value="{{problema.id_arbol}},1">1_Efecto directo</option>
+                                        <option value="{{problema.id_arbol}},2">2_Problema</option>
+                                        <option value="{{problema.id_arbol}},3">3_Causa directa1</option>
+                                        <option value="{{problema.id_arbol}},4">4_Causa directa2</option>
+                                        <option value="{{problema.id_arbol}},5">5_Causa directa3</option>
+                                        <option value="{{problema.id_arbol}},6">6_Causa indirecta1</option>
+                                        <option value="{{problema.id_arbol}},7">7_Causa indirecta2</option>
+                                        <option value="{{problema.id_arbol}},8">8_Causa indirecta3</option>
+                                        <option value="{{problema.id_arbol}},9">9_Causa indirecta4</option>
+                                        <option value="{{problema.id_arbol}},10">10_Causa indirecta5</option>
+                                        <option value="{{problema.id_arbol}},11">11_Causa indirecta6</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                <div class="resultado"></div>
+            </div>
+            <div id="cuerpo">
+                <div id="cuerpo1">
+                    <form [formGroup]="formularioefectodirecto">
+                        <div id="cuerpo11">
+                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                name="" id="texto1" aria-describedby="helpId" placeholder="1:Efecto_directo">
+                        </div>
+                    </form> 
+                </div>          
+               
+                <div id="cuerpo3">
+                    <form [formGroup]="formularioproblema">
+                        <div id="cuerpo11">
+                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                name="" id="texto1" aria-describedby="helpId" placeholder="2:Problema">
+                        </div>
+                    </form>
+                </div>
+                <div id="cuerpo4">
+                    <div id="cuerpo41">
+                        <form [formGroup]="formulariocausadirecta1">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="3:Causa_directa1">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo42">
+                        <form [formGroup]="formulariocausadirecta2">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="4:Causa_directa2">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo43">
+                        <form [formGroup]="formulariocausadirecta3">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="5:Causa_directa3">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="cuerpo2">
+                    <div id="cuerpo41">
+                        <form [formGroup]="formulariocausaindirecta1">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="6:Causa_indirecta1">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo42">
+                        <form [formGroup]="formulariocausaindirecta2">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="7:Causa_indirecta2">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo43">
+                        <form [formGroup]="formulariocausaindirecta3">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="8:Causa_indirecta3">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="cuerpo5">
+                    <div id="cuerpo41">
+                        <form [formGroup]="formulariocausaindirecta4">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="9:Causa_indirecta4">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo42">
+                        <form [formGroup]="formulariocausaindirecta5">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="10:Causa_indirecta5">
+                            </div>
+                        </form>
+                    </div>
+                    <div id="cuerpo43">
+                        <form [formGroup]="formulariocausaindirecta6">
+                            <div id="cuerpo11">
+                                <input formControlName="a" type="text" class="form-control" readonly="readonly"
+                                    name="" id="texto1" aria-describedby="helpId" placeholder="11:Causa_indirecta6">
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+                
+                <div id="cuerpo6">
+                        <div id="cabecera3">
+                            <button (click) = "pasararbolcreado()" class="btn btn-success">Guardar arbol creado</button>
+                        </div>
+                </div> 
+                <div id="cuerpo7"></div>           
             </div> 
-            <div class="resultado"></div>
         </div>
-        <div id="cuerpo">
-            <div id="cuerpo1">
-                <form [formGroup]="formularioefectodirecto">
-                    <div id="cuerpo11">
-                        <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                            name="" id="texto1" aria-describedby="helpId" placeholder="1:Efecto_directo">
-                    </div>
-                </form> 
-            </div>          
-           
-            <div id="cuerpo3">
-                <form [formGroup]="formularioproblema">
-                    <div id="cuerpo11">
-                        <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                            name="" id="texto1" aria-describedby="helpId" placeholder="2:Problema">
-                    </div>
-                </form>
-            </div>
-            <div id="cuerpo4">
-                <div id="cuerpo41">
-                    <form [formGroup]="formulariocausadirecta1">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="3:Causa_directa1">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formulariocausadirecta2">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="4:Causa_directa2">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formulariocausadirecta3">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="5:Causa_directa3">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="cuerpo2">
-                <div id="cuerpo41">
-                    <form [formGroup]="formulariocausaindirecta1">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="6:Causa_indirecta1">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formulariocausaindirecta2">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="7:Causa_indirecta2">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formulariocausaindirecta3">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="8:Causa_indirecta3">
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div id="cuerpo5">
-                <div id="cuerpo41">
-                    <form [formGroup]="formulariocausaindirecta4">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="9:Causa_indirecta4">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo42">
-                    <form [formGroup]="formulariocausaindirecta5">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="10:Causa_indirecta5">
-                        </div>
-                    </form>
-                </div>
-                <div id="cuerpo43">
-                    <form [formGroup]="formulariocausaindirecta6">
-                        <div id="cuerpo11">
-                            <input formControlName="a" type="text" class="form-control" readonly="readonly"
-                                name="" id="texto1" aria-describedby="helpId" placeholder="11:Causa_indirecta6">
-                        </div>
-                    </form>
-                </div>
-            </div> 
-            
-            <div id="cuerpo6">
-                    <div id="cabecera3">
-                        <button (click) = "pasararbolcreado()" class="btn btn-success">Guardar arbol creado</button>
-                    </div>
-            </div> 
-            <div id="cuerpo7"></div>           
-        </div> 
     </div>    
 </body>
 

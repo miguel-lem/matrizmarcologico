@@ -12,6 +12,8 @@
       display: -moz-box;
       display: -ms-flexbox;
       flex-wrap: wrap;
+      display: grid;
+      grid-template-rows: auto,auto;
       padding: 10px;
       background-image: radial-gradient(circle at 50% 120.71%, #a7deff 0, #6c90d8 50%, #38496b 100%);
     } 
