@@ -409,6 +409,10 @@ export class Arbolcausaefecto3Component {
     }
 
   }
+
+  capturar(): void{
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arbolcausaefecto3/'+this.elproyecto+'/arbolcausaefecto3pdf/'+1]);
+  }
 }
 
 

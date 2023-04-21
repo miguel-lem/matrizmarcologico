@@ -33,6 +33,9 @@ import { Editarelementomatriz2Component } from './components/editarelementomatri
 import { Matrizmarcologico3Component } from './components/matrizmarcologico3/matrizmarcologico3.component';
 import { Matrizmarcologico3creadaComponent } from './components/matrizmarcologico3creada/matrizmarcologico3creada.component';
 import { Editarelementomatriz3Component } from './components/editarelementomatriz3/editarelementomatriz3.component';
+import { ArbolcausaefectopdfComponent } from './components/arbolcausaefectopdf/arbolcausaefectopdf.component';
+import { Arbolcausaefecto2pdfComponent } from './components/arbolcausaefecto2pdf/arbolcausaefecto2pdf.component';
+import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf/arbolcausaefecto3pdf.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -52,8 +55,11 @@ const routes: Routes = [
   {path: 'home/login/proyectos/:correo/todoslosproblemas/:proyecto/arboldeproblemas2/:id', component:Arboldeproblemas2Component},
   {path: 'home/login/proyectos/:correo/todoslosproblemas/:proyecto/arboldeproblemas3/:id', component:Arboldeproblemas3Component},
   {path: 'home/login/proyectos/:correo/arbolcausaefecto/:proyecto', component:ArbolcausaefectoComponent},
+  {path: 'home/login/proyectos/:correo/arbolcausaefecto/:proyecto/arbolcausaefectopdf/:num1', component:ArbolcausaefectopdfComponent},
   {path: 'home/login/proyectos/:correo/arbolcausaefecto2/:proyecto', component:Arbolcausaefecto2Component},
+  {path: 'home/login/proyectos/:correo/arbolcausaefecto2/:proyecto/arbolcausaefecto2pdf/:num2', component:Arbolcausaefecto2pdfComponent},
   {path: 'home/login/proyectos/:correo/arbolcausaefecto3/:proyecto', component:Arbolcausaefecto3Component},
+  {path: 'home/login/proyectos/:correo/arbolcausaefecto3/:proyecto/arbolcausaefecto3pdf/:num3', component:Arbolcausaefecto3pdfComponent},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos/:proyecto', component:  ArboldeobjetivosComponent},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos2/:proyecto', component:  Arboldeobjetivos2Component},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos3/:proyecto', component:  Arboldeobjetivos3Component},

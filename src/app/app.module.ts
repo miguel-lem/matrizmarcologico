@@ -38,6 +38,9 @@ import { MatrizinvolucradoscreadaComponent } from './components/matrizinvolucrad
 import { EditarelementomatrizComponent } from './components/editarelementomatriz/editarelementomatriz.component';
 import { Editarelementomatriz2Component } from './components/editarelementomatriz2/editarelementomatriz2.component';
 import { Editarelementomatriz3Component } from './components/editarelementomatriz3/editarelementomatriz3.component';
+import { ArbolcausaefectopdfComponent } from './components/arbolcausaefectopdf/arbolcausaefectopdf.component';
+import { Arbolcausaefecto2pdfComponent } from './components/arbolcausaefecto2pdf/arbolcausaefecto2pdf.component';
+import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf/arbolcausaefecto3pdf.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +77,10 @@ import { Editarelementomatriz3Component } from './components/editarelementomatri
     MatrizinvolucradoscreadaComponent,
     EditarelementomatrizComponent,
     Editarelementomatriz2Component,
-    Editarelementomatriz3Component
+    Editarelementomatriz3Component,
+    ArbolcausaefectopdfComponent,
+    Arbolcausaefecto2pdfComponent,
+    Arbolcausaefecto3pdfComponent
   ],
   imports: [
     BrowserModule,

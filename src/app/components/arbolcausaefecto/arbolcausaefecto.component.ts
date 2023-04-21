@@ -3,9 +3,7 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 //importamos el servicio para poder establecer comnicacion
 import { CrudserviceService } from 'src/app/services/crudservice.service';
 import { Router, ActivatedRoute } from '@angular/router';
-//librerias para poder descargar pdf
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+
 
 
 @Component({
@@ -340,36 +338,8 @@ export class ArbolcausaefectoComponent {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
 
-  //esta funcion es para poder convertir a un pdf la informacion de la tabla
-  downloadPDF() {
-    //capturo el documento de lado del html
-    //document.getElementById('texto1').style.width = '100%'; 
-    //document.getElementById('texto1').style.height = '100px';
-    const INFORMACION: any = document.getElementById('cuerpo');
-    //coloco las variable de psicion, unidad de media, y el formato
-    //con 'p' se va de verttical con 'l' de horizontal
-    const doc = new jsPDF('l', 'pt', 'a4');
-    const options = {
-      background: 'white',
-      scale: 3
-    };
-    //le agrego la imagen para el pdf
-    html2canvas(INFORMACION, options).then((canvas) => {
-
-      const img = canvas.toDataURL('image/PNG');
-
-      // Add image Canvas to PDF
-      const bufferX = 15;
-      const bufferY = 15;
-      const imgProps = (doc as any).getImageProperties(img);
-      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
-      return doc;
-    }).then((docResult) => {
-      //aqui le contorlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
-      docResult.save(`${new Date().toISOString()}arbol-causa-efecto.pdf`);
-    });
+  capturar(): void{
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arbolcausaefecto/'+this.elproyecto+'/arbolcausaefectopdf/'+1]);
   }
 
   eliminarArbol():void{
