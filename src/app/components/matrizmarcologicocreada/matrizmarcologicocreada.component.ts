@@ -3,6 +3,9 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 //importamos el servicio para poder establecer comnicacion
 import { CrudserviceService } from 'src/app/services/crudservice.service';
 import { Router, ActivatedRoute } from '@angular/router';
+//librerias para poder descargar pdf
+import jsPDF from 'jspdf';
+import * as _html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-matrizmarcologicocreada',
@@ -68,8 +71,36 @@ export class MatrizmarcologicocreadaComponent {
 
   } 
 
-  descargaPdf(): void {
+  descargaPdf(): void { 
+    const INFORMACION: any = document.getElementById('tablaresponsiva');
+    //coloco las variable de psicion, unidad de media, y el formato
+    //con 'p' se va de verttical con 'l' de horizontal
+    const doc = new jsPDF('l', 'pt', 'a4');
+    const options = {
+      background: 'white',
+      scale: 3
+    };
+    //esta vriable la cree para que no me de los errores al transformar el pdf 
+    const html2canvas: any=_html2canvas;
+    //le agrego la imagen para el pdf
+    html2canvas(INFORMACION, options).then((canvas) => {
 
+      const img = canvas.toDataURL('image/PNG');
+
+      // Add image Canvas to PDF
+      const bufferX = 15;
+      const bufferY = 15;
+      const imgProps = (doc as any).getImageProperties(img);
+      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
+      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
+      //doc.addPage();
+      
+      return doc;
+    }).then((docResult) => {
+      //aqui le contorlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
+      docResult.save(`${new Date().toISOString()}matriz-marco-logico-diseño1.pdf`);
+    });
   }
 
 }

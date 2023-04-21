@@ -38,6 +38,7 @@
                             <th colspan="4" scope="col">Matriz de Marco Lógico</th>
                         </tr>
                         <tr>
+                            <th scope="col">Pertenece</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Indicadores</th>
                             <th scope="col">Verificadores</th>
@@ -47,6 +48,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let elemento of Elementos; let iControl=index" class="">
+                            <td>{{ elemento.nombre}}</td>
                             <td>{{ elemento.descripcion}}</td> 
                             <td>{{ elemento.indicadores}}</td>
                             <td>{{ elemento.verificadores}}</td>

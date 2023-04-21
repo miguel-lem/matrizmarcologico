@@ -70,6 +70,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioproposito =this.formulario.group({
@@ -79,6 +80,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formulariocomponente1 =this.formulario.group({
@@ -88,6 +90,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formulariocomponente2 =this.formulario.group({
@@ -97,6 +100,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formulariocomponente3 =this.formulario.group({
@@ -106,6 +110,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad1 =this.formulario.group({
@@ -115,6 +120,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad2 =this.formulario.group({
@@ -124,6 +130,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad3 =this.formulario.group({
@@ -133,6 +140,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad4 =this.formulario.group({
@@ -142,6 +150,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad5 =this.formulario.group({
@@ -151,6 +160,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
     this.formularioactividad6 =this.formulario.group({
@@ -160,6 +170,7 @@ export class Matrizmarcologico2Component {
       d:[''],
       nombre:[''],
       e:[''],
+      f:[''],
       nombre_extraido:['']
     });
        //para cargar el dato recibido por el id
@@ -181,6 +192,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['a'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -202,6 +214,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['b'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -222,6 +235,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['c'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -242,6 +256,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['d'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -262,6 +277,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['e'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -282,6 +298,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['f'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -302,6 +319,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['g'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -322,6 +340,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['h'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -342,6 +361,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['i'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -362,6 +382,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['j'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -381,6 +402,7 @@ export class Matrizmarcologico2Component {
           d:[''],
           nombre:respuesta[0]['descripcion'],
           e:respuesta[0]['id_finproposito'],
+          f:['k'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
         console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
@@ -394,74 +416,28 @@ export class Matrizmarcologico2Component {
   ngOnInit() {
     
   }
+
+  //con esta fucion extraifo todo lo que ayan llenado de lado del cliente y le guardo la informacion
+  guardarDatos(): void{
+    if(window.confirm("Ya completo los campos, porque de lo contrario si esta mal elaborada la tabla debera eliminarla y volver a crearla")){
+      console.log("Se empieza a enviar la informacion a la tabla de matriz de marco logico");
+      this.coneccionServicio.agregarMatrizMarco2(this.formulariofin.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioproposito.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente1.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente2.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente3.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad1.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad2.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad3.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad4.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad5.value).subscribe();
+      this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad6.value).subscribe();
+    }else{
+      alert("Proceso de creacion de matriz de marco logico cancelado")
+    }
+    
+  }
   
-  //funciones se aqui para abajo sirven solamente para enviar los campos de la matriz de marco logico en la tabla
-  enviarfinaMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formulariofin.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formulariofin.value).subscribe();
-  }
-
-
-  enviarpropositoaMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioproposito.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioproposito.value).subscribe();
-  }
-
-  enviarcomponente1aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formulariocomponente1.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente1.value).subscribe();
-  }
-
-  enviarcomponente2aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formulariocomponente2.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente2.value).subscribe();
-  }
-
-  enviarcomponente3aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formulariocomponente3.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formulariocomponente3.value).subscribe();
-  }
-
-  enviaractividad1aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad1.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad1.value).subscribe();
-  }
-
-  enviaractividad2aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad2.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad2.value).subscribe();
-  }
-
-  enviaractividad3aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad3.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad3.value).subscribe();
-  }
-
-  enviaractividad4aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad4.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad4.value).subscribe();
-  }
-
-  enviaractividad5aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad5.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad5.value).subscribe();
-  }
-
-  enviaractividad6aMatriz(): any{
-    console.log("probando el funcionamiento del boton");
-    console.log(this.formularioactividad6.value);
-    this.coneccionServicio.agregarMatrizMarco2(this.formularioactividad6.value).subscribe();
-  }
 
   regresarUnpoco(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);

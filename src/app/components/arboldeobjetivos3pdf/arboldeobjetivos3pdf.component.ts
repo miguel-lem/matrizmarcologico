@@ -239,8 +239,6 @@ export class Arboldeobjetivos3pdfComponent {
   //esta funcion es para poder convertir a un pdf la informacion de la tabla
   downloadPDF() {
     //capturo el documento de lado del html
-    //document.getElementById('texto1').style.width = '100%'; 
-    //document.getElementById('texto1').style.height = '100px';
     const INFORMACION: any = document.getElementById('cuerpo');
     //coloco las variable de psicion, unidad de media, y el formato
     //con 'p' se va de verttical con 'l' de horizontal
