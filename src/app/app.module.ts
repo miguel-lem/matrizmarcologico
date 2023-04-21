@@ -41,6 +41,9 @@ import { Editarelementomatriz3Component } from './components/editarelementomatri
 import { ArbolcausaefectopdfComponent } from './components/arbolcausaefectopdf/arbolcausaefectopdf.component';
 import { Arbolcausaefecto2pdfComponent } from './components/arbolcausaefecto2pdf/arbolcausaefecto2pdf.component';
 import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf/arbolcausaefecto3pdf.component';
+import { ArboldeobjetivospdfComponent } from './components/arboldeobjetivospdf/arboldeobjetivospdf.component';
+import { Arboldeobjetivos2pdfComponent } from './components/arboldeobjetivos2pdf/arboldeobjetivos2pdf.component';
+import { Arboldeobjetivos3pdfComponent } from './components/arboldeobjetivos3pdf/arboldeobjetivos3pdf.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,10 @@ import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf
     Editarelementomatriz3Component,
     ArbolcausaefectopdfComponent,
     Arbolcausaefecto2pdfComponent,
-    Arbolcausaefecto3pdfComponent
+    Arbolcausaefecto3pdfComponent,
+    ArboldeobjetivospdfComponent,
+    Arboldeobjetivos2pdfComponent,
+    Arboldeobjetivos3pdfComponent
   ],
   imports: [
     BrowserModule,

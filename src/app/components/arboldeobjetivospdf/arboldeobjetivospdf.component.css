@@ -1,7 +1,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    flex-wrap: wrap;
   }
   .container-login100 {
       position:relative;
@@ -12,9 +11,9 @@
       display: -moz-box;
       display: -ms-flexbox;
       flex-wrap: wrap;
-      padding: 10px;
       display: grid;
       grid-template-rows: auto, auto;
+      padding: 10px;
       background: #9053c7;
       background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
       background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
@@ -24,15 +23,6 @@
   div#cabecera{
         width: 100%;
         height: 50px;
-        min-width: 400px;
-  }
-  div#cabecera1{
-    float: left;
-    width: 470px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   div#cabecera2{
     float: left;
@@ -45,24 +35,6 @@
   div#cabecera3{
     float: left;
     width: 100px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-  }
-  div#cabecera33{
-    float: left;
-    width: 180px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-  }
-  div#cabecera5{
-    float: left;
-    width: 250px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -83,40 +55,21 @@
   }
   div#cuerpotabla1{
     float: left;
-    min-width: 400px;
     margin-top: 5px;
     width: 40%;
     height: 680px;
   }
   div#cuerpo{
     float: left;
-    min-width: 400px;
     margin-top: 5px;
     width: 100%;
     height: 680px;
     background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), 
-    url("/assets/imagenes/Slide5.jpg") top center;
+    url("/assets/imagenes/Slide1.jpg") top center;
     background-size: cover;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-  }
-  div#cuerpo1{
-    margin-top: 5px;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  div#cuerpo11{
-    border-width: 1px;
-    border-radius: 5px;
-    width: 300px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
   }
   #texto1{
     width: 100%;
@@ -124,14 +77,24 @@
     resize: none; 
     word-wrap: break-word;
   }
- 
- 
+
+  div#cuerpo11{
+    border-width: 1px;
+    border-radius: 5px;
+    width: 240px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: gray;
+  }
+  
   div#cuerpo111{
     border-width: 1px;
     border-radius: 5px;
-    width: 150px;
-    height: 50px;
-    display: flex;
+    width: 230px;
+    height: 100px;
+    display: flex; 
     align-items: center;
     justify-content: center; 
   }

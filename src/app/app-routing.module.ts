@@ -36,6 +36,9 @@ import { Editarelementomatriz3Component } from './components/editarelementomatri
 import { ArbolcausaefectopdfComponent } from './components/arbolcausaefectopdf/arbolcausaefectopdf.component';
 import { Arbolcausaefecto2pdfComponent } from './components/arbolcausaefecto2pdf/arbolcausaefecto2pdf.component';
 import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf/arbolcausaefecto3pdf.component';
+import { ArboldeobjetivospdfComponent } from './components/arboldeobjetivospdf/arboldeobjetivospdf.component';
+import { Arboldeobjetivos2pdfComponent } from './components/arboldeobjetivos2pdf/arboldeobjetivos2pdf.component';
+import { Arboldeobjetivos3pdfComponent } from './components/arboldeobjetivos3pdf/arboldeobjetivos3pdf.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -64,8 +67,11 @@ const routes: Routes = [
   {path: 'home/login/proyectos/:correo/arboldeobjetivos2/:proyecto', component:  Arboldeobjetivos2Component},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos3/:proyecto', component:  Arboldeobjetivos3Component},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos/:proyecto/arboldeobjetivoscreado/:valor', component:  ArboldeobjetivoscreadoComponent},
+  {path: 'home/login/proyectos/:correo/arboldeobjetivos/:proyecto/arboldeobjetivoscreado/:valor/arboldeobjetivospdf/:un1', component:  ArboldeobjetivospdfComponent},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos2/:proyecto/arboldeobjetivos2creado/:valor', component:  Arboldeobjetivos2creadoComponent},
+  {path: 'home/login/proyectos/:correo/arboldeobjetivos2/:proyecto/arboldeobjetivos2creado/:valor/arboldeobjetivos2pdf/:un2', component:  Arboldeobjetivos2pdfComponent},
   {path: 'home/login/proyectos/:correo/arboldeobjetivos3/:proyecto/arboldeobjetivos3creado/:valor', component:  Arboldeobjetivos3creadoComponent},
+  {path: 'home/login/proyectos/:correo/arboldeobjetivos3/:proyecto/arboldeobjetivos3creado/:valor/arboldeobjetivos3pdf/:un3', component:  Arboldeobjetivos3pdfComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto', component:MatrizmarcologicoComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto/matrizmarcologicocreada/:id', component:MatrizmarcologicocreadaComponent},
   {path: 'home/login/proyectos/:correo/matrizmarcologico/:proyecto/matrizmarcologicocreada/:id/editarelementomatriz/:idmat', component:EditarelementomatrizComponent},

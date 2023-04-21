@@ -26,14 +26,6 @@
         height: 50px;
         min-width: 400px;
   }
-  div#cabecera1{
-    float: left;
-    width: 470px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   div#cabecera2{
     float: left;
     width: 100px;
@@ -45,15 +37,6 @@
   div#cabecera3{
     float: left;
     width: 100px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-  }
-  div#cabecera33{
-    float: left;
-    width: 180px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -117,6 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    background-color: gray;
   }
   #texto1{
     width: 100%;

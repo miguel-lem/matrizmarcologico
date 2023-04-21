@@ -333,4 +333,8 @@ export class Arboldeobjetivos2creadoComponent {
 
   }
 
+  crearpdf(): void {
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arboldeobjetivos2/'+this.elproyecto+'/arboldeobjetivos2creado/'+2+'/arboldeobjetivos2pdf/'+2]);
+  }
+
 }

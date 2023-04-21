@@ -408,4 +408,8 @@ export class Arboldeobjetivos3creadoComponent {
     }
 
   }
+
+  creadPDF(): void {
+    this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arboldeobjetivos3/'+this.elproyecto+'/arboldeobjetivos3creado/'+3+'/arboldeobjetivos3pdf/'+3]);
+  }
 }

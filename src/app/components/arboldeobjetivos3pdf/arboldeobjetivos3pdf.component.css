@@ -22,17 +22,15 @@
       background: linear-gradient(-135deg, #c850c0, #4158d0);
     } 
   div#cabecera{
+    position:relative;
         width: 100%;
         height: 50px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        flex-wrap: wrap;
         min-width: 400px;
-  }
-  div#cabecera1{
-    float: left;
-    width: 470px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   div#cabecera2{
     float: left;
@@ -51,27 +49,18 @@
     justify-content: center;
     opacity: .9;
   }
-  div#cabecera33{
+  div#cabecera4{
     float: left;
-    width: 180px;
+    width: 200px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .9;
+    opacity: .1;
   }
   div#cabecera5{
     float: left;
     width: 250px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: .9;
-  }
-  div#cabecera4{
-    float: left;
-    width: 200px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -89,13 +78,14 @@
     height: 680px;
   }
   div#cuerpo{
+    position:relative;
     float: left;
     min-width: 400px;
     margin-top: 5px;
     width: 100%;
     height: 680px;
     background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), 
-    url("/assets/imagenes/Slide5.jpg") top center;
+    url("/assets/imagenes/Slide6.jpg") top center;
     background-size: cover;
     display: grid;
     grid-template-columns: auto;
@@ -117,14 +107,16 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    background-color: gray;
   }
   #texto1{
     width: 100%;
     height: 100px;
-    resize: none; 
+    resize: none;
+    overflow: hidden;
     word-wrap: break-word;
   }
- 
+  
  
   div#cuerpo111{
     border-width: 1px;
