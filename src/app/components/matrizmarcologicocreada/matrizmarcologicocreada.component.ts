@@ -71,35 +71,25 @@ export class MatrizmarcologicocreadaComponent {
 
   } 
 
-  descargaPdf(): void { 
-    const INFORMACION: any = document.getElementById('tablaresponsiva');
-    //coloco las variable de psicion, unidad de media, y el formato
-    //con 'p' se va de verttical con 'l' de horizontal
-    const doc = new jsPDF('l', 'pt', 'a4');
-    const options = {
-      background: 'white',
-      scale: 3
-    };
-    //esta vriable la cree para que no me de los errores al transformar el pdf 
-    const html2canvas: any=_html2canvas;
-    //le agrego la imagen para el pdf
-    html2canvas(INFORMACION, options).then((canvas) => {
 
-      const img = canvas.toDataURL('image/PNG');
 
-      // Add image Canvas to PDF
-      const bufferX = 15;
-      const bufferY = 15;
-      const imgProps = (doc as any).getImageProperties(img);
-      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
-      //doc.addPage();
-      
-      return doc;
-    }).then((docResult) => {
-      //aqui le contorlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
-      docResult.save(`${new Date().toISOString()}matriz-marco-logico-diseño1.pdf`);
+  otraideaPDF(): void{
+    var doc = new jsPDF();
+	
+    // se extrae la informacion de lado del documento y la almaceno en una variable para convertir a pdf.
+    var elementHTML: any = document.getElementById('tablaresponsiva');
+
+    doc.html(elementHTML, {
+        callback: function(doc) {
+            // para guardar el PDF
+            doc.save(`${new Date().toISOString()}Matriz-marco-logico-diseño1.pdf`);
+        },
+        margin: [10, 10, 10, 10],
+        autoPaging: 'text',
+        x: 0,
+        y: 0,
+        width: 190, //el ancho del documento pdf
+        windowWidth: 675 //el alto de la ventana medido en pixeles
     });
   }
 

@@ -22,6 +22,9 @@
                     <button  (click) = "regresarUnpoco()" type="" class="btn btn-success">Regresar</button>
                 </div> 
                 <div id="cabecera3">
+                    <button (click)="descargarPDF()" type="" class="btn btn-success"><i class="fa-solid fa-download"></i> PDF</button> 
+                </div>
+                <div id="cabecera3">
                     <button (click)="eliminarMatriz()" type="" class="btn btn-danger">Eliminar</button>
                 </div>
                 <div id="cabecera3">
@@ -30,7 +33,7 @@
             </form>
         </div>
         <div id="cuerpo">
-            <div class="table-responsive">
+            <div class="table-responsive" id="tablaresponsiva">
                         
                 <table class="table table-bordered" id="tabla">
                     <thead>
@@ -38,6 +41,7 @@
                             <th colspan="4" scope="col">Matriz de Marco Lógico</th>
                         </tr>
                         <tr>
+                            <th scope="col">Pertenece</th>
                             <th scope="col">Descripcion</th>
                             <th scope="col">Indicadores</th>
                             <th scope="col">Verificadores</th>
@@ -47,6 +51,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let elemento of Elementos; let iControl=index" class="">
+                            <td>{{ elemento.nombre}}</td>
                             <td>{{ elemento.descripcion}}</td> 
                             <td>{{ elemento.indicadores}}</td>
                             <td>{{ elemento.verificadores}}</td>

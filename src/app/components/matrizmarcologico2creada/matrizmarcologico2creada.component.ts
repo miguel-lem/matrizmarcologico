@@ -3,6 +3,8 @@ import {FormGroup, FormBuilder} from '@angular/forms';
 //importamos el servicio para poder establecer comnicacion
 import { CrudserviceService } from 'src/app/services/crudservice.service';
 import { Router, ActivatedRoute } from '@angular/router';
+//librerias para poder descargar pdf
+import jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-matrizmarcologico2creada',
@@ -63,6 +65,26 @@ export class Matrizmarcologico2creadaComponent {
   editaelementoMatriz(elemento: any): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico2/'+this.elproyecto+'/matrizmarcologico2creada/'+1+'/editarelementomatriz2/'+elemento]);
 
+  }
+
+  otraideaPDF(): void{
+    var doc = new jsPDF();
+	
+    // se extrae la informacion de lado del documento y la almaceno en una variable para convertir a pdf.
+    var elementHTML: any = document.getElementById('tablaresponsiva');
+
+    doc.html(elementHTML, {
+        callback: function(doc) {
+            // para guardar el PDF
+            doc.save(`${new Date().toISOString()}Matriz-marco-logico-diseño2.pdf`);
+        },
+        margin: [10, 10, 10, 10],
+        autoPaging: 'text',
+        x: 0,
+        y: 0,
+        width: 190, //el ancho del documento pdf
+        windowWidth: 675 //el alto de la ventana medido en pixeles
+    });
   }
 
 }

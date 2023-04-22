@@ -70,32 +70,22 @@ export class MatrizinvolucradoscreadaComponent {
 
  //esta funcion es para poder convertir a un pdf la informacion de la tabla
   downloadPDF() {
-    //capturo el documento de lado del html
-    const html2canvas: any=_html2canvas;
-    const INFORMACION = document.getElementById('tablaprincipal');
-    //coloco las variable de psicion, unidad de media, y el formato
-    //con 'p' se va de verttical con 'l' de horizontal
-    const doc = new jsPDF('l', 'pt', 'a4');
-    const options = {
-      background: 'white',
-      scale: 3
-    };
-    //le agrego la imagen para el pdf
-    html2canvas(INFORMACION, options).then((canvas) => {
+    var doc = new jsPDF();
+	
+    // se extrae la informacion de lado del documento y la almaceno en una variable para convertir a pdf.
+    var elementHTML: any = document.getElementById('tablaresponsiva');
 
-      const img = canvas.toDataURL('image/PNG'); 
-
-      // Add image Canvas to PDF
-      const bufferX = 15;
-      const bufferY = 15;
-      const imgProps = (doc as any).getImageProperties(img);
-      const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX;
-      const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-      doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
-      return doc;
-    }).then((docResult) => {
-      //aqui le contorlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
-      docResult.save(`${new Date().toISOString()}matrizinvolucrados.pdf`);
+    doc.html(elementHTML, {
+        callback: function(doc) {
+            // para guardar el PDF
+            doc.save(`${new Date().toISOString()}Matriz-de-involucrados.pdf`);
+        },
+        margin: [10, 10, 10, 10],
+        autoPaging: 'text',
+        x: 0,
+        y: 0,
+        width: 190, //el ancho del documento pdf
+        windowWidth: 675 //el alto de la ventana medido en pixeles
     });
   }
 
