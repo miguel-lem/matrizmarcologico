@@ -67,6 +67,7 @@ export class Matrizmarcologico2creadaComponent {
 
   }
 
+  //funcion para poder descargar el pdf de la matriz diseñada
   otraideaPDF(): void{
     var doc = new jsPDF();
 	
