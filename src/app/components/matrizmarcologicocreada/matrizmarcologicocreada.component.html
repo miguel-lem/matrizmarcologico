@@ -47,11 +47,11 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let elemento of Elementos; let iControl=index" class="">
-                            <td>{{ elemento.nombre}}</td>
-                            <td>{{ elemento.descripcion}}</td> 
-                            <td>{{ elemento.indicadores}}</td>
-                            <td>{{ elemento.verificadores}}</td>
-                            <td>{{ elemento.supuestos}}</td>
+                            <td id="eltd">{{ elemento.nombre}}</td>
+                            <td id="eltd">{{ elemento.descripcion}}</td> 
+                            <td id="eltd">{{ elemento.indicadores}}</td>
+                            <td id="eltd">{{ elemento.verificadores}}</td>
+                            <td id="eltd">{{ elemento.supuestos}}</td>
                             <td>
                                 <button (click) = "editaelementoMatriz(elemento.id_matriz)" type="button" class="btn btn-outline-info"><i class="fa-regular fa-pen-to-square"></i></button>
                             </td>

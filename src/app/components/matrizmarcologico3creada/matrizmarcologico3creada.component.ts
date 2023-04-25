@@ -5,6 +5,8 @@ import { CrudserviceService } from 'src/app/services/crudservice.service';
 import { Router, ActivatedRoute } from '@angular/router';
 //librerias para poder descargar pdf
 import jsPDF from 'jspdf';
+import * as _html2canvas from 'html2canvas';
+import * as _html2pdf from 'html2pdf.js';
 
 
 @Component({
@@ -69,23 +71,40 @@ export class Matrizmarcologico3creadaComponent {
   }
 
   descargarPDF(): void{
-    var doc = new jsPDF();
-	
-    // se extrae la informacion de lado del documento y la almaceno en una variable para convertir a pdf.
-    var elementHTML: any = document.getElementById('tablaresponsiva');
-
-    doc.html(elementHTML, {
-        callback: function(doc) {
-            // para guardar el PDF
-            doc.save(`${new Date().toISOString()}Matriz-marco-logico-diseño3.pdf`);
+    // Aquí puedes elegir cualquier elemento del DOM
+    //le utilizo ts puro para trabajarle con la libraria
+    //aqui extraigo el elemento del DOM 
+    const $elementoParaConvertir: any = document.getElementById('tablaresponsiva');
+    //utilizo la variable creada en base al alias que le puse a la libreria
+    const html2pdf: any=_html2pdf;
+    html2pdf()
+      //aqui le coloco las configuracion del pdf
+      .set({
+        margin: 1,
+        //el nombre del archivo, le coloque lo de la fecha para que tome la del sistema
+        filename: (`${new Date().toISOString()}Matriz-marco-logico3.pdf`),
+        //caracteristicas y tipo de imagen
+        image: {
+            type: 'jpeg',
+            quality: 0.98
         },
-        margin: [10, 10, 10, 10],
-        autoPaging: 'text',
-        x: 0,
-        y: 0,
-        width: 190, //el ancho del documento pdf
-        windowWidth: 675 //el alto de la ventana medido en pixeles
-    });
+        //le utilizo la libreria del canvas, antes en la otra manera le enviaba directo a esta libreria
+        html2canvas: {
+          // la escala es para la calidad, mientras mas alto mas pesado el archivo
+            scale: 3, 
+            letterRendering: true,
+        },
+        jsPDF: {
+            unit: "in",
+            //es el formato de la hoja
+            format: "a4",
+            //la orientacion = landscape o portrait la primera de acuerdo a la imagen es: orizontal, la otra es vertical
+            orientation: 'landscape' 
+        }
+    })
+    .from($elementoParaConvertir)
+    .save()
+    .catch(err => console.log(err));
   }
 
 }

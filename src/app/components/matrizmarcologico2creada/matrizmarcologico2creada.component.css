@@ -77,3 +77,6 @@ div#cuerpo{
 #tabla{
     background-color: #b5bac9;
 }
+#eltd{
+    white-space: pre-wrap;
+}
