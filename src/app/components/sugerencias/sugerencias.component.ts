@@ -61,13 +61,14 @@ export class SugerenciasComponent {
     console.log(this.formularioenviar.value);
     this.coneccionServicio.agregarComentario(this.formularioenviar.value).subscribe(
       respuesta=>{
-        //para poder recargar la pagina y ver el nuevo nombre creado
+        //para poder recargar la pagina 
         location.reload();
         alert("Su comentario a sido enviado")
       }
     );
   }
   
+  //función con ruta de navegacion
   regresarProyectos(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }

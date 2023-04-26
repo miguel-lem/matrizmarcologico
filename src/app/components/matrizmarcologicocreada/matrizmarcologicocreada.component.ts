@@ -38,8 +38,6 @@ export class MatrizmarcologicocreadaComponent {
     this.formulariodelnombre.patchValue({nombre_extraido: this.elproyecto});
     //aqui le extraigo todos los elementos de la tabla matriz marco logico para mostrarlos en la tabla
     this.coneccionServicio.filtrarlamatrizmarcoparverlocreado(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la tabla matriz marco lo siguiente");
-      console.log(respuesta);
       this.Elementos=respuesta;
 
     });
@@ -48,26 +46,23 @@ export class MatrizmarcologicocreadaComponent {
     
   }
 
+  //funcion con ruta para navegacion
   regresarUnpoco(): void {
-    //this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico/'+this.elproyecto]);
   }
 
+  //funcion para poder eliminar la matriz
   eliminarMatriz(): void{
     if(window.confirm("En verdad desea eliminar la matriz que a creado ¿?")){
-      alert("Decidio eliminar la matriz");
-      console.log("la informacion que le voy  pasar");
-      console.log(this.formulariodelnombre.value);
       this.coneccionServicio.eliminarMatrizmarco(this.formulariodelnombre.value).subscribe(respuesta=>{
         //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
         location.reload();
       });
-    }else{
-      alert("A cancelado la eliminación del arbol")
     }
 
   }
 
+  //funcion para navegacion, esta mal redactado el nombre de la funcion
   editaelementoMatriz(elemento: any): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico/'+this.elproyecto+'/matrizmarcologicocreada/'+1+'/editarelementomatriz/'+elemento]);
 

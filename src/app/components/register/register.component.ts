@@ -31,14 +31,14 @@ export class RegisterComponent {
   }
   ngOnInit() {}
 
+
+  //ruta de navegacion
   regresar(): void {
     this.router.navigate(['home/info/login']);
   }
 
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos(): any{
-    //console.log('me presionaste');
-    //console.log(this.formularioderegistro.value);
     //pasamos el dato mediante la funcion creada de lado del servicio
     this.coneccionServicio.agregarRegistro(this.formularioderegistro.value).subscribe(
       respuesta=>{
@@ -52,8 +52,6 @@ export class RegisterComponent {
       }
     );
     
-    //console.log("se paso del registro");
-    //this.router.navigate(['/proyectos/'+this.variablecorreo]);
   } 
 
 }

@@ -30,7 +30,6 @@ export class RecursosComponent {
     this.elinvolucrado = this.activeRoute.snapshot.paramMap.get('idinvolucrado');
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
     this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
-    console.log("valor obtenido",this.elinvolucrado);
 
     this.formulariorecursos = this.formulario.group({
       id_recurso:[''],
@@ -50,8 +49,6 @@ export class RecursosComponent {
       //en la vista
       this.coneccionServicio.extraerRecursos(this.elinvolucrado).subscribe(
         respuesta=>{
-          console.log("valores que se obtuvieron");
-          console.log(respuesta);
           this.Recursos=respuesta;
         }
       );
@@ -59,8 +56,6 @@ export class RecursosComponent {
     //cabecera y evitar repetirlo en cada fila
     this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
       respuesta=>{
-        console.log("Lo que se extrajo como unico involucrado");
-        console.log(respuesta);
         //extraigo la informacion y le cargo para poder contemplar en la vista
         this.formularioverpertenencia = this.formulario.group({
           nombre:respuesta[0] ['nombre']
@@ -72,10 +67,10 @@ export class RecursosComponent {
   ngOnInit(){
 
   }
+
+  //funcion para poder enviar los datos a la BD
   enviarDatos3(): any{
     if(this.id_llave==undefined){
-      console.log('me presionaste'); 
-      console.log(this.formulariorecursos.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarRecursos(this.formulariorecursos.value).subscribe(
         respuesta=>{
@@ -83,10 +78,7 @@ export class RecursosComponent {
           location.reload();
         }
       );
-      console.log("se paso del registro"); 
     }else{
-      console.log("El numero es mayor que cero");
-      console.log(this.formulariorecursos.value);
       //pasamos el dato mediante la funcion creada de lado del servicio pero ya editado
       this.coneccionServicio.actualizarRecurso(this.formulariorecursos.value).subscribe(
         respuesta=>{
@@ -103,9 +95,8 @@ export class RecursosComponent {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizinvolucrados/'+this.elproyecto]);
   }
 
+  //funcion para poder controlar el cerrado de sesion
   cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
     if(window.confirm("Seguro desea cerrar sesion")){
       this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
       this.router.navigate(['home']);
@@ -113,26 +104,23 @@ export class RecursosComponent {
     
   }
 
+  //funcion para control de eliminacion de recurso
   eliminarRecurso(recurso: any): void{
     this.captura=recurso;
-    console.log("el protecto que se pretente eliminar es: ",recurso);
     this.formulariodeeliminar = this.formulario.group({
       recurso: [this.captura]
     });
-    console.log("El contenido del formulario");
-    console.log(this.formulariodeeliminar.value);
     if(window.confirm("Desea eliminar el recurso, recuerde que se perdera la informacion")){
-      alert("Decidio eliminar el recurso");
       this.coneccionServicio.borrarrecurso(this.formulariodeeliminar.value).subscribe(
         respuesta=>{
           location.reload();
         }
       );
-    }else{
-      alert("a cancelado la eliminacion del recurso");
     }
   }
 
+
+  //funcion para edicion de recurso
   editarrecurso( recurso: any): void {
     this.id_llave=recurso;
     //extraigo el recurso que selecciono

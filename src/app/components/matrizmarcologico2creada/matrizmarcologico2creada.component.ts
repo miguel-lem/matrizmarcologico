@@ -37,11 +37,10 @@ export class Matrizmarcologico2creadaComponent {
     this.formulariodelnombre.patchValue({nombre_extraido: this.elproyecto});
     //aqui le extraigo todos los elementos de la tabla matriz marco logico para mostrarlos en la tabla
     this.coneccionServicio.filtrarlamatrizmarcoparverlocreado2(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la tabla matriz marco lo siguiente");
-      console.log(respuesta);
       this.Elementos=respuesta;
     });
   }
+  //rutas de navegacion
   regresarUnpoco(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico2/'+this.elproyecto]);
   }
@@ -49,21 +48,18 @@ export class Matrizmarcologico2creadaComponent {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
 
+  //funcion para eliminar la matriz creada
   eliminarMatriz(): void{
     if(window.confirm("En verdad desea eliminar la matriz2 que a creado ¿?")){
-      alert("Decidio eliminar la matriz2");
-      console.log("la informacion que le voy  pasar");
-      console.log(this.formulariodelnombre.value);
       this.coneccionServicio.eliminarMatrizmarco2(this.formulariodelnombre.value).subscribe(respuesta=>{
         //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
         location.reload();
       });
-    }else{
-      alert("A cancelado la eliminación de la matriz 2")
     }
 
   }
 
+  //ruta para navegar
   editaelementoMatriz(elemento: any): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico2/'+this.elproyecto+'/matrizmarcologico2creada/'+1+'/editarelementomatriz2/'+elemento]);
 

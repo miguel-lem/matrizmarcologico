@@ -46,8 +46,6 @@ export class ProyectosComponent {
       //en la vista
       this.coneccionServicio.extraerProyectos(this.elcorreo).subscribe(
         respuesta=>{
-          //console.log("valores que se obtuvieron");
-          //console.log(respuesta);
           this.Proyectos=respuesta;
         }
       )
@@ -58,8 +56,6 @@ export class ProyectosComponent {
   }
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos1(): any{
-    console.log('me presionaste'); 
-    console.log(this.formulariodecrearproyecto.value);
     if(window.confirm("Desea crear proyecto con ese nombre¿?, luego no podra editar el nombre")){
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarProyecto(this.formulariodecrearproyecto.value).subscribe(
@@ -68,13 +64,11 @@ export class ProyectosComponent {
           location.reload();
         }
       );
-    }
-    console.log("se paso del registro"); 
+    } 
   }
   
+  //funcion para controlar el cerrado de sesion
   cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
     if(window.confirm("Seguro desea cerrar sesion")){
       this.coneccionServicio.agregarFin(this.elcorreo).subscribe(
         respuesta=>{
@@ -85,23 +79,20 @@ export class ProyectosComponent {
     }
   }
 
+
+  //funcion para eliminar un proyecto
   eliminarProyecto(nombre:any): void {
     this.captura=nombre;
-    console.log("el protecto que se pretente eliminar es: ",nombre);
     this.formulariodeeliminar = this.formulario.group({
       nombre_proyect: [this.captura]
     });
-    console.log("El contenido del formulario");
-    console.log(this.formulariodeeliminar.value);
     if(window.confirm("Desea eliminar el proyecto, recuerde que se perdera toda la informacion relacionada con el proyecto")){
-      alert("Decidio eliminar el proyecto");
+      
       this.coneccionServicio.borrarproyecto(this.formulariodeeliminar.value).subscribe(
         respuesta=>{
           location.reload();
         }
       );
-    }else{
-      alert("a cancelado la eliminacion del proyecto");
     }
   }
 

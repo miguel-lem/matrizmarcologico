@@ -38,11 +38,10 @@ export class Matrizmarcologico3creadaComponent {
     this.formulariodelnombre.patchValue({nombre_extraido: this.elproyecto});
     //aqui le extraigo todos los elementos de la tabla matriz marco logico para mostrarlos en la tabla
     this.coneccionServicio.filtrarlamatrizmarcoparverlocreado3(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la tabla matriz marco lo siguiente");
-      console.log(respuesta);
       this.Elementos=respuesta;
     }); 
   }
+  //funciones con rutas de navegacion
   regresarUnpoco(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico3/'+this.elproyecto]);
   }
@@ -50,21 +49,19 @@ export class Matrizmarcologico3creadaComponent {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
 
+
+  //funcion para poder eliminar la matriz creada
   eliminarMatriz(): void{
     if(window.confirm("En verdad desea eliminar la matriz3 que a creado ¿?")){
-      alert("Decidio eliminar la matriz3");
-      console.log("la informacion que le voy  pasar");
-      console.log(this.formulariodelnombre.value);
       this.coneccionServicio.eliminarMatrizmarco3(this.formulariodelnombre.value).subscribe(respuesta=>{
         //recargo la pagina para ver los cambios de eliminar el arbol de causa efecto
         location.reload();
       });
-    }else{
-      alert("A cancelado la eliminación de la matriz 3");
     }
 
   }
 
+  //funcion para navegacion solo anotado mal el nombre
   editaelementoMatriz(elemento: any): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizmarcologico3/'+this.elproyecto+'/matrizmarcologico3creada/'+1+'/editarelementomatriz3/'+elemento]);
 

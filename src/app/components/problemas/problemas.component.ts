@@ -50,8 +50,6 @@ export class ProblemasComponent {
 
     this.coneccionServicio.extraerProblemas(this.elinvolucrado).subscribe(
         respuesta=>{
-          console.log("valores que se obtuvieron");
-          console.log(respuesta);
           this.Problemas=respuesta;
         }
     );
@@ -60,8 +58,6 @@ export class ProblemasComponent {
     //cabecera y evitar repetirlo en cada fila
     this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
       respuesta=>{
-        console.log("Lo que se extrajo como unico involucrado");
-        console.log(respuesta);
         //extraigo la informacion y le cargo para poder contemplar en la vista
         this.formularioverpertenencia = this.formulario.group({
           nombre:respuesta[0] ['nombre']
@@ -73,10 +69,11 @@ export class ProblemasComponent {
   ngOnInit(){
 
   }
+
+  //funcion para pasar los datos
   enviarDatos3(): any{
+    //con la llave le controlo si es primer ingreso o si es edicion de algo ya existente
     if(this.id_llave==undefined){
-      console.log('me presionaste'); 
-      console.log(this.formularioproblemas.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarProblemas(this.formularioproblemas.value).subscribe(
         respuesta=>{
@@ -84,9 +81,7 @@ export class ProblemasComponent {
           location.reload();
         }
       );
-      console.log("se paso del registro");
     }else{
-      console.log("La llave es mayor que cero");
       //pasamos el dato mediante la funcion creada de lado del servicio, estos son lo de editado
       this.coneccionServicio.actualizarproblema(this.formularioproblemas.value).subscribe(
         respuesta=>{
@@ -98,29 +93,27 @@ export class ProblemasComponent {
      
   }
 
+  //ruta para navegacion
   regresarInvolucrados(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizinvolucrados/'+this.elproyecto]);
   }
+
+  //funcion para eliminar un problema
   eliminarProblema(problema: any): void{ 
     this.captura=problema;
-    console.log("el protecto que se pretente eliminar es: ",problema);
     this.formulariodeeliminar = this.formulario.group({
       problem: [this.captura]
     });
-    console.log("El contenido del formulario");
-    console.log(this.formulariodeeliminar.value);
     if(window.confirm("Desea eliminar el problema, recuerde que se perdera la informacion")){
-      alert("Decidio eliminar el problema");
       this.coneccionServicio.borrarproblema(this.formulariodeeliminar.value).subscribe(
         respuesta=>{
           location.reload();
         }
       );
-    }else{
-      alert("a cancelado la eliminacion del problema");
     }
   }
 
+  //funcion para poder editar un problema
   editarproblema( problema: any): void {
     //esta variable ya le comente el por que en la parte de involucrado
     this.id_llave=problema;

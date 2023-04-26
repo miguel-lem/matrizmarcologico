@@ -38,8 +38,6 @@ export class TodoslosproblemasComponent {
     this.formularioproblemas.patchValue({nombre_extraido: this.elproyecto});
     this.coneccionServicio.extraerlosProblemas(this.elproyecto).subscribe(
         respuesta=>{
-          console.log("valores que se obtuvieron");
-          console.log(respuesta);
           this.Problemas=respuesta;
         }
     );
@@ -52,13 +50,10 @@ export class TodoslosproblemasComponent {
   //esta funcion permite seleccionar los datos del problema en especifico y le paso 
   //para asi evitar en el arbol de problemas que se me carguen toditos los problemas
   enviarProblema(id:string){
-    this.variableid = id;
-    console.log("id recuperado: ",this.variableid); 
+    this.variableid = id; 
     //aqui le separo un problema en especifico
     this.coneccionServicio.filtrarProblemasseleccionados(this.variableid).subscribe(
       respuesta=>{
-        console.log("valores que se obtuvieron");
-        console.log(respuesta);
         //le agrego los valores del problema  extraido al formulario
         this.formulariodeenvio.setValue({
           problema:respuesta[0]['problema'],
@@ -66,19 +61,15 @@ export class TodoslosproblemasComponent {
         });
         //los console.log son porqu debo ir probando si estan pasando los datos para sino buscar solucion
         //ya que de los contrario estaria a ciegas
-        console.log("valores que estamos separando: ");
-        console.log(this.formulariodeenvio.value);
         //esos datos extraidos le paso a la funcion de la api que se encarga de guardarlos ya en la parte del arbol de problemas
         this.coneccionServicio.agregarProblemasarbol(this.formulariodeenvio.value).subscribe();
-        console.log("se paso de la parte del envio del problema seleccionado: ");
       }
     );
     console.log("se paso el envio del problem");
   }
 
+  //funcion para el control de cerrar sesion
   cerrarSesion(): void {
-    //console.log("El correo que se enviara a cerrar sesion es: ");
-    //console.log(this.elcorreo);
     if(window.confirm("Seguro desea cerrar sesion")){
       this.coneccionServicio.agregarFin(this.elcorreo).subscribe();
       this.router.navigate(['home']);
@@ -86,6 +77,7 @@ export class TodoslosproblemasComponent {
     
   }
 
+  //ruta de navegacion
   regresarProyectos(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }

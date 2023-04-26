@@ -193,8 +193,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Fin1paratabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariofin1 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -205,7 +203,6 @@ export class MatrizmarcologicoComponent {
           f:['a'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el efecto directo1
@@ -214,8 +211,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Fin2paratabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariofin2 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -226,7 +221,6 @@ export class MatrizmarcologicoComponent {
           f:['b'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el efecto directo2
@@ -235,8 +229,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Fin3paratabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariofin3 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -247,7 +239,6 @@ export class MatrizmarcologicoComponent {
           f:['c'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el problema
@@ -256,8 +247,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Propositotabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioproposito = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -268,7 +257,6 @@ export class MatrizmarcologicoComponent {
           f:['d'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa1
@@ -277,8 +265,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Componente1tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocomponente1 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -289,7 +275,6 @@ export class MatrizmarcologicoComponent {
           f:['e'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa2
@@ -298,8 +283,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Componente2tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocomponente2 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -310,7 +293,6 @@ export class MatrizmarcologicoComponent {
           f:['f'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa3
@@ -319,8 +301,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Componente3tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocomponente3 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -331,7 +311,6 @@ export class MatrizmarcologicoComponent {
           f:['g'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta1
@@ -340,8 +319,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Actividad1tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioactividad1 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -352,7 +329,6 @@ export class MatrizmarcologicoComponent {
           f:['h'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta2
@@ -361,8 +337,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Actividad2tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioactividad2 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -373,7 +347,6 @@ export class MatrizmarcologicoComponent {
           f:['i'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta3
@@ -382,8 +355,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Actividad3tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioactividad3 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -394,7 +365,6 @@ export class MatrizmarcologicoComponent {
           f:['j'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta4
@@ -403,8 +373,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Actividad4tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioactividad4 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -415,7 +383,6 @@ export class MatrizmarcologicoComponent {
           f:['k'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta5
@@ -424,8 +391,6 @@ export class MatrizmarcologicoComponent {
       respuesta=>{
         this.Actividad5tabla=respuesta;
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioactividad5 = this.formulario.group({
           a:respuesta[0]['finproposito'],
           b:[''],
@@ -436,7 +401,6 @@ export class MatrizmarcologicoComponent {
           f:['l'],
           nombre_extraido:respuesta[0]['nombre_extraido'],
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
 
@@ -456,7 +420,7 @@ export class MatrizmarcologicoComponent {
   //funcion para poder pasarle todos los datos a la tabla de matriz de marco logico
   guardarDatos(): void{
     if(window.confirm("Ya completo los campos, porque de lo contrario si esta mal elaborada la tabla debera eliminarla y volver a crearla")){
-      console.log("Se empieza a enviar la informacion a la tabla de matriz de marco logico");
+      
       this.coneccionServicio.agregarMatrizMarco(this.formulariofin1.value).subscribe();
       this.coneccionServicio.agregarMatrizMarco(this.formulariofin2.value).subscribe();
       this.coneccionServicio.agregarMatrizMarco(this.formulariofin3.value).subscribe();
@@ -469,8 +433,6 @@ export class MatrizmarcologicoComponent {
       this.coneccionServicio.agregarMatrizMarco(this.formularioactividad3.value).subscribe();
       this.coneccionServicio.agregarMatrizMarco(this.formularioactividad4.value).subscribe();
       this.coneccionServicio.agregarMatrizMarco(this.formularioactividad5.value).subscribe();
-    }else{
-      alert("Proceso de creacion de matriz de marco logico cancelado");
     }
   }
 }
