@@ -39,6 +39,7 @@ import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf
 import { ArboldeobjetivospdfComponent } from './components/arboldeobjetivospdf/arboldeobjetivospdf.component';
 import { Arboldeobjetivos2pdfComponent } from './components/arboldeobjetivos2pdf/arboldeobjetivos2pdf.component';
 import { Arboldeobjetivos3pdfComponent } from './components/arboldeobjetivos3pdf/arboldeobjetivos3pdf.component';
+import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
@@ -48,6 +49,7 @@ const routes: Routes = [
   {path: 'home/login/forgetpassowrd', component: ForgetpassowrdComponent},
   {path: 'home/login/register', component: RegisterComponent},
   {path: 'home/login/proyectos/:correo', component: ProyectosComponent},
+  {path: 'home/login/proyectos/:correo/sugerencias/:ids', component: SugerenciasComponent},
   {path: 'home/login/proyectos/:correo/matrizinvolucrados/:proyecto', component: MatrizinvolucradosComponent},
   {path: 'home/login/proyectos/:correo/matrizinvolucrados/:proyecto/intereses/:idinvolucrado', component: InteresesComponent},
   {path: 'home/login/proyectos/:correo/matrizinvolucrados/:proyecto/problemas/:idinvolucrado', component: ProblemasComponent},

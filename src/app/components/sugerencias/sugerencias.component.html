@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+<body>
+    <div class="container-login100">
+        <div id="cabecera">
+            <div id="cabecera3">
+                <button (click)="regresarProyectos()" type="" class="btn btn-outline-warning"><--Regresar</button>
+            </div>
+            <form ngNativeValidate [formGroup]="formulariodecomentario" > 
+                <div id="cabecera1"> 
+                    <label id="label1">Usuario:</label>
+                </div>
+                <div id="cabecera4" >
+                    <input formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
+                        name="" id="texto11" aria-describedby="helpId" placeholder="Usuario">
+                </div>
+            </form>
+            <div id="cabecerauser">
+                <button type="" class="btn btn-info">:::<i class="fa-regular fa-user"></i></button>
+            </div>
+        </div> 
+        <div id="cuerpo">
+            <div id="cuerpo1">
+                <div class="card border-primary mb-3">
+                    <div class="card-header">
+                        <label>Su opinión es importante, haganos conocerla</label>
+                    </div>
+                    <div class="card-body text-primary">
+                        <form [formGroup]="formularioenviar">
+                            <div class="mb-3">
+                                <label for="" class="form-label">Comentario:</label>
+                                <textarea formControlName="comentario" type="text"
+                                class="form-control" name="" id="texto1" aria-describedby="helpId" placeholder="Comentario">
+                
+                                </textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Sugerencia:</label>
+                                <textarea formControlName="sugerencia" type="text"
+                                class="form-control" name="" id="texto1" aria-describedby="helpId" placeholder="Sugerencia">
+                
+                                </textarea>
+                            </div>
+                            <div class="btn-group" role="group" aria-label="Button group name">
+                                <div id="cabecera34">
+                                    <button (click) = "enviarDatos1()" type="" class="btn btn-outline-info"><i class="fa-regular fa-paper-plane"></i>Enviar comentario y sugerencia</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -66,7 +66,7 @@ div#cabecera1{
 }
 div#cabecera2{
   float: left;
-  width: 500px;
+  width: 400px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ div#cabecera3{
 }
 #cabecerauser{
   float: left;
-  width: 28px;
+  width: 80px;
   height: 50px;
   display: flex;
   align-items: center;

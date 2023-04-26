@@ -44,6 +44,7 @@ import { Arbolcausaefecto3pdfComponent } from './components/arbolcausaefecto3pdf
 import { ArboldeobjetivospdfComponent } from './components/arboldeobjetivospdf/arboldeobjetivospdf.component';
 import { Arboldeobjetivos2pdfComponent } from './components/arboldeobjetivos2pdf/arboldeobjetivos2pdf.component';
 import { Arboldeobjetivos3pdfComponent } from './components/arboldeobjetivos3pdf/arboldeobjetivos3pdf.component';
+import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
 
 @NgModule({
   declarations: [
@@ -86,7 +87,8 @@ import { Arboldeobjetivos3pdfComponent } from './components/arboldeobjetivos3pdf
     Arbolcausaefecto3pdfComponent,
     ArboldeobjetivospdfComponent,
     Arboldeobjetivos2pdfComponent,
-    Arboldeobjetivos3pdfComponent
+    Arboldeobjetivos3pdfComponent,
+    SugerenciasComponent
   ],
   imports: [
     BrowserModule,

@@ -63,6 +63,11 @@ export class CrudserviceService {
     return this.clienteHttp.post(this.API+"?borrarproyecto=",nombreproyecto);
   }
 
+   //funcion para pasarle los datos de comentarios y sugerencias a la tabla
+   agregarComentario(datosComentario:Registro):Observable<any>{
+    return this.clienteHttp.post(this.API+"?insertarcomentario=1",datosComentario);
+  }
+
   //funcion para pasarle los datos del nombre del involucrado
   agregarInvolucrado(datosInvolucrado:Involucrado):Observable<any>{
     return this.clienteHttp.post(this.API+"?insertarinvolucrado=1",datosInvolucrado);

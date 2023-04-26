@@ -21,8 +21,10 @@
     
     
     p {
-      font-family: "Raleway", sans-serif; 
-      color: wheat;
+      color: black;
+      font-family: "Raleway", sans-serif;
+      margin: 0.5rem 0.2rem; 
+      text-align: justify;
     }
     
     #main {
