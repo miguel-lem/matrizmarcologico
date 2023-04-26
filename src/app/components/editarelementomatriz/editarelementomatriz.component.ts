@@ -44,8 +44,6 @@ export class EditarelementomatrizComponent {
     //con ela funcion puedo extraer los elementos de la matriz de marco logico para editar
     this.coneccionServicio.extraerUnelementomatriz(this.idInvolucrado).subscribe(
       respuesta=>{
-        console.log("Lo que se extrajo como unico involucrado");
-        console.log(respuesta);
         //extraigo la informacion y le cargo para poder contemplar en la vista
         this.formularioedicion = this.formulario.group({
           id_matriz:respuesta[0]['id_matriz'],
@@ -61,6 +59,8 @@ export class EditarelementomatrizComponent {
   }
   ngOninit(){}
 
+
+  //rutas de navegacion
   guardareditado(): void {
     this.coneccionServicio.editarMatrizmarco(this.formularioedicion.value).subscribe(
       respuesta=>{

@@ -12,6 +12,7 @@ export class InfoComponent {
   ngOnInit() {
   }
 
+  //ruta para navegacion
   regresara(): void {
     this.router.navigate(['/home']);
   }

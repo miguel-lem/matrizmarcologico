@@ -46,22 +46,16 @@ export class MatrizinvolucradoscreadaComponent {
     this.formulariodelnombre.patchValue({nombre_extraido: this.elproyecto});
     //aqui le extraigo todos los elementos de la union de involucrado y los intereses
     this.coneccionServicio.filtrarinvolucradointeres(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la union de involucrado interes");
-      console.log(respuesta);
       this.InvolucradoIntereses=respuesta;
     });
 
     //aqui le extraigo todos los elementos de la union de involucrado y los problemas
     this.coneccionServicio.filtrarinvolucradoproblema(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la union de involucrado problemas");
-      console.log(respuesta);
       this.InvolucradoProblemas=respuesta;
     });
 
     //aqui le extraigo todos los elementos de la union de involucrado y los recursos
     this.coneccionServicio.filtrarinvolucradorecurso(this.elproyecto).subscribe(respuesta=>{
-      console.log("Se extrajo de la union de involucrado recursos");
-      console.log(respuesta);
       this.InvolucradoRecursos=respuesta;
     });
     var contenido= document.getElementById('tabla');
@@ -89,6 +83,7 @@ export class MatrizinvolucradoscreadaComponent {
     });
   }
 
+  //ruta de navegacion
   regresaraProyectos(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }

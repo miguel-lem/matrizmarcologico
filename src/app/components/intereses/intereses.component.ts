@@ -32,7 +32,6 @@ export class InteresesComponent {
     this.elinvolucrado = this.activeRoute.snapshot.paramMap.get('idinvolucrado');
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
     this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
-    console.log("involucrado obtenido: ",this.elinvolucrado)
     this.formulariointereses = this.formulario.group({
       id_interes:[''],
       interes: [''],
@@ -51,8 +50,6 @@ export class InteresesComponent {
 
     this.coneccionServicio.extraerIntereses(this.elinvolucrado).subscribe(
       respuesta=>{
-        console.log("valores que se obtuvieron");
-        console.log(respuesta); 
         this.Intereses=respuesta;
       }
     );
@@ -60,8 +57,6 @@ export class InteresesComponent {
     //cabecera y evitar repetirlo en cada fila
     this.coneccionServicio.extraerInvolucradounico(this.elinvolucrado).subscribe(
       respuesta=>{
-        console.log("Lo que se extrajo como unico involucrado");
-        console.log(respuesta);
         //extraigo la informacion y le cargo para poder contemplar en la vista
         this.formularioverpertenencia = this.formulario.group({
           nombre:respuesta[0] ['nombre']
@@ -74,8 +69,6 @@ export class InteresesComponent {
   }
   enviarDatos2(): any{
     if(this.id_llave==undefined){
-      console.log('me presionaste'); 
-      console.log(this.formulariointereses.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarIntereses(this.formulariointereses.value).subscribe(
         respuesta=>{
@@ -83,10 +76,7 @@ export class InteresesComponent {
           location.reload();
         }
       );
-      console.log("se paso del registro");
     }else{
-      console.log("el numero es mayor que cero");
-      console.log(this.formulariointereses.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.actualizarinteres(this.formulariointereses.value).subscribe(
         respuesta=>{
@@ -97,17 +87,17 @@ export class InteresesComponent {
     }
   }
 
+  //ruta para navegar
   regresarInvolucrados(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/matrizinvolucrados/'+this.elproyecto]);
   }
+
+  //funcion para eliminar los intereses
   eliminarInteres(interes: any): void{
     this.captura=interes;
-    console.log("el protecto que se pretente eliminar es: ",interes);
     this.formulariodeeliminar = this.formulario.group({
       intere: [this.captura]
     });
-    console.log("El contenido del formulario");
-    console.log(this.formulariodeeliminar.value);
     if(window.confirm("Desea eliminar el interes, recuerde que se perdera la informacion")){
       alert("Decidio eliminar el interes");
       this.coneccionServicio.borrarinteres(this.formulariodeeliminar.value).subscribe(
@@ -115,17 +105,14 @@ export class InteresesComponent {
           location.reload();
         }
       );
-    }else{
-      alert("a cancelado la eliminacion del interes");
     }
   }
 
+  //funcion para poder editar 
   editarintereses(interes:any):void{
     this.id_llave=interes;
     this.coneccionServicio.extraerInteresunico(interes).subscribe(
       respuesta=>{
-        console.log("informacion extraido de un interes en especifico");
-        console.log(respuesta);
         this.formulariointereses = this.formulario.group({
           id_interes:respuesta[0]['id_interes'],
           interes: respuesta[0]['interes']

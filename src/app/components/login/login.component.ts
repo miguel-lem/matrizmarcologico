@@ -41,32 +41,19 @@ export class LoginComponent {
     this.variablecorreo = valorobtenido;
   }
 
+  //funcion para enviar datos
   enviarDatos(): any{
-    //console.log('me presionaste');
-    //console.log(this.formulariodeinicio.value);
-    //console.log("el valor del correo: ");
-    //console.log(this.variablecorreo);
     this.coneccionServicio.agregarInicio(this.formulariodeinicio.value).subscribe();
     this.coneccionServicio.extraerelestado(this.variablecorreo).subscribe(respuesta=>{
-      //console.log("valores obtenidos de la consulta: ");
-      //console.log(respuesta);
       this.elestado=respuesta[0]['estado'];
-      //console.log("lo que se obtuvo de la consulta: ");
-      //console.log(this.elestado);
       if(this.elestado=='abierto'){
         this.router.navigate(['home/login/proyectos/'+this.variablecorreo]);
-        //console.log("Esta abierta la sesion");
       }else{
-        //console.log("no se puede ingresar por error de correo o contraseña");
         window.alert("Vuelve a intentarlo, verifica tu correo y contraseña");
       }
     });
     //pasamos el dato mediante la funcion creada de lado del servicio
     
-    //le llamo al otro componente y le paso el id que en este caso es el correo
-    //this.router.navigate(['home/login/proyectos/'+this.variablecorreo]);
-    //console.log(this.variablecorreo);
-    //console.log("se paso del registro");
   }
 
 }

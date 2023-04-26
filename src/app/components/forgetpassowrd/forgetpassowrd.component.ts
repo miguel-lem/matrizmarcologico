@@ -35,8 +35,6 @@ export class ForgetpassowrdComponent {
   }
 
   enviarDatos(): void{
-    console.log("lo que estoy para enviar");
-    console.log(this.formularioderecuperacion.value);
     this.coneccionServicio.recuperarContraseña1(this.formularioderecuperacion.value).subscribe();
   }
 

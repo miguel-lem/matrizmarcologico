@@ -20,6 +20,6 @@ NoBackNavigator() {
   {
     history.pushState(null, document.title, location.href);
   });
-}
+} 
 
 }

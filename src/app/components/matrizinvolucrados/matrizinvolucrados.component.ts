@@ -30,7 +30,6 @@ export class MatrizinvolucradosComponent {
   ){
     this.elproyecto = this.activeRoute.snapshot.paramMap.get('proyecto');
     this.elcorreo = this.activeRoute.snapshot.paramMap.get('correo');
-    console.log("valor obtenido",this.elproyecto);
 
     this.formularioinvolucrados1 = this.formulario.group({
       id_involucrado:[''],
@@ -56,21 +55,18 @@ export class MatrizinvolucradosComponent {
       //en la vista
       this.coneccionServicio.extraerInvolucrados(this.elproyecto).subscribe(
         respuesta=>{
-          console.log("valores que se obtuvieron");
-          console.log(respuesta);
           this.Involucrados=respuesta;
         }
       )
  
   }
   ngOnInit(){}
+
+  //control de enviar datos con la llave
   enviarDatos1(): any{
-    console.log("el valor de la llave");
-    console.log(this.id_llave);
+    //la llave lo que busca es activar un lado o elotro segun este el estado del involucrado
+    //si es nuevo esta la llave vacia
     if(this.id_llave==undefined){
-      console.log("la llave es indefinida");
-      console.log('me presionaste'); 
-      console.log(this.formularioinvolucrados1.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarInvolucrado(this.formularioinvolucrados1.value).subscribe(
         respuesta=>{
@@ -78,11 +74,7 @@ export class MatrizinvolucradosComponent {
           location.reload();
         }
       );
-      console.log("se paso del registro");
     }else{
-      console.log("la llave es mayor que cero");
-      console.log("lo que se va a enviar al registro de edicion");
-      console.log(this.formularioinvolucrados1.value);
       this.coneccionServicio.actualizarinvolucrado(this.formularioinvolucrados1.value).subscribe(
         respuesta=>{
           //recarga de la pagina pa poder notar el registro
@@ -91,32 +83,30 @@ export class MatrizinvolucradosComponent {
       );
     }
   }
+
+  //ruta de navegacion dentro de los invoolucrados
   obtenerInvolucrado(valorobtenido:string){
     this.elinvolucrado = valorobtenido;
     this.router.navigate(['/intereses/'+this.elinvolucrado]);
   }
 
+  //ruta de navegacion para la pagina de proyectos
   regresarProyectos(): void{
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
   }
 
   eliminarInvolucrado(involucrado:any): void{
     this.captura=involucrado;
-    console.log("el protecto que se pretente eliminar es: ",involucrado);
     this.formulariodeeliminar = this.formulario.group({
       involucra: [this.captura]
     });
-    console.log("El contenido del formulario");
-    console.log(this.formulariodeeliminar.value);
     if(window.confirm("Desea eliminar el involucrado, recuerde que se perdera la informacion de: intereses, problemas y recursos del involucrado seleccionado")){
-      alert("Decidio eliminar el involucrado");
+      
       this.coneccionServicio.borrarinvolucrado(this.formulariodeeliminar.value).subscribe(
         respuesta=>{
           location.reload();
         }
       );
-    }else{
-      alert("a cancelado la eliminacion del involucrado");
     }
   }
 
@@ -124,12 +114,9 @@ export class MatrizinvolucradosComponent {
     //guardo el dato del id del involucrado en la llave, porque de esto depende luego 
     //como se podra utilizar el mismo boton de guardar al involucrado
     this.id_llave=involucrado;
-    console.log("Esta es la fase de extraccion de un involcurado en especifico");
     //con ela funcion puedo extraer un determinado incolucrado
     this.coneccionServicio.extraerInvolucradounico(involucrado).subscribe(
       respuesta=>{
-        console.log("Lo que se extrajo como unico involucrado");
-        console.log(respuesta);
         //extraigo la informacion y le cargo para poder contemplar en la vista
         this.formularioinvolucrados1 = this.formulario.group({
           id_involucrado:respuesta[0]['id_involucrado'],
