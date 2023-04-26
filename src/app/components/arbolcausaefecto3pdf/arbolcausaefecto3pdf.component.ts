@@ -90,9 +90,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.efecto_directo="efectodirecto";
     this.coneccionServicio.filtrarcausasyefecto3(this.efecto_directo,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Efecto_directo=respuesta;
       }
     );
@@ -100,9 +97,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.problema="problema";
     this.coneccionServicio.filtrarcausasyefecto3(this.problema,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Problema= respuesta;
       }
     );
@@ -110,9 +104,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_directa1="causadirecta1";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_directa1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa1=respuesta;
       }
     );
@@ -120,9 +111,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_directa2="causadirecta2";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_directa2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa2=respuesta;
       }
     );
@@ -130,9 +118,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_directa3="causadirecta3";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_directa3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa3=respuesta;
       }
     );
@@ -140,9 +125,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_directa4="causadirecta4";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_directa4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa4=respuesta;
       }
     );
@@ -150,9 +132,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta1="causaindirecta1";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta1=respuesta;
       }
     );
@@ -160,9 +139,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta2="causaindirecta2";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta2=respuesta;
       }
     );
@@ -170,9 +146,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta3="causaindirecta3";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta3=respuesta;
       }
     );
@@ -180,9 +153,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta4="causaindirecta4";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta4=respuesta;
       }
     );
@@ -190,9 +160,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta5="causaindirecta5";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta5,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta5=respuesta;
       }
     );
@@ -201,9 +168,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta6="causaindirecta6";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta6,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta6=respuesta;
       }
     );
@@ -211,9 +175,6 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta7="causaindirecta7";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta7,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta7=respuesta;
       }
     );
@@ -221,15 +182,7 @@ export class Arbolcausaefecto3pdfComponent {
     this.causa_indirecta8="causaindirecta8";
     this.coneccionServicio.filtrarcausasyefecto3(this.causa_indirecta8,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta8=respuesta;
-        this.formulariocausaindirecta8 = this.formulario.group({
-          a:respuesta[0]['causasefectos'],
-          j:respuesta[0]['id_causaefecto']
-        });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
   }

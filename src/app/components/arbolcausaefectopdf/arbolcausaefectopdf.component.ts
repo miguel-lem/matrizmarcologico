@@ -77,9 +77,6 @@ export class ArbolcausaefectopdfComponent {
     this.efecto_indirecto="efectoindirecto";
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_indirecto,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Efecto_indirecto =respuesta;
       }
     );
@@ -87,9 +84,6 @@ export class ArbolcausaefectopdfComponent {
     this.efecto_directo1="efectodirecto1";
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_directo1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Efecto_directo1=respuesta;
       }
     );
@@ -97,9 +91,6 @@ export class ArbolcausaefectopdfComponent {
     this.efecto_directo2="efectodirecto2";
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_directo2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Efecto_directo2=respuesta;
       }
     );
@@ -107,9 +98,7 @@ export class ArbolcausaefectopdfComponent {
     this.problema="problema";
     this.coneccionServicio.filtrarcausasyefecto(this.problema,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
+        //extraccion de la variable para luego cargarle con el html en la vista
         this.Problema=respuesta;
       }
     );
@@ -117,9 +106,6 @@ export class ArbolcausaefectopdfComponent {
     this.causa_directa1="causadirecta1";
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa1=respuesta;
       }
     );
@@ -127,9 +113,6 @@ export class ArbolcausaefectopdfComponent {
     this.causa_directa2="causadirecta2";
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa2 = respuesta;
       }
     );
@@ -137,9 +120,6 @@ export class ArbolcausaefectopdfComponent {
     this.causa_directa3="causadirecta3";
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
-        //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_directa3=respuesta;
       }
     );
@@ -148,8 +128,6 @@ export class ArbolcausaefectopdfComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta1=respuesta;
       }
     );
@@ -158,8 +136,6 @@ export class ArbolcausaefectopdfComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta2=respuesta;
       }
     );
@@ -168,8 +144,6 @@ export class ArbolcausaefectopdfComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta3=respuesta;
       }
     );
@@ -178,8 +152,6 @@ export class ArbolcausaefectopdfComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta4=respuesta;
       }
     );
@@ -188,8 +160,6 @@ export class ArbolcausaefectopdfComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta5,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Causa_indirecta5=respuesta;
       }
     );
@@ -206,8 +176,6 @@ export class ArbolcausaefectopdfComponent {
   //esta funcion es para poder convertir a un pdf la informacion de la tabla
   downloadPDF() {
     //capturo el documento de lado del html
-    //document.getElementById('texto1').style.width = '100%'; 
-    //document.getElementById('texto1').style.height = '100px';
     const INFORMACION: any = document.getElementById('cuerpo');
     //coloco las variable de psicion, unidad de media, y el formato
     //con 'p' se va de verttical con 'l' de horizontal

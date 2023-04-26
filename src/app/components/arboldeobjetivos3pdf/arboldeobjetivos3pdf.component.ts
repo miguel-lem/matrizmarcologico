@@ -90,8 +90,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.fin,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Fin=respuesta;
       }
     );
@@ -100,8 +98,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.proposito,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Proposito=respuesta;
       }
     );
@@ -110,8 +106,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.componente1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Componente1=respuesta;
       }
     );
@@ -120,8 +114,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.componente2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Componente2=respuesta;
       }
     );
@@ -130,8 +122,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.componente3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Componente3=respuesta;
       }
     );
@@ -140,8 +130,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.componente4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Componente4=respuesta;
       }
     );
@@ -150,8 +138,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad1=respuesta;
       }
     );
@@ -160,8 +146,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad2=respuesta;
       }
     );
@@ -170,8 +154,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad3=respuesta;
       }
     );
@@ -180,8 +162,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad4=respuesta;
       }
     );
@@ -190,8 +170,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad5,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad5=respuesta;
       }
     );
@@ -201,8 +179,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad6,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad6=respuesta;
       }
     );
@@ -211,8 +187,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad7,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad7=respuesta;
       }
     );
@@ -221,8 +195,6 @@ export class Arboldeobjetivos3pdfComponent {
     this.coneccionServicio.filtrarFinesyPropositos3(this.actividad8,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.Actividad8=respuesta;
       }
     );
@@ -233,6 +205,7 @@ export class Arboldeobjetivos3pdfComponent {
   }
 
   regresarUnpoco(): void {
+    //ruta para nevegacion
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arboldeobjetivos3/'+this.elproyecto+'/arboldeobjetivos3creado/'+3]);
   }
 
@@ -263,7 +236,7 @@ export class Arboldeobjetivos3pdfComponent {
       doc.addImage(img, 'PNG', bufferX, bufferY, pdfWidth, pdfHeight, undefined, 'FAST');
       return doc;
     }).then((docResult) => {
-      //aqui le contorlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
+      //aqui le controlo para que el imprimir se vaya la descarga con la fecha del sistema y el nombre
       docResult.save(`${new Date().toISOString()}arbol-objetivos-diseño3.pdf`);
     });
   }

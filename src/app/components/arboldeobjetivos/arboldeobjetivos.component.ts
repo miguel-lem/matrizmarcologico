@@ -132,15 +132,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_indirecto,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioefectoindirecto = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['fin1'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el efecto directo1
@@ -148,15 +145,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_directo1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioefectodirecto1 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['fin2'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el efecto directo2
@@ -164,15 +158,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.efecto_directo2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioefectodirecto2 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['fin3'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear el problema
@@ -180,15 +171,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.problema,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formularioproblema = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['proposito'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa1
@@ -196,15 +184,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausadirecta1 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['componente1'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa2
@@ -212,15 +197,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausadirecta2 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['componente2'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa directa3
@@ -228,15 +210,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_directa3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausadirecta3 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['componente3'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta1
@@ -244,15 +223,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta1,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausaindirecta1 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['actividad1'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta2
@@ -260,15 +236,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta2,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausaindirecta2 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['actividad2'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta3
@@ -276,15 +249,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta3,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausaindirecta3 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['actividad3'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta4
@@ -292,15 +262,12 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta4,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausaindirecta4 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['actividad4'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
     //para extrear la causa indirecta5
@@ -308,25 +275,14 @@ export class ArboldeobjetivosComponent {
     this.coneccionServicio.filtrarcausasyefecto(this.causa_indirecta5,this.formulariodelnombre.value).subscribe(
       respuesta=>{
         //con el console-log imprimo para ver si estoy trayendo los datos
-        console.log("valores que se obtuvieron en la parte de arbol de problemas");
-        console.log(respuesta);
         this.formulariocausaindirecta5 = this.formulario.group({
           a:respuesta[0]['causasefectos'],
           descripcion:['actividad5'],
           j:respuesta[0]['id_causaefecto'],
           nombre_extraido:respuesta[0]['nombre_extraido']
         });    
-        console.log("se paso de la parte de la extraccion del efecto seleccionado: ");
       }
     );
-
-
-
-
-
-
-
-
   }
   ngOnInit() {
     
@@ -335,33 +291,18 @@ export class ArboldeobjetivosComponent {
   
   pasararbolcreado(): any{
     if(window.confirm("Ya convirtio a positivo todo¿?")){
-      console.log("Probando los datos del arbol creado");
-      console.log("Datos para fines");
-      console.log(this.formularioefectoindirecto.value);
       //pasamos el dato mediante la funcion creada de lado del servicio
       this.coneccionServicio.agregarFinesyPropositos(this.formularioefectoindirecto.value).subscribe();
-      console.log(this.formularioefectodirecto1.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto1.value).subscribe();
-      console.log(this.formularioefectodirecto2.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formularioefectodirecto2.value).subscribe();
-      console.log("Datos para proposito y componentes");
-      console.log(this.formularioproblema.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formularioproblema.value).subscribe();
-      console.log(this.formulariocausadirecta1.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta1.value).subscribe();
-      console.log(this.formulariocausadirecta2.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta2.value).subscribe();
-      console.log(this.formulariocausadirecta3.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausadirecta3.value).subscribe();
-      console.log(this.formulariocausaindirecta1.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta1.value).subscribe();
-      console.log(this.formulariocausaindirecta2.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta2.value).subscribe();
-      console.log(this.formulariocausaindirecta3.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta3.value).subscribe();
-      console.log(this.formulariocausaindirecta4.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta4.value).subscribe();
-      console.log(this.formulariocausaindirecta5.value);
       this.coneccionServicio.agregarFinesyPropositos(this.formulariocausaindirecta5.value).subscribe();
     }
     
@@ -369,7 +310,7 @@ export class ArboldeobjetivosComponent {
 
 
   regresarProyectos(): void {
+    //para el control de rutas
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);
-    //this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/todoslosproblemas/'+this.elproyecto]);
   }
 }
