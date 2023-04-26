@@ -13,16 +13,18 @@
       display: -ms-flexbox;
       flex-wrap: wrap;
       padding: 10px;
-      background: #9053c7;
-      background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: linear-gradient(-135deg, #c850c0, #4158d0);
+      background-image: linear-gradient(25deg, #5279d3 0, #3a5ea8 50%, #23447f 100%);
 }
 div#cabecera{
     width: 100%;
     height: 65px;
     min-width: 400px;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
 }
 input#texto11{
     width: 100%;
@@ -50,7 +52,6 @@ height: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
-opacity: .7;
 }
 div#cabecera4{
 float: left;
@@ -59,7 +60,6 @@ height: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
-opacity: .1;
 }
 div#cabecera5{
 float: left;
@@ -68,7 +68,6 @@ height: 50px;
 display: flex;
 align-items: center;
 justify-content: center;
-opacity: .7;
 }
 div#cuerpo{
     margin-top: 5px;
@@ -76,6 +75,12 @@ div#cuerpo{
     width: 100%;
     height: 680px;
     overflow: scroll;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
 }
 
 div#cuerpo11{
@@ -93,5 +98,8 @@ div#cuerpo11{
     height: 100px;
     resize: none; 
     word-wrap: break-word;
+  }
+  #label1{
+    color: wheat;
   }
 

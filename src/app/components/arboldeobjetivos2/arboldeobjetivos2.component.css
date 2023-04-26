@@ -25,6 +25,12 @@
         width: 100%;
         height: 50px;
         min-width: 400px;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   div#cabecera1{
     float: left;
@@ -44,7 +50,7 @@
   }
   div#cabecera3{
     float: left;
-    width: 100px;
+    width: 120px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -100,6 +106,12 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   div#cuerpo1{
     margin-top: 5px;

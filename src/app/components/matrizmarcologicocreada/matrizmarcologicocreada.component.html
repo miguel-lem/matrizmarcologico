@@ -15,20 +15,21 @@
                     <label id="label1">Proyecto: </label>
                 </div>
                 <div id="cabecera4" > 
-                    <input formControlName="nombre_extraido" type="text" class="form-control" 
+                    <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                         #valor name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
                 </div> 
                 <div id="cabecera3">
-                    <button (click)="descargaPDF()" type="" class="btn btn-success"><i class="fa-solid fa-download"></i> DescargarPDF</button> 
+                    <button (click)="descargaPDF()" type="" class="btn btn-outline-warning"><i class="fa-solid fa-download"></i> DescargarPDF</button> 
                 </div>
                 <div id="cabecera5">
-                    <button (click)="eliminarMatriz()" type="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
+                    <button (click)="eliminarMatriz()" type="" class="btn btn-outline-warning"><i class="fa-solid fa-trash-can"></i> Eliminar</button>
                 </div> 
                 <div id="cabecera3">
-                    <button (click)="regresarUnpoco()" type="" class="btn btn-success">Regresar</button>
+                    <button (click)="regresarUnpoco()" type="" class="btn btn-outline-warning"><--Regresar</button>
                 </div>
             </form>
         </div>
+        <div id="cuerpo">
             <div class="table-responsive" id="tablaresponsiva">
                         
                 <table class="table table-bordered" id="tabla">
@@ -59,6 +60,8 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+            
     </div>    
 </body>
 

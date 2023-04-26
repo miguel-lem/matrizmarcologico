@@ -16,17 +16,17 @@
                     <label id="label1">Proyecto: </label>
                 </div>
                 <div id="cabecera4" > 
-                    <input formControlName="nombre_extraido" type="text" class="form-control" 
+                    <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                         #valor name="" id="texto11" aria-describedby="helpId" placeholder="Proyecto">
                 </div> 
                 <div id="cabecera5">
-                    <button routerLink="matrizmarcologico3creada/3" type="" class="btn btn-success">Ver matriz creada</button>
+                    <button routerLink="matrizmarcologico3creada/3" type="" class="btn btn-outline-warning"><i class="fa-solid fa-eye"></i>Ver matriz creada</button>
                 </div> 
                 <div id="cabecera3">
-                    <button (click) = "guardarDatos()" type="" class="btn btn-success"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
+                    <button (click) = "guardarDatos()" type="" class="btn btn-outline-warning"><i class="fa-regular fa-floppy-disk"></i> Guardar</button>
                 </div>
                 <div id="cabecera3">
-                    <button (click) = "regresarUnpoco()" type="" class="btn btn-success">Ir a proyectos</button>
+                    <button (click) = "regresarUnpoco()" type="" class="btn btn-outline-warning"><i class="fa-solid fa-house-laptop"></i>Ir a proyectos</button>
                 </div>
             </form>
         </div>
