@@ -18,10 +18,16 @@
 div#cabecera{
         width: 100%;
         height: 50px;
+        border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
 }
 div#cabecera1{
     float: left;
-    width: 650px;
+    width: 620px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -29,7 +35,7 @@ div#cabecera1{
 }
 div#cabecera2{
   float: left;
-  width: 150px;
+  width: 100px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -38,7 +44,7 @@ div#cabecera2{
 
   div#cabecera3{
     float: left;
-    width: 55px;
+    width: 75px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -46,16 +52,15 @@ div#cabecera2{
   }
   div#cabecera4{
     float: left;
-    width: 200px;
+    width: 150px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .1;
   }
   div#cabecera5{
     float: left;
-    width: 100px;
+    width: 117px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -63,7 +68,7 @@ div#cabecera2{
   }
   div#cabecera6{
     float: left;
-    width: 50px;
+    width: 30px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -74,6 +79,12 @@ div#cabecera2{
     width: 100%;
     height: 680px;
     overflow: scroll;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   #label1{
     color: wheat;

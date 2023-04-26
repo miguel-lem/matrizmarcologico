@@ -22,6 +22,12 @@
         height: 50px;
         min-width: 400px;
         display: grid;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
         
   }
   div#cabecera1{
@@ -34,7 +40,7 @@
   }
   div#cabecera2{
     float: left;
-    width: 150px;
+    width: 100px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -42,12 +48,11 @@
   }
   div#cabecera3{
     float: left;
-    width: 100px;
+    width: 125px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .7;
   }
   div#cabecera33{
     float: left;
@@ -56,7 +61,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .7;
   }
   div#cabecera4{
     float: left;
@@ -65,7 +69,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .1;
   }
   input#texto11{
     width: 100%;
@@ -89,6 +92,12 @@
     grid-template-rows: auto;
     width: 100%;
     height: 680px;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
  
   div#cuerpo11{

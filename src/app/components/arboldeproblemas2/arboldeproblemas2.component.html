@@ -7,7 +7,7 @@
     <div class="container-login100">
         <div id="cabecera">
             <div id="cabecera6">
-                <button (click) = "regresarTodoslosproblemas()" type="submit" class="btn btn-success"><--</button>
+                <button (click) = "regresarTodoslosproblemas()" type="submit" class="btn btn-outline-warning"><--</button>
             </div>
             <form [formGroup]="formulariodelnombre" > 
                 <div id="cabecera1">
@@ -21,7 +21,7 @@
                         name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
                 </div>  
                 <div id="cabecera3">
-                    <button (click) = "regresaraProyectos()" type="" class="btn btn-success">Ir a Proyectos</button>
+                    <button (click) = "regresaraProyectos()" type="" class="btn btn-outline-info"><i class="fa-solid fa-house-laptop"></i>Ir a Proyectos</button>
                 </div>
                 
             </form>
@@ -165,7 +165,9 @@
                             <button (click) = "pasararbolcreado()" class="btn btn-success">Guardar arbol creado</button>
                         </div>
                 </div> 
-                <div id="cuerpo7"></div>           
+                <div id="cuerpo7">
+                    <label>Guía del árbol 2</label>
+                </div>           
             </div> 
         </div>
     </div>    

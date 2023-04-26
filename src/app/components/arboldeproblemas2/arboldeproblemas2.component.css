@@ -18,13 +18,19 @@
       background-image: radial-gradient(circle at 50% 120.71%, #a7deff 0, #6c90d8 50%, #38496b 100%);
     } 
   div#cabecera{
-        width: 100%;
-        height: 50px;
-        min-width: 400px;
+    width: 100%;
+    height: 50px;
+    min-width: 400px;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   div#cabecera1{
     float: left;
-    width: 750px;
+    width: 650px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -32,7 +38,7 @@
   }
   div#cabecera2{
     float: left;
-    width: 150px;
+    width: 100px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -45,7 +51,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .7;
   }
   div#cabecera4{
     float: left;
@@ -54,10 +59,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: .1;
   }
   input#texto1{
     width: 100%;
+  }
+  #contenedorcuerpo{
+    display: flex;
+    justify-content: space-between  space-around;
   }
   div#cuerpotabla1{
     float: left;
@@ -66,13 +74,28 @@
     width: 40%;
     height: 680px;
     overflow: scroll;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   div#cuerpo{
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 60%;
+    width: 59.4%;
     height: 680px;
+    margin-left: 7px;
+    background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2));
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
+    
   }
   div#cuerpo1{
     margin-top: 5px;
@@ -202,7 +225,7 @@
   
   div#cabecera6{
     float: left;
-    width: 50px;
+    width: 30px;
     height: 50px;
     display: flex;
     align-items: center;

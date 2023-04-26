@@ -33,6 +33,12 @@ div#cabecera{
   width: 100%;
   height: 50px;
   position: relative;
+  border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
 }
 div#cuerpo{
   margin-top: 5px;
@@ -43,6 +49,12 @@ div#cuerpo{
   grid-template-columns: auto;
   grid-template-rows: auto;
   overflow: scroll;
+  border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
 }
 div#cabecera1{
   float: left;
@@ -67,7 +79,6 @@ div#cabecera3{
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
 }
 div#cabecera4{
   float: left;
@@ -76,7 +87,6 @@ div#cabecera4{
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: .1;
 }
 input#texto1{
   width: 100%;

@@ -21,6 +21,12 @@
         height: 50px;
         display: grid;
         grid-template-columns: auto,auto,auto,auto,auto;
+        border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   
   div#cabecera3{
@@ -61,6 +67,12 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    border-radius: 5px;
+    border-color: wheat;
+    border-top: 1px solid wheat;
+    border-right: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+    border-left: 1px solid wheat;
   }
   div#cuerpo1{
     margin-top: 5px;

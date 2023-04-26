@@ -20,19 +20,24 @@
                         <input formControlName="nombre_extraido" type="text" class="form-control" readonly="readonly"
                             #nombre_necesario name="" id="texto1" aria-describedby="helpId" placeholder="Proyecto">
                     </div>
+                    
                     <div id="cabecera3">
-                        <button routerLink="arboldeproblemas/1" type="submit" class="btn btn-outline-info">Arbol 1</button>
+                        <label>-</label>
+                        <button routerLink="arboldeproblemas/1" type="submit" class="btn btn-outline-info"><i class="fa-solid fa-tree"></i>Arbol 1</button>
                     </div> 
                     <div id="cabecera3">
-                        <button routerLink="arboldeproblemas2/1" type="submit" class="btn btn-outline-info">Arbol 2</button>
+                        <label>-</label>
+                        <button routerLink="arboldeproblemas2/1" type="submit" class="btn btn-outline-info"><i class="fa-solid fa-tree"></i>Arbol 2</button>
                     </div> 
                     <div id="cabecera3">
-                        <button routerLink="arboldeproblemas3/1" type="submit" class="btn btn-outline-info">Arbol 3</button>
+                        <label>-</label>
+                        <button routerLink="arboldeproblemas3/1" type="submit" class="btn btn-outline-info"><i class="fa-solid fa-tree"></i>Arbol 3</button>
                     </div> 
                     
                 </form>
                 <div id="cabecera5">
-                    <button (click) = "cerrarSesion()" type="submit" class="btn btn-outline-danger">Cerrar sesion</button>
+                    <label>-</label>
+                    <button (click) = "cerrarSesion()" type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i>Cerrar sesion</button>
                 </div>
         </div> 
         <div id="cuerpo">
@@ -46,7 +51,7 @@
                             <th scope="col">Seleccion de problemas</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> 
                         <tr *ngFor="let problema of Problemas; let iControl=index" class="">
                             <td>{{ iControl+1}}</td> 
                             <td>{{ problema.problema}}</td> 

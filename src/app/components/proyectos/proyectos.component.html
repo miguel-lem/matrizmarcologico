@@ -13,13 +13,15 @@
                     <div id="cabecera2" >
                     <input required formControlName="nombre_proyecto" type="text" class="form-control" autocomplete="off"
                         name="" id="texto1" aria-describedby="helpId" placeholder="Ingresa un nombre al proyecto">
-                    </div>
-                    <div id="cabecera4" > 
-                        <input formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
-                            name="" id="texto1" aria-describedby="helpId" placeholder="Usuario">
-                    </div>  
+                    </div> 
                     <div id="cabecera3">
                         <button (click) = "enviarDatos1()" type="" class="btn btn-outline-info">.<i class="fa-solid fa-folder-open"></i> Crear Proyecto</button>
+                    </div>
+                    <div id="cabecera4" >
+                        <button type="" class="btn btn-info"><i class="fa-regular fa-user"></i></button>
+                        <label>:</label>
+                        <input formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
+                            name="" id="texto1" aria-describedby="helpId" placeholder="Usuario">
                     </div>
                 </form>
                 <div id="cabecera3">
@@ -49,7 +51,7 @@
                                         <label>.</label>
                                         <button routerLink="matrizinvolucrados/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">Crear</button>
                                         <label>.</label>
-                                        <button routerLink="matrizinvolucradoscreada/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success">Ver</button>
+                                        <button routerLink="matrizinvolucradoscreada/{{ proyecto.nombre_proyecto }}" type="button" class="btn btn-outline-success"><i class="fa-solid fa-eye"></i>Ver</button>
                                     </td>
                                     <td>
                                         <i class="fa-solid fa-tree"></i>
