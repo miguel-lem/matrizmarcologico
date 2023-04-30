@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 //importamos la libreria para dar uso de los formularios
-import {FormGroup, FormBuilder} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 //importamos el servicio para poder establecer comnicacion
 import { CrudserviceService } from 'src/app/services/crudservice.service';
 
@@ -56,15 +56,22 @@ export class ProyectosComponent {
   }
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos1(): any{
-    if(window.confirm("Desea crear proyecto con ese nombre¿?, luego no podra editar el nombre")){
-      //pasamos el dato mediante la funcion creada de lado del servicio
-      this.coneccionServicio.agregarProyecto(this.formulariodecrearproyecto.value).subscribe(
-        respuesta=>{
-          //para poder recargar la pagina y ver el nuevo nombre creado
-          location.reload();
-        }
-      );
-    } 
+    var proyecto = (<HTMLInputElement>document.getElementById('texto1')).value;
+    if(proyecto.length==0){
+      alert('No has escrito el nombre del proyecto');
+      return;
+    }
+    if(proyecto.length>0){
+      if(window.confirm("Desea crear proyecto con ese nombre¿?, luego no podra editar el nombre")){
+        //pasamos el dato mediante la funcion creada de lado del servicio
+        this.coneccionServicio.agregarProyecto(this.formulariodecrearproyecto.value).subscribe(
+          respuesta=>{
+            //para poder recargar la pagina y ver el nuevo nombre creado
+            location.reload();
+          }
+        );
+      } 
+    }
   }
   
   //funcion para controlar el cerrado de sesion
