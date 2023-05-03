@@ -21,23 +21,24 @@
                         <input formControlName="correo_primario" type="text" class="form-control" readonly="readonly"
                             name="" id="texto1" aria-describedby="helpId" placeholder="Usuario">
                     </div>
+                    <div id="cabecerauser">
+                        <label>-</label>
+                        <button type="" class="btn btn-info">Usuario<i class="fa-regular fa-user"></i></button>
+                    </div>
+                    <div id="cabecera34">
+                        <button routerLink="sugerencias/1" type="" class="btn btn-outline-info"><i class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                    <div id="cabecera3">
+                        <button (click) = "cerrarSesion()" type="" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesion</button>
+                    </div>
                 </form>
-                <div id="cabecerauser">
-                    <label>-</label>
-                    <button type="" class="btn btn-info">Usuario<i class="fa-regular fa-user"></i></button>
-                </div>
-                <div id="cabecera34">
-                    <button routerLink="sugerencias/1" type="" class="btn btn-outline-info"><i class="fa-regular fa-paper-plane"></i></button>
-                </div>
-                <div id="cabecera3">
-                    <button (click) = "cerrarSesion()" type="" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesion</button>
-                </div>
+                
         </div> 
         <div id="cuerpo">
                     <div class="table-responsive">
                         <table class="table table-primary" id="tabladecontenido" >
                             <thead>
-                                <tr>
+                                <tr> 
                                     <th scope="col">Proyectos</th>
                                     <th scope="col">Matriz involucrados</th>
                                     <th scope="col">Arbol de problemas </th>

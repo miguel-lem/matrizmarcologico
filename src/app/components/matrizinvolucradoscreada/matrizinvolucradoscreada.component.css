@@ -6,7 +6,7 @@
   .container-login100 {
       position:relative;
       width: 100%;  
-      min-height: 100vh; 
+      min-height: 100vh;  
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -17,9 +17,12 @@
 }
 div#cabecera{
     width: 100%;
-    height: 50px;
-    min-width: 400px;
+    height: 8%;
+    position: relative;
     border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    flex-wrap: wrap;
     border-color: wheat;
     border-top: 1px solid wheat;
     border-right: 1px solid wheat;
@@ -70,7 +73,7 @@ div#cuerpo{
     margin-top: 5px;
     min-width: 400px;
     width: 100%;
-    height: 680px;
+    height: 88.6%;
     overflow: scroll;
 }
 
@@ -80,4 +83,8 @@ div#cuerpo{
 }
 #label1{
     color: wheat;
+  }
+
+  td{
+    max-width: 280px;
   }
