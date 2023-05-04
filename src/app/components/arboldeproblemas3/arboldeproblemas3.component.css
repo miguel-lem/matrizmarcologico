@@ -9,7 +9,7 @@
       min-height: 100vh; 
       display: -webkit-box;
       display: -webkit-flex;
-      display: -moz-box;
+      display: -moz-box; 
       display: -ms-flexbox;
       flex-wrap: wrap;
       display: grid;
@@ -22,6 +22,9 @@
         height: 50px;
         min-width: 400px;
         border-radius: 5px;
+        grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto;
+  flex-wrap: wrap;
     border-color: wheat;
     border-top: 1px solid wheat;
     border-right: 1px solid wheat;
@@ -63,12 +66,20 @@
   input#texto1{
     width: 100%;
   }
+  #contenderodelcuerpo{
+    margin-top: 5px;
+    width: 100%;
+    height: 88.6%;
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
+  }
   div#cuerpotabla1{
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 40%;
-    height: 680px;
+    width: 500px;
+    height: 100%;
     overflow: scroll;
     border-radius: 5px;
     border-color: wheat;
@@ -81,8 +92,10 @@
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 59.4%;
-    height: 680px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
     border-radius: 5px;
     margin-left: 7px;
     border-color: wheat;

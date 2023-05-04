@@ -19,8 +19,10 @@
     } 
   div#cabecera{
     width: 100%;
-    height: 50px;
-    min-width: 400px;
+    height: 50px; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    flex-wrap: wrap;
     border-radius: 5px;
     border-color: wheat;
     border-top: 1px solid wheat;
@@ -64,15 +66,19 @@
     width: 100%;
   }
   #contenedorcuerpo{
-    display: flex;
-    justify-content: space-between  space-around;
+    margin-top: 5px;
+    width: 100%;
+    height: 88.6%;
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: wrap;
   }
   div#cuerpotabla1{
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 40%;
-    height: 680px;
+    width: 500px;
+    height: 100%;
     overflow: scroll;
     border-radius: 5px;
     border-color: wheat;
@@ -85,9 +91,11 @@
     float: left;
     min-width: 400px;
     margin-top: 5px;
-    width: 59.4%;
-    height: 680px;
+    width: 100%;
+    height: 100%;
     margin-left: 7px;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto,;
     background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2));
     border-radius: 5px;
     border-color: wheat;
