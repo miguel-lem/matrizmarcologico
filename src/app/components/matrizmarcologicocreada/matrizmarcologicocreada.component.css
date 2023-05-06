@@ -90,3 +90,6 @@ div#cuerpo{
 #eltd{
     white-space: pre-wrap;
 }
+td{
+    max-width: 280px;
+  }
