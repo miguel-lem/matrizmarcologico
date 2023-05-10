@@ -51,9 +51,7 @@ export class ProyectosComponent {
       )
   
   }
-  ngOnInit(): void {
-     
-  }
+
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos1(): any{
     var proyecto = (<HTMLInputElement>document.getElementById('texto1')).value;

@@ -248,11 +248,7 @@ export class Arboldeobjetivos2creadoComponent {
       }
     );
   }
-  
-  ngOnInit() {
-    
-  }
-
+ 
   guardararboleditado(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio
     this.coneccionServicio.editarFinesyPropositos2(this.formulariofin.value).subscribe();

@@ -60,8 +60,7 @@ export class MatrizinvolucradosComponent {
       )
  
   }
-  ngOnInit(){}
-
+ 
   //control de enviar datos con la llave
   enviarDatos1(): any{
     //la llave lo que busca es activar un lado o elotro segun este el estado del involucrado

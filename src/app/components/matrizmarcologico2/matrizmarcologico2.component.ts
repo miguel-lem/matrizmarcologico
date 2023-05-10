@@ -380,9 +380,6 @@ export class Matrizmarcologico2Component {
 
 
   }
-  ngOnInit() {
-    
-  }
 
   //con esta fucion extraifo todo lo que ayan llenado de lado del cliente y le guardo la informacion
   guardarDatos(): void{

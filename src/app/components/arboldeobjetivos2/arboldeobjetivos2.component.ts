@@ -272,9 +272,7 @@ export class Arboldeobjetivos2Component {
     );
   }
   
-  ngOnInit() {
-    
-  }
+
 
   pasararbolobjetivocreado(): any{
     if(window.confirm("Ya convirtio todo el arbol a positivo¿?")){

@@ -264,10 +264,7 @@ export class ArboldeobjetivoscreadoComponent {
 
 
   }
-  ngOnInit() {
-    
-  }
-  
+
   pasararbolcreado(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio
     this.coneccionServicio.editarFinesyPropositos(this.formulariofin1.value).subscribe();

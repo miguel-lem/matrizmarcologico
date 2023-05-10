@@ -12,7 +12,7 @@ import { Involucrado } from './Involucrado';
 })
 export class CrudserviceService {
    //creamos la variable de donde esta almacenado la API para la conexion
-   API: string = 'https://matrizml.com/matrizml2.php';
+   API: string = 'http://localhost/matrizml2.php';
 
   constructor(
     private clienteHttp:HttpClient

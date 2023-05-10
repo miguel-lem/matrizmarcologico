@@ -308,10 +308,7 @@ export class Arboldeobjetivos3creadoComponent {
     );
   }
   
-  ngOnInit() {
-    
-  }
-
+ 
  
   editararbolfinesproposito(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio

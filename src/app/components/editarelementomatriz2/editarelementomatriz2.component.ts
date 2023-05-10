@@ -56,8 +56,7 @@ export class Editarelementomatriz2Component {
     );
 
   }
-  ngOninit(){}
-
+ 
   //rutas de navegacion
   guardareditado(): void {
     this.coneccionServicio.editarMatrizmarco2(this.formularioedicion.value).subscribe(

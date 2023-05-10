@@ -56,8 +56,6 @@ export class Editarelementomatriz3Component {
     );
 
   }
-  ngOninit(){}
-
 
   //rutas para la navegacion
   guardareditado(): void {

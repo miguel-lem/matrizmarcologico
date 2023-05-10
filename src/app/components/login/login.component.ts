@@ -31,7 +31,6 @@ export class LoginComponent {
       });
       this.variablecorreo = '';
   }
-  ngOnInit() {} 
 
   iraPrincipal(): void {
     this.router.navigate(['/home']);

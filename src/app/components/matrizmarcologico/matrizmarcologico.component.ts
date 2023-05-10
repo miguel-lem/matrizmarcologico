@@ -408,10 +408,7 @@ export class MatrizmarcologicoComponent {
 
 
   }
-  ngOnInit() {
-    
-  }
-  
+
 
   regresarProyectos(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo]);

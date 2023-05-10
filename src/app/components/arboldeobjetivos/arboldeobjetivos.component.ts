@@ -284,10 +284,7 @@ export class ArboldeobjetivosComponent {
       }
     );
   }
-  ngOnInit() {
-    
-  }
-  
+ 
   
   pasararbolcreado(): any{
     if(window.confirm("Ya convirtio a positivo todo¿?")){

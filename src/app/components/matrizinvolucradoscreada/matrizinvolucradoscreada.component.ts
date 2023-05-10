@@ -61,7 +61,6 @@ export class MatrizinvolucradoscreadaComponent {
     });
     var contenido= document.getElementById('tabla');
   } 
-  ngOninit(){}
 
  //esta funcion es para poder convertir a un pdf la informacion de la tabla
   downloadPDF() {

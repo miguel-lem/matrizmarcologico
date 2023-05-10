@@ -42,9 +42,6 @@ export class MatrizmarcologicocreadaComponent {
 
     });
   }
-  prepararDatos(datos: string) {
-    
-  }
 
   //funcion con ruta para navegacion
   regresarUnpoco(): void {

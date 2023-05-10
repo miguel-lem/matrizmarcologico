@@ -263,9 +263,6 @@ export class ArbolcausaefectoComponent {
     );
 
   }
-  ngOnInit() {
-    
-  }
   
   guardarmodificaciones(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio

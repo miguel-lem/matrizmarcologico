@@ -43,10 +43,7 @@ export class TodoslosproblemasComponent {
     );
     
   }
-  
-  ngOnInit() {
-    
-  }
+
   //esta funcion permite seleccionar los datos del problema en especifico y le paso 
   //para asi evitar en el arbol de problemas que se me carguen toditos los problemas
   enviarProblema(id:string){

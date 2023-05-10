@@ -28,8 +28,7 @@ export class ForgetpassowrdComponent {
 
   }
 
-  ngOnInit() {}
-
+ 
   iraPrincipal(): void {
     this.router.navigate(['home/login']);
   }

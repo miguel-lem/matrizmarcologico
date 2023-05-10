@@ -251,9 +251,7 @@ export class Arbolcausaefecto2Component {
     );
   }
   
-  ngOnInit() {
-    
-  }
+
 
   pasararboleditado(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio

@@ -474,10 +474,7 @@ export class Matrizmarcologico3Component {
 
 
   }
-  ngOnInit() {
-    
-  }
- 
+
 
   //funcion con ruta para navegacion
   regresarUnpoco(): void {

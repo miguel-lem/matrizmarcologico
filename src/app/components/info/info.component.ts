@@ -9,8 +9,6 @@ import { Router } from '@angular/router';
 export class InfoComponent {
   constructor(private router: Router) {
   }
-  ngOnInit() {
-  }
 
   //ruta para navegacion
   regresara(): void {

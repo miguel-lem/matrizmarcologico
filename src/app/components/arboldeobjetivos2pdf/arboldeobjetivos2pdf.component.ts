@@ -165,9 +165,6 @@ export class Arboldeobjetivos2pdfComponent {
     );
   }
   
-  ngOnInit() {
-    
-  }
 
   regresarUnpoco(): void {
     //ruta de navegacion 

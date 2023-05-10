@@ -294,12 +294,7 @@ export class Arbolcausaefecto3Component {
       }
     );
   }
-  
-  ngOnInit() {
-    
-  }
 
- 
   pasararboleditado(): any{
     //pasamos el dato mediante la funcion creada de lado del servicio
     this.coneccionServicio.editarCausasyEfectos3(this.formularioefectodirecto.value).subscribe();

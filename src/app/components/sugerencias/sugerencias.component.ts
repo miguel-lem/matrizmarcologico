@@ -52,9 +52,7 @@ export class SugerenciasComponent {
       );
   
   }
-  ngOnInit(): void {
-     
-  }
+
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos1(): any{
     console.log('me presionaste'); 

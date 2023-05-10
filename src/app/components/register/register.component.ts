@@ -29,8 +29,6 @@ export class RegisterComponent {
         contrasenia:['']
       });
   }
-  ngOnInit() {}
-
 
   //ruta de navegacion
   regresar(): void {

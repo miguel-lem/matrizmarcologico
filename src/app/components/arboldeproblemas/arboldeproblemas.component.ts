@@ -288,10 +288,7 @@ export class ArboldeproblemasComponent {
     );
   }
   
-  ngOnInit() {
-    
-  }
-
+ 
   changeselected(parametroid:any){
     const idproblemaseidopciones = parametroid.target.value;
     //this.id=parametroid.target.value;

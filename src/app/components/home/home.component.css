@@ -10,6 +10,13 @@
     text-decoration: none;
   }
   
+  #letra{
+    color: black;
+  }
+  #letra:hover{
+    color: yellow;
+  }
+
   h1,
   h2{
     font-family: "Raleway", sans-serif;
@@ -80,6 +87,12 @@
     text-align: center;
   }
   
+  #abajo{
+    top: 90%;
+    left: 2%;
+    position: absolute;
+  }
+
   #hero h1 {
     margin: 0 0 10px 0;
     font-size: 64px;

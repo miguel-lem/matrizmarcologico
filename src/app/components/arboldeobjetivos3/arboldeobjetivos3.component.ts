@@ -336,11 +336,7 @@ export class Arboldeobjetivos3Component {
     );
   }
   
-  ngOnInit() {
-    
-  }
 
- 
   creararbolfinesproposito(): any{
     if(window.confirm("Ya convirtio el arbol a positivo ¿?")){
       //pasamos el dato mediante la funcion creada de lado del servicio

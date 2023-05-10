@@ -162,7 +162,7 @@
   }
   
   .wrap-login100 {
-    width: 960px;
+    width: 460px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -174,22 +174,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
+    padding: 150px 80px 33px 95px;
   }
-  
-  /*------------------------------------------------------------------
-  [  ]*/
-  .login100-pic {
-    width: 316px;
-  }
-  
-  .login100-pic img {
-    max-width: 100%;
-  }
-  
-  
-  /*------------------------------------------------------------------
-  [  ]*/
   .login100-form {
     width: 290px;
   }

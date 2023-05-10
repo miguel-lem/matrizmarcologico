@@ -66,9 +66,6 @@ export class ProblemasComponent {
     );
 
   }
-  ngOnInit(){
-
-  }
 
   //funcion para pasar los datos
   enviarDatos3(): any{

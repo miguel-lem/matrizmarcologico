@@ -165,10 +165,7 @@ export class ArbolcausaefectopdfComponent {
     );
 
   }
-  ngOnInit() {
-    
-  }
-  
+
   regresarProyectos(): void {
     this.router.navigate(['home/login/proyectos/'+this.elcorreo+'/arbolcausaefecto/'+this.elproyecto]);
   }

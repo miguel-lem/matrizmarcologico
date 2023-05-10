@@ -64,9 +64,6 @@ export class RecursosComponent {
     );
 
   }
-  ngOnInit(){
-
-  }
 
   //funcion para poder enviar los datos a la BD
   enviarDatos3(): any{

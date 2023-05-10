@@ -95,7 +95,7 @@
   
   button:hover {
       cursor: pointer;
-  }
+  } 
   
   iframe {
       border: none !important;
@@ -125,8 +125,6 @@
   }
   
   
-  /*//////////////////////////////////////////////////////////////////
-  [ login ]*/
   
   .limiter {
     width: 100%;
@@ -161,7 +159,7 @@
   }
   
   .wrap-login100 {
-    width: 960px;
+    width: 460px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -173,22 +171,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 177px 130px 33px 95px;
-  }
-  
-  /*------------------------------------------------------------------
-  [  ]*/
-  .login100-pic {
-    width: 316px;
-  }
-  
-  .login100-pic img {
-    max-width: 100%;
+    padding: 100px 80px 33px 95px;
   }
   
   
-  /*------------------------------------------------------------------
-  [  ]*/
   .login100-form {
     width: 290px;
   }

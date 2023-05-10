@@ -339,9 +339,6 @@ export class Arboldeproblemas3Component {
       );
   }
   
-  ngOnInit() {
-    
-  }
 
   //esta funcion es la que permite interactuar las opciones de lado del html y cargar los datos
   changeselected(parametroid:any){

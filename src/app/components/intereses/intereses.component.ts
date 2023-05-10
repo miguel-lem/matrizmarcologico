@@ -64,9 +64,7 @@ export class InteresesComponent {
       }
     );
   }
-  ngOnInit(){
-
-  }
+ 
   enviarDatos2(): any{
     if(this.id_llave==undefined){
       //pasamos el dato mediante la funcion creada de lado del servicio
