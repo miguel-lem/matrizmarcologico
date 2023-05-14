@@ -12,15 +12,14 @@
       display: -moz-box;
       display: -ms-flexbox;
       flex-wrap: wrap;
-      display: grid;
-      grid-template-rows: auto,auto;
       padding: 10px;
       background-image: linear-gradient(180deg, #5d6366 0, #415460 25%, #1f4459 50%, #003553 75%, #00264d 100%);
     } 
   div#cabecera{
         width: 100%;
-        height: 50px;
-        min-width: 400px; 
+        height: 8%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
     border-radius: 5px;
     border-color: wheat;
     border-top: 1px solid wheat;
@@ -89,7 +88,7 @@
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    height: 680px;
+    height: 89.7%;
     border-radius: 5px;
     border-color: wheat;
     border-top: 1px solid wheat;

@@ -13,24 +13,15 @@
       display: -ms-flexbox;
       flex-wrap: wrap;
       padding: 10px;
-      display: grid;
-      grid-template-rows: auto, auto;
-      background: #9053c7;
-      background: -webkit-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: -o-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: -moz-linear-gradient(-135deg, #c850c0, #4158d0);
-      background: linear-gradient(-135deg, #c850c0, #4158d0);
+      background-image: linear-gradient(25deg, #5279d3 0, #3a5ea8 50%, #23447f 100%);
     } 
   div#cabecera{
     position:relative;
         width: 100%;
-        height: 50px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
+        height: 8%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto;
         flex-wrap: wrap;
-        min-width: 400px;
     border-radius: 5px;
     border-color: wheat;
     border-top: 1px solid wheat;
@@ -95,7 +86,7 @@
     min-width: 400px;
     margin-top: 5px;
     width: 100%;
-    height: 680px;
+    height: 89.7%;
     background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), 
     url("/assets/imagenes/Slide6.jpg") top center;
     background-size: cover;
