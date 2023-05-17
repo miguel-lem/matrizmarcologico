@@ -44,7 +44,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let valor of Fin1paratabla; let iControl=index" class="">
-                            <th>Fin 1</th>
+                            <th>Fin 1:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td> 
@@ -52,7 +52,7 @@
                                 <form [formGroup]="formulariofin1">
                                     <div id="cuerpo11">
                                         <textarea formControlName="b" type="text" class="form-control" 
-                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador.- Es la especificación cuantitativa y cualitativa para medir el logro de un objetivo">
                                         </textarea>
                                     </div>
                                 </form>
@@ -61,7 +61,7 @@
                                 <form [formGroup]="formulariofin1">
                                     <div id="cuerpo11">
                                         <textarea formControlName="c" type="text" class="form-control" 
-                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación.- Fuentes que el ejecutor y el evaluador pueden consultar para ver si los objetivos se están logrando">
                                         </textarea>
                                     </div>
                                 </form>
@@ -70,95 +70,95 @@
                                 <form [formGroup]="formulariofin1">
                                     <div id="cuerpo11">
                                         <textarea formControlName="d" type="text" class="form-control" 
-                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                        #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos.- Son todas aquellas condiciones o factores suficientes para garantizar el éxito del proyecto en cada uno de sus niveles">
                                         </textarea>
                                     </div>
                                 </form>
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Fin2paratabla; let iControl=index" class="">
-                            <th>Fin 2</th>
+                            <th>Fin 2:</th>
                             <td  class="">
                                 {{ valor.finproposito}}
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin2">
                                     <textarea formControlName="b" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador.- Es la especificación cuantitativa y cualitativa para medir el logro de un objetivo">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin2">
                                     <textarea formControlName="c" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación.- Fuentes que el ejecutor y el evaluador pueden consultar para ver si los objetivos se están logrando">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin2">
                                     <textarea formControlName="d" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos.- Son todas aquellas condiciones o factores suficientes para garantizar el éxito del proyecto en cada uno de sus niveles">
                                     </textarea>
                                 </form>
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Fin3paratabla; let iControl=index" class="">
-                            <th>Fin 3</th>
+                            <th>Fin 3:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin3">
                                     <textarea formControlName="b" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador.- Es la especificación cuantitativa y cualitativa para medir el logro de un objetivo">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin3">
                                     <textarea formControlName="c" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación.- Fuentes que el ejecutor y el evaluador pueden consultar para ver si los objetivos se están logrando">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formulariofin3">
                                     <textarea formControlName="d" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos.- Son todas aquellas condiciones o factores suficientes para garantizar el éxito del proyecto en cada uno de sus niveles">
                                     </textarea>
                                 </form>
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Propositotabla; let iControl=index" class="">
-                            <th>Proposito</th>
+                            <th>Proposito:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
                             <td>
                                 <form [formGroup]="formularioproposito">
                                     <textarea formControlName="b" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Indicador.- Es la especificación cuantitativa y cualitativa para medir el logro de un objetivo">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formularioproposito">
                                     <textarea formControlName="c" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Medios de verificación.- Fuentes que el ejecutor y el evaluador pueden consultar para ver si los objetivos se están logrando">
                                     </textarea>
                                 </form>
                             </td>
                             <td>
                                 <form [formGroup]="formularioproposito">
                                     <textarea formControlName="d" type="text" class="form-control" 
-                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos">
+                                    #valor name="" id="texto1" aria-describedby="helpId" placeholder="Supuestos.- Son todas aquellas condiciones o factores suficientes para garantizar el éxito del proyecto en cada uno de sus niveles">
                                     </textarea>
                                 </form>
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Componente1tabla; let iControl=index" class="">
-                            <th>Componente 1</th>
+                            <th>Componente 1:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -185,7 +185,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Componente2tabla; let iControl=index" class="">
-                            <th>Componente 2</th>
+                            <th>Componente 2:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -212,7 +212,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Componente3tabla; let iControl=index" class="">
-                            <th>Componente 3</th>
+                            <th>Componente 3:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -239,7 +239,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Actividad1tabla; let iControl=index" class="">
-                            <th>Actividad 1</th>
+                            <th>Actividad 1:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -266,7 +266,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Actividad2tabla; let iControl=index" class="">
-                            <th>Actividad 2</th>
+                            <th>Actividad 2:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -293,7 +293,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Actividad3tabla; let iControl=index" class="">
-                            <th>Actividad 3</th>
+                            <th>Actividad 3:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -320,7 +320,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Actividad4tabla; let iControl=index" class="">
-                            <th>Actividad 4</th>
+                            <th>Actividad 4:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
@@ -347,7 +347,7 @@
                             </td>
                         </tr>
                         <tr *ngFor="let valor of Actividad5tabla; let iControl=index" class="">
-                            <th>Actividad 5</th>
+                            <th>Actividad 5:</th>
                             <td>
                                 {{ valor.finproposito}}
                             </td>
