@@ -31,9 +31,9 @@ export class RegisterComponent {
   }
 
   //ruta de navegacion
-  regresar(): void {
-    this.router.navigate(['home/info/login']);
-  }
+  iraLogin(): void {
+    this.router.navigate(['home/login']); 
+  } 
 
   //creamos el metodo con el cual le vamos a enviar los datos a la bd y a su vez tambien le probaremos en la consola
   enviarDatos(): any{
