@@ -38,7 +38,7 @@ export class MatrizmarcologicocreadaComponent {
     this.formulariodelnombre.patchValue({nombre_extraido: this.elproyecto});
     //aqui le extraigo todos los elementos de la tabla matriz marco logico para mostrarlos en la tabla
     this.coneccionServicio.filtrarlamatrizmarcoparverlocreado(this.elproyecto).subscribe(respuesta=>{
-      this.Elementos=respuesta;
+      this.Elementos=respuesta; 
 
     });
   }
